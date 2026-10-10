@@ -120,3 +120,11 @@ test("pages carry a CSP; the sample page allows its inline script only", async (
   assert.equal(sample.headers.get("X-Content-Type-Options"), "nosniff");
   assert.match(home.headers.get("Cache-Control"), /no-transform/);
 });
+
+test("the brand guide gets the strict site CSP, not the sample page's", async () => {
+  const res = await worker.fetch(new Request("https://brandrune.com/brand/"), makeEnv());
+  const csp = res.headers.get("Content-Security-Policy");
+  assert.match(csp, /script-src 'self'/);
+  assert.match(csp, /style-src 'self'/);
+  assert.doesNotMatch(csp, /unsafe-inline/);
+});
