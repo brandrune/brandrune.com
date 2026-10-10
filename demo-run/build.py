@@ -57,8 +57,11 @@ out = {
     "columns": ["name", "style", "length"] + tlds,
     "rows": rows,
 }
-# The exact stdout `check` printed for this run (emit() with no filters), so
-# the page can quote real lines and a test can hold it to them.
+# check-stdout.txt and check-stderr.txt are not captured from the terminal.
+# They are re-rendered from results.json with the script's own render_text()
+# and the same first stderr line cmd_check prints, which is what `check`
+# prints for this run with no filters. The page quotes these lines and a test
+# holds it to them.
 shown = sorted(doc["names"], key=lambda e: br.sort_key(e, tlds))
 stdout = br.render_text(doc, shown, "")
 (here / "check-stdout.txt").write_text(stdout + "\n")

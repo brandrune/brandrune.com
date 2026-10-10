@@ -1,6 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import worker, { validEmail, makeToken, readToken, capKey } from "../src/worker.js";
+import { createHash } from "node:crypto";
+import worker, { validEmail, makeToken, readToken, capKey, cooldownKey } from "../src/worker.js";
 
 const AUDIENCE = "aud-123";
 const SECRET = "test-secret-0123456789abcdef";
@@ -93,6 +94,32 @@ test("capKey folds the variants that reach one inbox", () => {
   assert.equal(capKey("a.p.e.r.s.o.n@googlemail.com"), "aperson@gmail.com");
   assert.equal(capKey("first.last+x@example.com"), "first.last@example.com");
   assert.equal(capKey("first.last@example.com"), "first.last@example.com");
+  assert.equal(capKey("+tag@example.com"), "+tag@example.com", "an address that is all tag keeps its local part");
+});
+
+test("the cooldown key is an HMAC under CONFIRM_SECRET, not a bare hash", async () => {
+  const k = await cooldownKey("a.person@gmail.com", SECRET);
+  const plain = createHash("sha256").update(capKey("a.person@gmail.com")).digest("hex");
+  assert.notEqual(k, "confirm-sent:" + plain);
+  assert.ok(!k.includes(plain));
+  assert.notEqual(k, await cooldownKey("a.person@gmail.com", "another-secret"));
+  assert.equal(k, await cooldownKey("A.Person+x@googlemail.com", SECRET), "variants of one inbox share a key");
+});
+
+test("with the site-wide cap exhausted, confirmed, new and cooling-down addresses get the same answer", async () => {
+  const r = fakeResend({ "confirmed@example.org": { unsubscribed: false } });
+  const kv = fakeKV();
+  kv.store.set(await cooldownKey("cooling@example.org", SECRET), "1");
+  const answers = [];
+  await withFetch(r.handler, async () => {
+    for (const email of ["confirmed@example.org", "never.seen@example.org", "cooling@example.org"]) {
+      const res = await worker.fetch(post({ email }), makeEnv({ kv, globalLimited: true }));
+      answers.push(`${res.status} ${await res.text()}`);
+    }
+  });
+  assert.equal(new Set(answers).size, 1, answers.join(" / "));
+  assert.match(answers[0], /^429 /);
+  assert.equal(r.calls.length, 0, "no per-address lookup happens before the site-wide cap");
 });
 
 test("a new signup sends one email and stores no contact", async () => {

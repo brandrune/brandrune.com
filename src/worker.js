@@ -254,15 +254,17 @@ export function capKey(email) {
   const at = e.lastIndexOf("@");
   let local = e.slice(0, at);
   let domain = e.slice(at + 1);
-  local = local.split("+")[0];
+  local = local.split("+")[0] || local;
   if (domain === "googlemail.com") domain = "gmail.com";
   if (domain === "gmail.com") local = local.replace(/\./g, "");
   return `${local}@${domain}`;
 }
 
-async function cooldownKey(email) {
-  const digest = new Uint8Array(await crypto.subtle.digest("SHA-256", enc.encode(capKey(email))));
-  return "confirm-sent:" + Array.from(digest, (b) => b.toString(16).padStart(2, "0")).join("");
+// HMAC, not a bare hash: without CONFIRM_SECRET a KV key cannot be matched
+// back to an address by hashing guesses.
+export async function cooldownKey(email, secret) {
+  const mac = new Uint8Array(await crypto.subtle.sign("HMAC", await hmacKey(secret), enc.encode("brandrune-cooldown:v1:" + capKey(email))));
+  return "confirm-sent:" + Array.from(mac, (b) => b.toString(16).padStart(2, "0")).join("");
 }
 
 // --- POST /api/subscribe -----------------------------------------------------
@@ -300,13 +302,20 @@ async function subscribe(request, env) {
     return reply(false, 503, "Signups are not set up yet. Try again later.");
   }
 
+  // Site-wide cap, keyed on a constant, before any branch that depends on the
+  // address. Checked later, it would answer 200 for a confirmed address and
+  // 429 for a new one, and the difference would tell who is on the list.
+  if (!(await env.GLOBAL_SEND_LIMITER.limit({ key: "all-confirmation-sends" })).success) {
+    return reply(false, 429, "Signups are busy right now. Try again in a few minutes.");
+  }
+
   // Burst cap on the same inbox. KV takes up to a minute to agree across
   // locations, so this covers the gap before the daily cooldown is visible.
   const key = capKey(email);
   if (!(await env.CONFIRM_EMAIL_LIMITER.limit({ key })).success) return reply(true, 200);
 
   // Daily cap: one confirmation email per inbox per 24 hours, whoever asks.
-  const coolKey = await cooldownKey(email);
+  const coolKey = await cooldownKey(email, env.CONFIRM_SECRET);
   if (await env.CONFIRM_COOLDOWN.get(coolKey)) return reply(true, 200);
 
   // Already confirmed: same answer as a new signup, so the form does not
@@ -314,11 +323,6 @@ async function subscribe(request, env) {
   const state = await contactState(env, email);
   if (state === "error") return failed("contact lookup");
   if (state === "confirmed") return reply(true, 200);
-
-  // Site-wide cap on sends, keyed on a constant.
-  if (!(await env.GLOBAL_SEND_LIMITER.limit({ key: "all-confirmation-sends" })).success) {
-    return reply(false, 429, "Signups are busy right now. Try again in a few minutes.");
-  }
 
   await env.CONFIRM_COOLDOWN.put(coolKey, "1", { expirationTtl: COOLDOWN_SECONDS });
   const link = `${siteOrigin(env)}/confirm?t=${await makeToken(email, env.CONFIRM_SECRET)}`;
