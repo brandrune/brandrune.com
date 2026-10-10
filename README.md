@@ -4,14 +4,32 @@ The site for [Brandrune](https://github.com/brandrune/brandrune), the free Claud
 Code naming skill. A Cloudflare Worker with static assets, on its own custom
 domains (brandrune.com and www.brandrune.com, no wildcard route).
 
-- `public/`: the page, styles, script, OG image and the sample results page.
+- `public/`: the page, styles, script, OG image, the brand guide at `/brand/` and
+  the sample results page.
 - `src/worker.js`: serves the assets with security headers, redirects www and
   http to https://brandrune.com, and handles `POST /api/subscribe`.
 - `sample-run/`: the invented project, names and registry results behind
   `public/sample/`. Regenerate with the skill's script:
   `python3 brandrune.py check sample-run/names.txt --tlds com,ai --description-file sample-run/about.txt --out sample-run/results.json --html public/sample/index.html`
-- `og/`: HTML sources for `public/og.png` and `public/apple-touch-icon.png`,
-  rendered with headless Chrome at 1200x630 and 180x180.
+- `brand-src/`: the logo system as code. `geometry.py` builds the carved
+  berkanan mark and the drawn wordmark from one 30 degree construction;
+  `build.py` writes every SVG into `public/brand/assets/` (plus
+  `public/favicon.svg`); `render.mjs` renders the PNGs, `public/og.png` and
+  `public/apple-touch-icon.png` with headless Chromium.
+
+## Brand assets
+
+```bash
+python3 -m venv .venv && .venv/bin/pip install shapely==2.2.0
+.venv/bin/python brand-src/build.py                 # SVGs
+PLAYWRIGHT_CORE=/path/to/node_modules/playwright-core node brand-src/render.mjs   # PNGs, og.png, apple-touch-icon.png
+.venv/bin/python brand-src/build.py zip             # brandrune-brand-assets.zip
+```
+
+The SVGs carry no `<style>` and no live text in the logo itself, so they
+render the same everywhere and pass the site CSP when opened directly. The
+social card template keeps its headline as live text on purpose, so it can
+be edited.
 
 ## Email signup
 
@@ -29,7 +47,7 @@ Secret: `RESEND_API_KEY` (a dedicated Resend key named `brandrune-site`), set wi
 
 ```bash
 npm install
-npm test          # worker unit tests, offline
+npm test          # worker unit tests and static checks on public/, offline
 npx wrangler deploy
 ```
 

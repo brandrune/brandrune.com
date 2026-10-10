@@ -2,3 +2,5 @@ node_modules/
 .wrangler/
 .dev.vars
 sample-run/results.json.bak
+.venv/
+brand-src/__pycache__/

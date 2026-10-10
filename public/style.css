@@ -40,9 +40,10 @@ section { padding: 64px 0; border-top: 1px solid var(--rule); }
 .top-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 16px; }
 .brand { display: inline-flex; align-items: center; gap: 8px; color: var(--ink); text-decoration: none; font-weight: 650; font-size: 21px; letter-spacing: 0.01em; }
 .brand:hover { color: var(--ink); }
-nav { display: flex; gap: 22px; flex-wrap: wrap; }
-nav a { color: var(--stone); text-decoration: none; font-size: 15px; }
-nav a:hover { color: var(--ink); text-decoration: underline; }
+.brand img { display: block; height: 30px; width: auto; }
+.top nav { display: flex; gap: 22px; flex-wrap: wrap; }
+.top nav a { color: var(--stone); text-decoration: none; font-size: 15px; }
+.top nav a:hover { color: var(--ink); text-decoration: underline; }
 
 .hero { border-top: 0; padding: 72px 0 64px; }
 .eyebrow { color: var(--ochre); font-weight: 650; font-size: 15px; letter-spacing: 0.04em; text-transform: uppercase; margin: 0 0 14px; }
@@ -105,11 +106,12 @@ nav a:hover { color: var(--ink); text-decoration: underline; }
 .signup.done .status { font-size: 19px; }
 
 .foot { border-top: 1px solid var(--rule); padding: 28px 0 40px; color: var(--stone); font-size: 15px; }
+.page-msg { padding: 80px 24px; }
 .foot-inner { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
 
 @media (max-width: 640px) {
-  nav { gap: 14px; }
-  nav a:nth-child(-n+2) { display: none; }
+  .top nav { gap: 14px; }
+  .top nav a:nth-child(-n+2) { display: none; }
   section { padding: 48px 0; }
   .hero { padding: 48px 0; }
   .lede { font-size: 18px; }

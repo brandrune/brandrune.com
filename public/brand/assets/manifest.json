@@ -1,0 +1,293 @@
+[
+ {
+  "name": "brandrune-lockup",
+  "vb": [
+   -4.0,
+   -38.075,
+   226.13920536033334,
+   48.0
+  ],
+  "png": [
+   1200
+  ],
+  "transparent": true
+ },
+ {
+  "name": "brandrune-lockup-flat",
+  "vb": [
+   -4.0,
+   -38.075,
+   226.13920536033334,
+   48.0
+  ],
+  "png": [
+   1200
+  ],
+  "transparent": true
+ },
+ {
+  "name": "brandrune-lockup-ink",
+  "vb": [
+   -4.0,
+   -38.075,
+   226.13920536033334,
+   48.0
+  ],
+  "png": [
+   1200
+  ],
+  "transparent": true
+ },
+ {
+  "name": "brandrune-lockup-reversed",
+  "vb": [
+   -22.0,
+   -56.075,
+   262.13920536033334,
+   84.0
+  ],
+  "png": [
+   1200
+  ],
+  "transparent": false
+ },
+ {
+  "name": "brandrune-stacked",
+  "vb": [
+   -4.0,
+   -4.0,
+   195.76394048328424,
+   114.05
+  ],
+  "png": [
+   800
+  ],
+  "transparent": true
+ },
+ {
+  "name": "brandrune-stacked-ink",
+  "vb": [
+   -4.0,
+   -4.0,
+   195.76394048328424,
+   114.05
+  ],
+  "png": [
+   800
+  ],
+  "transparent": true
+ },
+ {
+  "name": "brandrune-stacked-reversed",
+  "vb": [
+   -26.0,
+   -26,
+   239.76394048328424,
+   158.05
+  ],
+  "png": [
+   800
+  ],
+  "transparent": false
+ },
+ {
+  "name": "brandrune-wordmark",
+  "vb": [
+   -2.0,
+   -30.6,
+   191.76394048328424,
+   33.05
+  ],
+  "png": [
+   1200
+  ],
+  "transparent": true
+ },
+ {
+  "name": "brandrune-mark",
+  "vb": [
+   0,
+   0,
+   48.0,
+   48.0
+  ],
+  "png": [
+   512,
+   1024
+  ],
+  "transparent": true
+ },
+ {
+  "name": "brandrune-mark-flat",
+  "vb": [
+   0,
+   0,
+   48.0,
+   48.0
+  ],
+  "png": [
+   512
+  ],
+  "transparent": true
+ },
+ {
+  "name": "brandrune-mark-ink",
+  "vb": [
+   0,
+   0,
+   48.0,
+   48.0
+  ],
+  "png": [
+   512
+  ],
+  "transparent": true
+ },
+ {
+  "name": "brandrune-mark-reversed",
+  "vb": [
+   0,
+   0,
+   48.0,
+   48.0
+  ],
+  "png": [
+   512
+  ],
+  "transparent": false
+ },
+ {
+  "name": "brandrune-app-icon",
+  "vb": [
+   0,
+   0,
+   512,
+   512
+  ],
+  "png": [
+   16,
+   32,
+   64,
+   180,
+   192,
+   512,
+   1024
+  ],
+  "transparent": true
+ },
+ {
+  "name": "brandrune-github-avatar",
+  "vb": [
+   0,
+   0,
+   512,
+   512
+  ],
+  "png": [
+   512
+  ],
+  "transparent": false
+ },
+ {
+  "name": "favicon",
+  "vb": [
+   0,
+   0,
+   32,
+   32
+  ],
+  "png": [
+   16,
+   32,
+   48
+  ],
+  "transparent": true
+ },
+ {
+  "name": "brandrune-og-template",
+  "vb": [
+   0,
+   0,
+   1200,
+   630
+  ],
+  "png": [
+   1200
+  ],
+  "transparent": false
+ },
+ {
+  "name": "explore-carved",
+  "vb": [
+   0,
+   0,
+   48.0,
+   48.0
+  ],
+  "png": [
+   512
+  ],
+  "transparent": true
+ },
+ {
+  "name": "explore-monogram-b",
+  "vb": [
+   0,
+   0,
+   48,
+   48
+  ],
+  "png": [
+   512
+  ],
+  "transparent": true
+ },
+ {
+  "name": "explore-runestone",
+  "vb": [
+   0,
+   0,
+   48,
+   48
+  ],
+  "png": [
+   512
+  ],
+  "transparent": true
+ },
+ {
+  "name": "explore-seal",
+  "vb": [
+   0,
+   0,
+   48,
+   48
+  ],
+  "png": [
+   512
+  ],
+  "transparent": true
+ },
+ {
+  "name": "construction",
+  "vb": [
+   0,
+   0,
+   240,
+   240
+  ],
+  "png": null,
+  "transparent": true
+ },
+ {
+  "name": "clearspace",
+  "vb": [
+   -18.0,
+   -52.075,
+   254.13920536033334,
+   76.0
+  ],
+  "png": null,
+  "transparent": true
+ }
+]

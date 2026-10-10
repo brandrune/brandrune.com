@@ -62,7 +62,7 @@ function json(body, status = 200) {
 // Plain HTML answer for a form posted without JavaScript.
 function page(title, message, status = 200) {
   const esc = (s) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
-  const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><title>${esc(title)}: Brandrune</title><link rel="stylesheet" href="/style.css"></head><body><main class="wrap narrow" style="padding:80px 24px"><h1>${esc(title)}</h1><p>${esc(message)}</p><p><a href="/">Back to brandrune.com</a></p></main></body></html>`;
+  const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><title>${esc(title)}: Brandrune</title><link rel="stylesheet" href="/style.css"></head><body><main class="wrap narrow page-msg"><h1>${esc(title)}</h1><p>${esc(message)}</p><p><a href="/">Back to brandrune.com</a></p></main></body></html>`;
   return new Response(html, { status, headers: { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "no-store" } });
 }
 
