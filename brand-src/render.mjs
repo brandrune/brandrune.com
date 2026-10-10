@@ -5,7 +5,7 @@
 //
 // Needs playwright-core and a Playwright Chromium. Point PLAYWRIGHT_CORE at
 // an install if it is not resolvable from here, for example
-//   PLAYWRIGHT_CORE=~/Dev/kylnor.com/node_modules/playwright-core
+//   PLAYWRIGHT_CORE=/path/to/node_modules/playwright-core
 // Runs headless; it never needs a display.
 import { createRequire } from "node:module";
 import { readFileSync } from "node:fs";

@@ -20,7 +20,7 @@ domains (brandrune.com and www.brandrune.com, no wildcard route).
 ## Brand assets
 
 ```bash
-python3 -m venv .venv && .venv/bin/pip install shapely
+python3 -m venv .venv && .venv/bin/pip install shapely==2.2.0
 .venv/bin/python brand-src/build.py                 # SVGs
 PLAYWRIGHT_CORE=/path/to/node_modules/playwright-core node brand-src/render.mjs   # PNGs, og.png, apple-touch-icon.png
 .venv/bin/python brand-src/build.py zip             # brandrune-brand-assets.zip

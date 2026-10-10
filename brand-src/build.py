@@ -87,7 +87,8 @@ def horizontal(mode="carved", rune_color=None, word_color=C["ink"], tones=CARVED
     wx = r.bbox[2] + GAP - WM_X0
     x0, y0 = r.bbox[0] - pad, r.bbox[1] - pad
     vw, vh = wx + WM_X1 + pad - x0, r.height + 2 * pad
-    back = f'<rect x="{fmt(x0)}" y="{fmt(y0)}" width="{fmt(vw)}" height="{fmt(vh)}" fill="{bg}"/>' if bg else ""
+    # overhang by one unit so a rounded viewport never leaves a transparent edge row
+    back = f'<rect x="{fmt(x0 - 1)}" y="{fmt(y0 - 1)}" width="{fmt(vw + 2)}" height="{fmt(vh + 2)}" fill="{bg}"/>' if bg else ""
     body = back + rune_svg(r, mode, rune_color, tones) + wordmark_svg(wx, 0, word_color)
     return (x0, y0, vw, vh), body
 
@@ -102,7 +103,8 @@ def stacked(mode="carved", rune_color=None, word_color=C["ink"], tones=CARVED, p
     wy = r.bbox[3] + STACK_GAP - WM_Y0
     x0, y0 = WM_X0 - pad, -pad
     vw, vh = WM_W + 2 * pad, wy + WM_Y1 + pad - y0
-    back = f'<rect x="{fmt(x0)}" y="{fmt(y0)}" width="{fmt(vw)}" height="{fmt(vh)}" fill="{bg}"/>' if bg else ""
+    # overhang by one unit so a rounded viewport never leaves a transparent edge row
+    back = f'<rect x="{fmt(x0 - 1)}" y="{fmt(y0 - 1)}" width="{fmt(vw + 2)}" height="{fmt(vh + 2)}" fill="{bg}"/>' if bg else ""
     return (x0, y0, vw, vh), back + rune_svg(r, mode, rune_color, tones) + wordmark_svg(0, wy, word_color)
 
 
@@ -352,7 +354,10 @@ def package():
     files = sorted(p for p in OUT.iterdir() if p.suffix in (".svg", ".png") and not p.name.startswith("usage-"))
     with zipfile.ZipFile(target, "w", zipfile.ZIP_DEFLATED) as z:
         for p in files:
-            z.write(p, f"brandrune-brand/{p.name}")
+            # fixed timestamp so a rebuild gives the same zip bytes
+            info = zipfile.ZipInfo(f"brandrune-brand/{p.name}", date_time=(2026, 10, 10, 0, 0, 0))
+            info.compress_type = zipfile.ZIP_DEFLATED
+            z.writestr(info, p.read_bytes())
     print(f"packed {len(files)} files into {target.relative_to(ROOT)}")
 
 
