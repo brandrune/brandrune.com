@@ -25,7 +25,12 @@
   },
   "ratelimits": [
     { "name": "SUBSCRIBE_LIMITER", "namespace_id": "4417", "simple": { "limit": 5, "period": 60 } },
-    { "name": "CONFIRM_EMAIL_LIMITER", "namespace_id": "4420", "simple": { "limit": 2, "period": 60 } }
+    { "name": "CONFIRM_EMAIL_LIMITER", "namespace_id": "4420", "simple": { "limit": 2, "period": 60 } },
+    { "name": "GLOBAL_SEND_LIMITER", "namespace_id": "4421", "simple": { "limit": 10, "period": 60 } }
+  ],
+  // One confirmation email per inbox per day: keys are hashes, values expire after 24 hours.
+  "kv_namespaces": [
+    { "binding": "CONFIRM_COOLDOWN", "id": "5bffc292f4bc482a992105f1dc2c5d74" }
   ],
   "observability": { "enabled": false }
 }

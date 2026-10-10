@@ -54,23 +54,40 @@ parking list in `app.js` is copied from `brandrune.py` 0.3.0; keep them in step.
 ## Email signup (double opt-in)
 
 1. `POST /api/subscribe` checks the Origin (`SITE_ORIGIN`), rate limits per IP
-   (`SUBSCRIBE_LIMITER`, 5 a minute) and per address (`CONFIRM_EMAIL_LIMITER`, 2 a
-   minute), refuses a body over 2 KB by `Content-Length` before reading it (and cuts
-   off an undeclared one at the cap), validates the address, and treats a filled
-   honeypot field as success. A new address is stored in the Resend audience
-   "Brandrune updates" (`RESEND_AUDIENCE_ID`) as `unsubscribed: true`, and a
-   confirmation email goes out from `CONFIRM_FROM`. An address that is already
-   confirmed gets the same answer and no email, so the form does not reveal who is
-   on the list.
-2. The email links to `GET /confirm?t=<token>`. The token is
+   (`SUBSCRIBE_LIMITER`, 5 a minute), refuses a body over 2 KB by `Content-Length`
+   before reading it (and cuts off an undeclared one at the cap), validates the
+   address, and treats a filled honeypot field as success. Then it emails a
+   confirmation link from `CONFIRM_FROM`. **Nothing is written to the Resend
+   audience at this step.**
+2. Sends are capped three ways, all counted against the address with its `+tag`
+   dropped, lowercased, and for gmail.com and googlemail.com its dots dropped
+   (`capKey` in `src/worker.js`):
+   - one confirmation email per inbox per 24 hours: a KV entry (`CONFIRM_COOLDOWN`)
+     keyed on a SHA-256 of that address, with a 24 hour TTL;
+   - a burst limit on the same key (`CONFIRM_EMAIL_LIMITER`, 2 a minute), which
+     covers the time KV takes to agree across locations;
+   - a site-wide limit on all sends (`GLOBAL_SEND_LIMITER`, 10 a minute, keyed on a
+     constant). Workers rate limits count per Cloudflare location, so this is a cap
+     per location, not a hard global one.
+   An address that is already confirmed, or inside its cooldown, gets the same
+   answer and no email, so the form does not reveal who is on the list. If any cap
+   binding is missing, the endpoint answers 503 and sends nothing.
+3. The email links to `GET /confirm?t=<token>`. The token is
    `base64url(email).expiry.HMAC-SHA256` over a purpose tag, the address and the
    expiry, signed with `CONFIRM_SECRET`, good for 48 hours. The GET only shows a
    button; link scanners follow GETs, so nothing changes until a person clicks.
-3. `POST /api/confirm` checks the token again and sets `unsubscribed: false`, then
-   303s to `/confirmed/`.
+4. `POST /api/confirm` checks the token again and creates the contact in the
+   audience "Brandrune updates" (`RESEND_AUDIENCE_ID`) as subscribed. Resend treats
+   a create for an existing address as an update (checked 2026-10-10), so an address
+   that unsubscribed and confirms again is resubscribed; a 409 falls back to an
+   explicit update. Then it 303s to `/confirmed/`.
 
 No other data is kept and the site has no analytics; responses carry
 `Cache-Control: no-transform` so the edge does not inject a beacon.
+
+KV namespaces: `brandrune-confirm-cooldown` (production, bound in `wrangler.jsonc`)
+and `brandrune-confirm-cooldown-preview`. The preview worker uses the Resend
+audience "Brandrune updates (preview test)", never the production audience.
 
 Secrets, set with `wrangler secret put <NAME>`:
 

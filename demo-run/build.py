@@ -8,8 +8,14 @@ function, so the page shows exactly what the script printed.
 
 import importlib.util
 import json
+import os
 import sys
+import time
 from pathlib import Path
+
+# The run was read on Kyle's clock; render its timestamps the same way.
+os.environ["TZ"] = "America/Denver"
+time.tzset()
 
 here = Path(__file__).resolve().parent
 spec = importlib.util.spec_from_file_location("brandrune", sys.argv[1])
@@ -51,6 +57,14 @@ out = {
     "columns": ["name", "style", "length"] + tlds,
     "rows": rows,
 }
+# The exact stdout `check` printed for this run (emit() with no filters), so
+# the page can quote real lines and a test can hold it to them.
+shown = sorted(doc["names"], key=lambda e: br.sort_key(e, tlds))
+stdout = br.render_text(doc, shown, "")
+(here / "check-stdout.txt").write_text(stdout + "\n")
+stderr_first = f"checking {len(doc['names'])} names on {', '.join('.' + t for t in tlds)}" + (" with Vercel pricing" if doc.get("registrar") else "")
+(here / "check-stderr.txt").write_text(stderr_first + "\n")
+
 dest = here.parent / "public" / "demo" / "run.json"
 dest.write_text(json.dumps(out, separators=(",", ":")) + "\n")
 print(f"wrote {dest} ({dest.stat().st_size} bytes, {len(rows)} names)")

@@ -1,26 +1,47 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import worker, { validEmail, makeToken, readToken } from "../src/worker.js";
+import worker, { validEmail, makeToken, readToken, capKey } from "../src/worker.js";
 
 const AUDIENCE = "aud-123";
 const SECRET = "test-secret-0123456789abcdef";
 const CONTACTS = `https://api.resend.com/audiences/${AUDIENCE}/contacts`;
 
-function makeEnv({ limited = false, emailLimited = false, ...over } = {}) {
+function limiter(allow = true) {
+  const keys = [];
+  return { keys, limit: async ({ key }) => { keys.push(key); return { success: typeof allow === "function" ? allow(key) : allow }; } };
+}
+
+// A fake Workers KV namespace that records every write.
+function fakeKV() {
+  const store = new Map();
+  const puts = [];
+  return {
+    store, puts,
+    get: async (k) => (store.has(k) ? store.get(k) : null),
+    put: async (k, v, opts) => { puts.push({ k, v, opts }); store.set(k, v); },
+    delete: async (k) => { store.delete(k); },
+  };
+}
+
+function makeEnv({ limited = false, emailLimited = false, globalLimited = false, kv = fakeKV(), ...over } = {}) {
   return {
     RESEND_API_KEY: "test-key",
     RESEND_AUDIENCE_ID: AUDIENCE,
     CONFIRM_SECRET: SECRET,
     CONFIRM_FROM: "Brandrune <test@example.com>",
-    SUBSCRIBE_LIMITER: { limit: async () => ({ success: !limited }) },
-    CONFIRM_EMAIL_LIMITER: { limit: async () => ({ success: !emailLimited }) },
+    SUBSCRIBE_LIMITER: limiter(!limited),
+    CONFIRM_EMAIL_LIMITER: limiter(!emailLimited),
+    GLOBAL_SEND_LIMITER: limiter(!globalLimited),
+    CONFIRM_COOLDOWN: kv,
     ASSETS: { fetch: async () => new Response("<html>asset</html>", { headers: { "Content-Type": "text/html" } }) },
     ...over,
   };
 }
 
-// A fake Resend. `contacts` maps email -> { unsubscribed }. Every call is recorded.
-function fakeResend(contacts = {}, { failSend = false, failLookup = false } = {}) {
+// A fake Resend that behaves like the real one: creating a contact that
+// already exists answers 201 and updates it (read 2026-10-10 against the API).
+// `contacts` maps email -> { unsubscribed }. Every call is recorded.
+function fakeResend(contacts = {}, { failSend = false, failLookup = false, conflictOnCreate = false } = {}) {
   const calls = [];
   const handler = async (url, init = {}) => {
     const method = init.method || "GET";
@@ -29,7 +50,7 @@ function fakeResend(contacts = {}, { failSend = false, failLookup = false } = {}
     if (u === "https://api.resend.com/emails") return failSend ? new Response("no", { status: 500 }) : new Response(JSON.stringify({ id: "e1" }), { status: 200 });
     if (u === CONTACTS && method === "POST") {
       const body = JSON.parse(init.body);
-      if (contacts[body.email]) return new Response(JSON.stringify({ message: "Contact already exists" }), { status: 409 });
+      if (conflictOnCreate && contacts[body.email]) return new Response(JSON.stringify({ message: "Contact already exists" }), { status: 409 });
       contacts[body.email] = { unsubscribed: body.unsubscribed };
       return new Response(JSON.stringify({ object: "contact", id: "c1" }), { status: 201 });
     }
@@ -59,6 +80,7 @@ function post(body, { origin = "https://brandrune.com", type = "application/json
 }
 
 const sentEmails = (calls) => calls.filter((c) => c.url === "https://api.resend.com/emails");
+const creates = (calls) => calls.filter((c) => c.url === CONTACTS && c.method === "POST");
 const linkFrom = (email) => email.body.text.match(/https:\/\/\S+\/confirm\?t=\S+/)[0];
 
 test("validEmail accepts real shapes and rejects junk", () => {
@@ -66,19 +88,79 @@ test("validEmail accepts real shapes and rejects junk", () => {
   for (const bad of ["", "nope", "a@b", "a@b.c", ".a@example.com", "a..b@example.com", "a@-ex.com", "a b@example.com", "a@example.com\n", "x".repeat(65) + "@example.com", 42, null]) assert.equal(validEmail(bad), false, String(bad));
 });
 
-test("a new signup is stored as unsubscribed and gets one confirmation email", async () => {
+test("capKey folds the variants that reach one inbox", () => {
+  assert.equal(capKey("A.Person+news@Gmail.com"), "aperson@gmail.com");
+  assert.equal(capKey("a.p.e.r.s.o.n@googlemail.com"), "aperson@gmail.com");
+  assert.equal(capKey("first.last+x@example.com"), "first.last@example.com");
+  assert.equal(capKey("first.last@example.com"), "first.last@example.com");
+});
+
+test("a new signup sends one email and stores no contact", async () => {
   const r = fakeResend();
+  const env = makeEnv();
   await withFetch(r.handler, async () => {
-    const res = await worker.fetch(post({ email: "Someone@Example.com", website: "" }), makeEnv());
+    const res = await worker.fetch(post({ email: "Someone@Example.com", website: "" }), env);
     assert.equal(res.status, 200);
     assert.deepEqual(await res.json(), { ok: true, pending: true });
   });
-  assert.deepEqual(r.contacts["someone@example.com"], { unsubscribed: true });
+  assert.equal(creates(r.calls).length, 0, "no contact until the link is clicked");
+  assert.deepEqual(r.contacts, {});
   const mails = sentEmails(r.calls);
   assert.equal(mails.length, 1);
   assert.deepEqual(mails[0].body.to, ["someone@example.com"]);
   assert.equal(mails[0].body.from, "Brandrune <test@example.com>");
   assert.match(linkFrom(mails[0]), /^https:\/\/brandrune\.com\/confirm\?t=/);
+  assert.equal(env.CONFIRM_COOLDOWN.puts.length, 1);
+  assert.equal(env.CONFIRM_COOLDOWN.puts[0].opts.expirationTtl, 86400);
+  assert.doesNotMatch(env.CONFIRM_COOLDOWN.puts[0].k, /someone|example/, "the cooldown key is a hash, not the address");
+});
+
+test("one email per inbox per day: +tags and Gmail dots share the cooldown", async () => {
+  const r = fakeResend();
+  const kv = fakeKV();
+  await withFetch(r.handler, async () => {
+    for (const email of ["a.person@gmail.com", "aperson+1@gmail.com", "A.P.E.R.S.O.N+zz@googlemail.com", "a.person@gmail.com"]) {
+      const res = await worker.fetch(post({ email }), makeEnv({ kv }));
+      assert.equal(res.status, 200, email);
+    }
+  });
+  assert.equal(sentEmails(r.calls).length, 1);
+});
+
+test("after the cooldown expires a new email can go out", async () => {
+  const r = fakeResend();
+  const kv = fakeKV();
+  await withFetch(r.handler, async () => {
+    await worker.fetch(post({ email: "a.person@example.com" }), makeEnv({ kv }));
+    kv.store.clear(); // what the 24 hour TTL does
+    await worker.fetch(post({ email: "a.person@example.com" }), makeEnv({ kv }));
+  });
+  assert.equal(sentEmails(r.calls).length, 2);
+});
+
+test("the burst limiter counts the folded address", async () => {
+  const r = fakeResend();
+  const env = makeEnv({ emailLimited: true });
+  await withFetch(r.handler, async () => {
+    const res = await worker.fetch(post({ email: "A.Person+x@Gmail.com" }), env);
+    assert.equal(res.status, 200);
+  });
+  assert.deepEqual(env.CONFIRM_EMAIL_LIMITER.keys, ["aperson@gmail.com"]);
+  assert.equal(r.calls.length, 0);
+});
+
+test("the site-wide limiter is keyed on a constant and stops every send", async () => {
+  const r = fakeResend();
+  const env = makeEnv({ globalLimited: true });
+  await withFetch(r.handler, async () => {
+    const res = await worker.fetch(post({ email: "a.person@example.com" }), env);
+    assert.equal(res.status, 429);
+    const res2 = await worker.fetch(post({ email: "b.person@example.org" }), env);
+    assert.equal(res2.status, 429);
+  });
+  assert.deepEqual(env.GLOBAL_SEND_LIMITER.keys, ["all-confirmation-sends", "all-confirmation-sends"]);
+  assert.equal(sentEmails(r.calls).length, 0);
+  assert.equal(env.CONFIRM_COOLDOWN.puts.length, 0);
 });
 
 test("the confirmation link uses SITE_ORIGIN, so a preview links to itself", async () => {
@@ -96,32 +178,25 @@ test("an already confirmed address gets the same answer and no email", async () 
     assert.deepEqual(await res.json(), { ok: true, pending: true });
   });
   assert.equal(sentEmails(r.calls).length, 0);
-  assert.equal(r.calls.some((c) => c.method === "POST" && c.url === CONTACTS), false);
+  assert.equal(creates(r.calls).length, 0);
 });
 
-test("a pending address signing up again gets a fresh email and stays unsubscribed", async () => {
+test("an address that unsubscribed can sign up again, and stays unsubscribed until it confirms", async () => {
   const r = fakeResend({ "a.person@example.com": { unsubscribed: true } });
   await withFetch(r.handler, () => worker.fetch(post({ email: "a.person@example.com" }), makeEnv()));
   assert.equal(sentEmails(r.calls).length, 1);
   assert.deepEqual(r.contacts["a.person@example.com"], { unsubscribed: true });
 });
 
-test("the per-address limiter stops a second email without saying so", async () => {
-  const r = fakeResend();
-  await withFetch(r.handler, async () => {
-    const res = await worker.fetch(post({ email: "a.person@example.com" }), makeEnv({ emailLimited: true }));
-    assert.equal(res.status, 200);
-  });
-  assert.equal(r.calls.length, 0);
-});
-
-test("a failed send is reported, not hidden", async () => {
+test("a failed send is reported, and frees the cooldown for a retry", async () => {
   const r = fakeResend({}, { failSend: true });
+  const env = makeEnv();
   await withFetch(r.handler, async () => {
-    const res = await worker.fetch(post({ email: "a.person@example.com" }), makeEnv());
+    const res = await worker.fetch(post({ email: "a.person@example.com" }), env);
     assert.equal(res.status, 502);
     assert.equal((await res.json()).ok, false);
   });
+  assert.equal(env.CONFIRM_COOLDOWN.store.size, 0);
 });
 
 test("a failed contact lookup is reported and sends nothing", async () => {
@@ -133,14 +208,16 @@ test("a failed contact lookup is reported and sends nothing", async () => {
   assert.equal(sentEmails(r.calls).length, 0);
 });
 
-test("without CONFIRM_SECRET signups fail closed", async () => {
-  const r = fakeResend();
-  await withFetch(r.handler, async () => {
-    const res = await worker.fetch(post({ email: "a.person@example.com" }), makeEnv({ CONFIRM_SECRET: undefined }));
-    assert.equal(res.status, 503);
+for (const missing of ["CONFIRM_SECRET", "CONFIRM_COOLDOWN", "CONFIRM_EMAIL_LIMITER", "GLOBAL_SEND_LIMITER", "RESEND_API_KEY"]) {
+  test(`without ${missing} signups fail closed`, async () => {
+    const r = fakeResend();
+    await withFetch(r.handler, async () => {
+      const res = await worker.fetch(post({ email: "a.person@example.com" }), makeEnv({ [missing]: undefined }));
+      assert.equal(res.status, 503);
+    });
+    assert.equal(r.calls.length, 0);
   });
-  assert.equal(r.calls.length, 0);
-});
+}
 
 test("the honeypot answers success and stores nothing", async () => {
   const r = fakeResend();
@@ -272,8 +349,8 @@ test("a bad or expired link says so on GET", async () => {
   assert.equal(exp.status, 410);
 });
 
-test("pressing confirm subscribes the contact and lands on /confirmed/", async () => {
-  const r = fakeResend({ "a.person@example.com": { unsubscribed: true } });
+test("pressing confirm creates the contact as subscribed and lands on /confirmed/", async () => {
+  const r = fakeResend({});
   const t = await makeToken("a.person@example.com", SECRET);
   await withFetch(r.handler, async () => {
     const res = await worker.fetch(post({ t }, { path: "/api/confirm", type: "application/x-www-form-urlencoded", accept: "text/html" }), makeEnv());
@@ -281,16 +358,38 @@ test("pressing confirm subscribes the contact and lands on /confirmed/", async (
     assert.equal(res.headers.get("Location"), "/confirmed/");
   });
   assert.deepEqual(r.contacts["a.person@example.com"], { unsubscribed: false });
+  assert.equal(creates(r.calls).length, 1);
 });
 
-test("confirm recreates a contact that vanished in between", async () => {
-  const r = fakeResend({});
+test("confirm resubscribes an existing unsubscribed contact", async () => {
+  const r = fakeResend({ "a.person@example.com": { unsubscribed: true } });
+  const t = await makeToken("a.person@example.com", SECRET);
+  await withFetch(r.handler, () => worker.fetch(post({ t }, { path: "/api/confirm", type: "application/x-www-form-urlencoded", accept: "text/html" }), makeEnv()));
+  assert.deepEqual(r.contacts["a.person@example.com"], { unsubscribed: false });
+});
+
+test("confirm falls back to an update if Resend answers 409 on create", async () => {
+  const r = fakeResend({ "a.person@example.com": { unsubscribed: true } }, { conflictOnCreate: true });
   const t = await makeToken("a.person@example.com", SECRET);
   await withFetch(r.handler, async () => {
     const res = await worker.fetch(post({ t }, { path: "/api/confirm", type: "application/x-www-form-urlencoded", accept: "text/html" }), makeEnv());
     assert.equal(res.status, 303);
   });
   assert.deepEqual(r.contacts["a.person@example.com"], { unsubscribed: false });
+  assert.equal(r.calls.filter((c) => c.method === "PATCH").length, 1);
+});
+
+test("/confirm and /api/confirm answer 503 without CONFIRM_SECRET", async () => {
+  const r = fakeResend({});
+  const t = await makeToken("a.person@example.com", SECRET);
+  const env = makeEnv({ CONFIRM_SECRET: undefined });
+  await withFetch(r.handler, async () => {
+    const get = await worker.fetch(new Request(`https://brandrune.com/confirm?t=${t}`), env);
+    assert.equal(get.status, 503);
+    const postRes = await worker.fetch(post({ t }, { path: "/api/confirm", type: "application/x-www-form-urlencoded", accept: "text/html" }), env);
+    assert.equal(postRes.status, 503);
+  });
+  assert.equal(r.calls.length, 0);
 });
 
 test("confirm refuses a forged token, a foreign Origin and a GET", async () => {

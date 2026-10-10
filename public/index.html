@@ -6,7 +6,7 @@
 <meta name="color-scheme" content="light">
 <meta name="theme-color" content="#fafaf8">
 <title>Brandrune: names you can read, domains that are really open</title>
-<meta name="description" content="A free naming skill for Claude Code and Codex. Your coding agent writes about 150 names, a script asks the domain registries about every one, and only a registry's 'no such domain' counts as open.">
+<meta name="description" content="A free Claude Code skill for naming what you build. Claude writes about 150 names, a script asks the domain registries about every one, and only a registry's 'no such domain' counts as open.">
 <link rel="canonical" href="https://brandrune.com/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -14,18 +14,18 @@
 <meta property="og:site_name" content="Brandrune">
 <meta property="og:url" content="https://brandrune.com/">
 <meta property="og:title" content="Brandrune: names you can read, domains that are really open">
-<meta property="og:description" content="A free naming skill for Claude Code and Codex. Plain-text names, real filters, and a domain is only called open when the registry says it has no record of it.">
+<meta property="og:description" content="A free Claude Code skill for naming what you build. Plain-text names, real filters, and a domain is only called open when the registry says it has no record of it.">
 <meta property="og:image" content="https://brandrune.com/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Brandrune: names you can read, domains that are really open.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Brandrune: names you can read, domains that are really open">
-<meta name="twitter:description" content="A free naming skill for Claude Code and Codex. Plain-text names, real filters, registry-checked domains.">
+<meta name="twitter:description" content="A free Claude Code skill for naming what you build. Plain-text names, real filters, registry-checked domains.">
 <meta name="twitter:image" content="https://brandrune.com/og.png">
 <link rel="stylesheet" href="/style.css">
 <link rel="stylesheet" href="/home.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Brandrune","applicationCategory":"DeveloperApplication","operatingSystem":"macOS, Linux, Windows (Claude Code or Codex)","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://brandrune.com/","description":"A free naming skill for Claude Code and Codex, with registry-checked domain availability."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Brandrune","applicationCategory":"DeveloperApplication","operatingSystem":"macOS, Linux, Windows (Claude Code)","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://brandrune.com/","description":"A free Claude Code skill for naming what you build, with registry-checked domain availability."}</script>
 </head>
 <body class="home">
 <a class="skip" href="#main">Skip to content</a>
@@ -48,14 +48,15 @@
   <section class="hero" aria-labelledby="hero-h">
     <div class="wrap hero-grid">
       <div class="hero-copy">
-        <p class="kicker">Free naming skill for Claude Code and Codex</p>
+        <p class="kicker">A free Claude Code skill</p>
         <h1 id="hero-h">Names you can read. <span class="h1-line">Domains that are really open.</span></h1>
-        <p class="lede">Describe what you are building in a sentence. Your coding agent writes about 150 names, and a small script asks the domain registries about every one. A name is only called open when the registry says it has no record of it.</p>
+        <p class="lede">Describe what you are building in a sentence. Claude writes about 150 names, and a small script asks the domain registries about every one. A name is only called open when the registry says it has no record of it.</p>
         <div class="cta-row">
           <a class="btn btn-primary" href="#install">Install it, free</a>
-          <a class="btn btn-ghost" href="#how">Watch a run</a>
+          <a class="btn btn-ghost" href="#run">Watch a run</a>
         </div>
         <p class="hero-note">Free, forever. No account, no API key, no paid tier.</p>
+        <p class="hero-proof">Checked with the registries themselves, never guessed.</p>
       </div>
       <div class="hero-art">
         <svg class="rune" viewBox="0 0 240 240" role="img" aria-labelledby="rune-t">
@@ -98,13 +99,6 @@
         </svg>
       </div>
     </div>
-    <div class="wrap">
-      <ul class="sources" aria-label="Where the answers come from">
-        <li><span class="src-tld">.com .net</span> Verisign RDAP</li>
-        <li><span class="src-tld">most others</span> the registry's RDAP server, from IANA's list</li>
-        <li><span class="src-tld">.io .co .sh .me .so .gg</span> the registry's WHOIS</li>
-      </ul>
-    </div>
   </section>
 
   <section id="how" class="how" aria-labelledby="how-h">
@@ -113,23 +107,34 @@
       <h2 id="how-h">One sentence in. About 150 checked names out.</h2>
       <ol class="steps">
         <li><span class="n" aria-hidden="true">1</span><h3>You describe it</h3><p>One or two sentences, plus any rules: a length, a word it must contain, the extensions you care about.</p></li>
-        <li><span class="n" aria-hidden="true">2</span><h3>Your agent writes the names</h3><p>Claude Code or Codex writes about 150, spread across eight styles, held to names a person can say after reading once.</p></li>
+        <li><span class="n" aria-hidden="true">2</span><h3>Claude writes the names</h3><p>Your own Claude Code session writes about 150, spread across eight styles, held to names a person can say after reading once.</p></li>
         <li><span class="n" aria-hidden="true">3</span><h3>A script asks the registries</h3><p>Every name, every extension, in the same run. Only a registry's "no such domain" counts as open.</p></li>
       </ol>
 
       <div class="run" id="run" data-src="/demo/run.json">
         <div class="run-bar">
           <span class="run-title">A real run, replayed</span>
-          <span class="run-meta" id="run-meta">Recorded 2026-10-10 on an invented project. 150 names, .com and .ai.</span>
+          <span class="run-meta" id="run-meta">Recorded 2026-10-10 on an invented project. The run took 279 seconds; this replay is sped up.</span>
           <button type="button" class="run-replay" id="run-replay" hidden>Replay</button>
         </div>
-        <div class="run-term" aria-hidden="true">
-          <p class="t-line t-prompt"><span class="t-caret">&gt;</span> <span id="run-typed">Name my app. A plant-care app that tells you when to water, based on the light in your room and the weather outside.</span></p>
-          <p class="t-line t-agent" id="run-l1">Writing 150 names across 8 styles: 40 compound, 25 blend, 20 phrase, 20 invented, 15 respelled, 10 real-word, 10 prefixed, 10 foreign.</p>
-          <p class="t-line t-cmd" id="run-l2"><span class="t-dollar">$</span> python3 brandrune.py check names.txt --tlds com,ai</p>
-          <p class="t-line t-out" id="run-l3">Asking rdap.verisign.com for .com and rdap.identitydigital.services for .ai</p>
-          <p class="t-line t-out t-tally" id="run-l4">.com <b id="tally-com">16 open, 29 parked, 105 taken</b> <span class="t-sep">|</span> .ai <b id="tally-ai">83 open, 3 open*, 2 parked, 31 taken, 31 unknown</b></p>
-          <p class="t-line t-out" id="run-l5">Done in 278.9 seconds. The .ai registry rate limited 31 lookups with HTTP 429, so those are unknown, not open.</p>
+        <div class="run-term">
+          <p class="t-line t-prompt"><span class="t-caret">&gt;</span> <span id="run-typed">Name my app. A plant-care app that tells you when to water, based on the light in your room and the weather outside.</span><span class="t-rest" id="run-rest"></span></p>
+          <p class="t-note" id="run-l1">Claude writes 150 names to names.txt in 8 styles (40 compound, 25 blend, 20 phrase, 20 invented, 15 respelled, 10 real-word, 10 prefixed, 10 foreign), then runs the checker with a Vercel token set (Vercel sells domains, so its API can confirm the real price and catch premium and reserved names). Below, the lines in monospace are what the script printed.</p>
+          <p class="t-line t-cmd" id="run-l2"><span class="t-dollar">$</span> python3 brandrune.py check names.txt --tlds com,ai --description-file about.txt --out results.json --html names.html</p>
+          <p class="t-line t-real" id="run-l3">checking 150 names on .com, .ai with Vercel pricing</p>
+          <div class="t-done" id="run-done">
+          <p class="t-line t-real">150 of 150 names, checked 2026-10-10 12:03 MDT</p>
+          <p class="t-line t-real t-end">.com across all 150: 16 open, 105 taken, 29 parked</p>
+          <p class="t-line t-real t-end">open* = the registry has no record, but the price was not verified, so a premium</p>
+          <p class="t-line t-real t-end">        or reserved name is not ruled out. See the row's note in results.json.</p>
+          <p class="t-line t-real t-end">unknown = no usable registry answer. Not counted as open.</p>
+          </div>
+        </div>
+        <div class="tally" id="run-tally" aria-live="off">
+          <p class="tally-head">Registry answers so far</p>
+          <p class="tally-row"><span class="tally-tld">.com</span><span class="tally-cell" data-size="16 open, 29 parked, 105 taken (150 of 150)"><span class="tally-live" id="tally-com">16 open, 29 parked, 105 taken (150 of 150)</span></span></p>
+          <p class="tally-row"><span class="tally-tld">.ai</span><span class="tally-cell" data-size="83 open, 3 open*, 2 parked, 31 taken, 31 unknown (150 of 150)"><span class="tally-live" id="tally-ai">83 open, 3 open*, 2 parked, 31 taken, 31 unknown (150 of 150)</span></span></p>
+          <p class="tally-note">The .ai registry rate limited 31 lookups (HTTP 429). The script retried, then marked them unknown, not open.</p>
         </div>
         <div class="run-tools" id="run-tools">
           <span class="rt-label">Filter the run</span>
@@ -144,15 +149,19 @@
           </label>
           <span class="rt-count" id="run-count" role="status" aria-live="polite">150 of 150</span>
         </div>
-        <div class="wall-frame">
+        <div class="wall-wrap">
+        <div class="wall-frame" id="run-frame">
           <ul class="wall" id="run-wall" aria-label="The 150 names from the recorded run, with their .com and .ai status"></ul>
           <noscript><p class="wall-empty">The replay needs JavaScript. The full results page below works without it.</p></noscript>
         </div>
+        <p class="wall-cue off" id="run-cue" aria-hidden="true"><span>Scroll the list for all 150</span></p>
+        </div>
         <div class="run-answer" id="run-answer">
-          <p class="ra-head">What the agent says back</p>
-          <p class="ra-pick"><span class="ra-label">Pick:</span> <span class="ra-name">shadule</span> <span class="chip open">.com open $11</span> <span class="chip open">.ai open $160/2y</span></p>
-          <p class="ra-why">Shade plus schedule, seven letters, says what the app does. The registry had no record of either domain, and the registrar confirmed the standard price.</p>
-          <p class="ra-alts"><span class="ra-label">Also open on .com:</span> sprigtime, palmpace, verdinity, askyourplant, giveitadrink</p>
+          <p class="ra-head">The agent's short answer</p>
+          <p class="ra-note">A summary in the shape the skill asks for, written from this run. Not captured output.</p>
+          <p class="ra-pick"><span class="ra-label">Pick:</span> <span class="ra-name">sprigtime</span> <span class="chip open">.com open $11</span> <span class="chip open">.ai open $160/2y</span></p>
+          <p class="ra-why">Sprig plus time: a plant and a schedule in one easy word, nine letters, said the way it is spelled. The registry had no record of either domain, and Vercel confirmed the standard price.</p>
+          <p class="ra-alts"><span class="ra-label">Also open on .com:</span> askyourplant, palmpace, shadule, verdinity, giveitadrink</p>
           <p class="ra-link"><a href="/sample/plant-care/">Open the full results page from this run</a>, the same page the skill writes on your machine.</p>
         </div>
       </div>
@@ -186,7 +195,7 @@
     <div class="wrap">
       <p class="kicker">Next to Namelix</p>
       <h2 id="compare-h">Four things it does differently</h2>
-      <p class="section-lede">Namelix is the generator most people try first, and it is good at volume and at logos. If you want a logo, use it. These are the four places Brandrune goes another way.</p>
+      <p class="section-lede">Namelix is a popular name generator, and it is good at volume and at logos. If you want a logo, use it. These are the four places Brandrune goes another way.</p>
       <div class="vs" role="table" aria-label="Namelix and Brandrune, side by side">
         <div class="vs-row vs-headrow" role="row">
           <span class="vs-topic" role="columnheader"><span class="sr">Topic</span></span>
@@ -232,11 +241,11 @@
             <ol class="steps-down">
               <li><p class="q">Does that registry report nic.<i>ext</i> or google.<i>ext</i> as registered?</p>
                 <p class="leaf"><span class="leaf-if">no</span> <span class="chip unknown">unknown</span> <span class="leaf-why">the registry failed its sanity check</span></p></li>
-              <li><p class="q">With a free Vercel token, the registrar is asked for the price</p>
+              <li><p class="q">With a free Vercel token, Vercel is asked whether it sells the name and at what price. Vercel sells domains, so its API can confirm the real price.</p>
                 <p class="leaf"><span class="leaf-if">standard price</span> <span class="chip open">open $11</span></p>
                 <p class="leaf"><span class="leaf-if">well above standard</span> <span class="chip premium">premium</span></p>
                 <p class="leaf"><span class="leaf-if">will not sell it</span> <span class="chip reserved">reserved</span></p>
-                <p class="leaf"><span class="leaf-if">no token</span> <span class="chip openstar">open*</span> <span class="leaf-why">no record, price not verified</span></p></li>
+                <p class="leaf"><span class="leaf-if">no token, or no price came back</span> <span class="chip openstar">open*</span> <span class="leaf-why">no record, price not verified</span></p></li>
             </ol>
           </li>
           <li class="branch b-record">
@@ -258,6 +267,12 @@
           </li>
         </ol>
       </div>
+      <p class="decide-sub">Where the answers come from</p>
+      <ul class="sources sources-decide" aria-label="Where the answers come from">
+        <li><span class="src-tld">.com .net</span> Verisign RDAP</li>
+        <li><span class="src-tld">most others</span> the registry's RDAP server, from IANA's list</li>
+        <li><span class="src-tld">.io .co .sh .me .so .gg</span> the registry's WHOIS</li>
+      </ul>
       <p class="decide-note">Redirects are never followed. Every answer is saved in <code>results.json</code> with the URL or server that gave it and the time.</p>
     </div>
   </section>
@@ -273,9 +288,9 @@
           <div class="cmd"><code>/plugin install brandrune@brandrune</code><button type="button" class="copy" data-copy="/plugin install brandrune@brandrune" aria-label="Copy the install command">Copy</button></div>
         </div>
         <div class="install-card">
-          <h3>Codex</h3>
-          <div class="cmd"><code>$skill-installer install https://github.com/brandrune/brandrune/tree/main/skills/brandrune</code><button type="button" class="copy" data-copy="$skill-installer install https://github.com/brandrune/brandrune/tree/main/skills/brandrune" aria-label="Copy the Codex install command">Copy</button></div>
-          <p class="small">Then invoke it as <code>$brandrune</code>, or just describe a naming task.</p>
+          <h3>Or copy the skill by hand</h3>
+          <div class="cmd"><code>git clone https://github.com/brandrune/brandrune</code><button type="button" class="copy" data-copy="git clone https://github.com/brandrune/brandrune" aria-label="Copy the clone command">Copy</button></div>
+          <div class="cmd"><code>cp -r brandrune/skills/brandrune ~/.claude/skills/</code><button type="button" class="copy" data-copy="cp -r brandrune/skills/brandrune ~/.claude/skills/" aria-label="Copy the copy command">Copy</button></div>
         </div>
       </div>
       <div class="ask">
@@ -283,7 +298,7 @@
         <p class="ask-quote">"Name my app. It's a plant-care app that tells you when to water. Short, and the .com has to be open."</p>
         <p class="ask-quote">"Only 8 letters or fewer. Has to have 'leaf' in it. Just compounds."</p>
       </div>
-      <p class="small">It needs Python 3.9 or newer, which macOS and most Linux systems already have. Nothing to pip install. Optional: a free Vercel token turns <code>open*</code> into a priced <code>open</code> and catches premium and reserved names. The manual install is on <a href="https://github.com/brandrune/brandrune">GitHub</a>.</p>
+      <p class="small">It needs Python 3.9 or newer, which macOS and most Linux systems already have. Nothing to pip install. Optional: a free Vercel token turns <code>open*</code> into a priced <code>open</code>. Vercel sells domains, so its API can confirm the real price and catch premium and reserved names. Source and docs are on <a href="https://github.com/brandrune/brandrune">GitHub</a>.</p>
     </div>
   </section>
 
@@ -296,11 +311,11 @@
       <div class="faq-list">
         <details>
           <summary>Why is it free?</summary>
-          <p>Because it costs almost nothing to run. Your own coding agent writes the names, and the registries answer lookups for free. There is no server doing the work, so there is nothing to charge for. It is MIT licensed, and there is no paid tier coming.</p>
+          <p>Because it costs almost nothing to run. Your own Claude Code writes the names, and the registries answer lookups for free. There is no server doing the work, so there is nothing to charge for. It is MIT licensed, and there is no paid tier coming.</p>
         </details>
         <details>
           <summary>What data leaves my machine?</summary>
-          <p>The candidate names go to the domain registries that answer for them, and to Vercel's domain API only if you set a Vercel token. Your description stays in your own Claude Code or Codex session. The skill has no server and collects nothing. The checker on this page sends the name you type from your browser to Verisign, and nowhere else. This website stores only the email you choose to give below.</p>
+          <p>The candidate names go to the domain registries that answer for them, and to Vercel's domain API only if you set a Vercel token (Vercel sells domains, so its API can confirm the real price). Your description stays in your own Claude Code session. The skill has no server and collects nothing. The checker on this page sends the name you type from your browser to Verisign, and nowhere else. This website stores only the email you choose to give below.</p>
         </details>
         <details>
           <summary>Why not just ask the model if a domain is free?</summary>
@@ -312,15 +327,15 @@
         </details>
         <details>
           <summary>Does it check trademarks?</summary>
-          <p>No. For the names you lean toward, your agent runs a quick web search for the name in your field and points you to the USPTO search. Clearing a trademark is your call.</p>
+          <p>No. For the names you lean toward, Claude runs a quick web search for the name in your field and points you to the USPTO search. Clearing a trademark is your call.</p>
         </details>
         <details>
           <summary>Which extensions work?</summary>
-          <p>.com and .net through Verisign, most others through their registry's RDAP server, and .io, .co, .sh, .me, .so and .gg through WHOIS. Extensions with neither, such as .us, .de and .co.uk, come back <code>unknown</code>, never open.</p>
+          <p>.com and .net through Verisign, most others through their registry's RDAP server, and .io, .co, .sh, .me, .so and .gg through WHOIS. Extensions with neither, such as .us and .de, come back <code>unknown</code>, never open. Two-part extensions such as .co.uk are refused before anything is checked.</p>
         </details>
         <details>
-          <summary>Do I need Claude Code or Codex?</summary>
-          <p>For the naming, yes, either one. The checker also runs on its own: <code>python3 brandrune.py verify yourname.com</code>.</p>
+          <summary>Do I need Claude Code?</summary>
+          <p>For the naming, yes. The checker also runs on its own: <code>python3 brandrune.py verify yourname.com</code>.</p>
         </details>
         <details>
           <summary>It used to be called weavenames.</summary>
@@ -336,7 +351,7 @@
     <div id="updates" class="updates">
       <div class="updates-copy">
         <h2 id="updates-h">Get updates</h2>
-        <p>Optional. An email when something new ships, and nothing else. You get one confirmation email first, and nothing more until you click it.</p>
+        <p>Optional. An email when something new ships, and nothing else. You get one confirmation email first, and you are not on the list until you click it.</p>
       </div>
       <form id="signup" class="signup" action="/api/subscribe" method="post" novalidate aria-labelledby="updates-h">
         <label for="email">Email address</label>

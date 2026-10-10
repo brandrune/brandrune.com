@@ -18,13 +18,14 @@
 
 /* --- hero --------------------------------------------------------------- */
 
-.hero { border-top: 0; padding: 72px 0 0; overflow: hidden; }
+.hero { border-top: 0; padding: 72px 0 72px; overflow: hidden; }
 .hero-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.6fr); gap: 40px; align-items: center; }
 .hero h1 { font-size: clamp(40px, 5.2vw, 70px); line-height: 1.03; letter-spacing: -0.035em; font-weight: 750; margin: 0 0 26px; }
 .h1-line { display: block; color: var(--ochre); }
 .hero .lede { font-size: 20px; line-height: 1.55; max-width: 620px; margin: 0 0 32px; color: #33332f; }
 .cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin: 0 0 16px; }
 .hero-note { color: var(--stone); font-size: 15px; margin: 0; }
+.hero-proof { margin: 28px 0 0; padding-top: 18px; border-top: 1px solid var(--rule); font-weight: 600; color: var(--ink); max-width: 620px; }
 .hero-art { display: flex; justify-content: center; }
 
 .rune { width: 100%; max-width: 420px; height: auto; display: block; overflow: visible; }
@@ -71,8 +72,10 @@
 @keyframes node-pop { from { transform: scale(0); } to { transform: scale(1); } }
 @keyframes carve { from { opacity: 0; transform: translate(-7px, -4px) scale(0.94); } to { opacity: 1; transform: none; } }
 
+.decide-sub { margin: 36px 0 0; font-weight: 650; text-align: center; }
 .sources { list-style: none; margin: 56px 0 0; padding: 18px 0; border-top: 1px solid var(--rule); display: flex; flex-wrap: wrap; gap: 10px 32px; font-size: 15px; color: var(--stone); }
 .sources li { display: flex; align-items: baseline; gap: 10px; }
+.sources-decide { margin: 10px 0 0; justify-content: center; border-top: 0; padding-top: 0; }
 .src-tld { flex: none; white-space: nowrap; font: 600 13px var(--mono); color: var(--ink); background: var(--card); border: 1px solid var(--rule); border-radius: 5px; padding: 1px 7px; }
 
 /* --- how it works and the replay ---------------------------------------- */
@@ -82,22 +85,42 @@
 .how .steps .n { display: inline-flex; width: auto; height: auto; border-radius: 0; background: none; font: 650 13px var(--mono); color: var(--ochre); margin: 0 0 14px; padding: 0 0 6px; border-bottom: 2px solid var(--ochre-tint); }
 .how .steps p { margin: 0; color: var(--stone); font-size: 16px; }
 
-.run { background: var(--card); border: 1px solid #dddcd5; border-radius: 16px; overflow: hidden; box-shadow: 0 30px 60px -40px rgba(29, 29, 27, 0.35); }
+.run { scroll-margin-top: 16px; background: var(--card); border: 1px solid #dddcd5; border-radius: 16px; overflow: hidden; box-shadow: 0 30px 60px -40px rgba(29, 29, 27, 0.35); }
 .run-bar { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; padding: 12px 18px; border-bottom: 1px solid var(--rule); background: #f6f5f1; }
 .run-title { font-weight: 650; font-size: 15px; }
 .run-meta { color: var(--stone); font-size: 14px; flex: 1 1 260px; }
 .run-replay { font: 600 14px var(--sans); color: var(--ochre); background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 6px 12px; cursor: pointer; }
 .run-replay:hover { border-color: var(--ochre); }
+/* The button's space is held while it is hidden, so showing it moves nothing. */
+.run-replay[hidden] { display: inline-block; visibility: hidden; }
 
 .run-term { font: 14px/1.65 var(--mono); padding: 18px 20px 14px; color: var(--ink); border-bottom: 1px solid var(--rule); }
 .t-line { margin: 0 0 4px; overflow-wrap: anywhere; }
 .t-caret, .t-dollar { color: var(--ochre); font-weight: 700; }
 .t-prompt { font-weight: 600; margin-bottom: 10px; }
-.t-agent, .t-out { color: var(--stone); }
-.t-tally b { color: var(--ink); font-weight: 600; }
-.t-sep { color: #c9c7bf; padding: 0 4px; }
-.run.playing .t-line.pending, .run.playing .run-answer.pending { visibility: hidden; }
-.run.playing .t-typing::after { content: ""; display: inline-block; width: 0.55em; height: 1.05em; margin-left: 2px; vertical-align: -0.15em; background: var(--ochre); animation: blink 0.9s steps(1) infinite; }
+.t-real { color: #33332f; }
+.t-pre { white-space: pre-wrap; }
+.t-note { font: italic 14px/1.5 var(--sans); color: var(--stone); margin: 6px 0 8px; }
+.t-done { position: relative; margin-top: 10px; overflow-x: auto; scrollbar-width: thin; }
+/* While the lookups run, the summary's space is held and says what it is waiting for. */
+.run.playing .t-done.pending::before { content: "the script prints its summary when every lookup is back ..."; visibility: visible; position: absolute; top: 0; left: 0; font: italic 14px/1.6 var(--sans); color: var(--stone); }
+/* Script output keeps its own line breaks and columns, like a terminal. */
+.t-done .t-real { white-space: pre; overflow-wrap: normal; }
+/* The whole prompt is always laid out; typing only reveals it, so nothing reflows. */
+.t-rest { visibility: hidden; }
+.run.playing .pending { visibility: hidden; }
+.run.playing .t-typing::after { content: ""; display: inline-block; width: 0.55em; height: 1.05em; margin-right: -0.55em; vertical-align: -0.15em; background: var(--ochre); animation: blink 0.9s steps(1) infinite; }
+
+/* Page annotation, not script output: live counts while the answers land. */
+.tally { padding: 12px 20px 12px; border-bottom: 1px solid var(--rule); background: #fcfbf8; font-size: 14px; }
+.tally-head { margin: 0 0 4px; font-weight: 650; }
+.tally-row { display: grid; grid-template-columns: 3.2em minmax(0, 1fr); gap: 8px; margin: 0 0 2px; }
+.tally-tld { font: 600 13px/1.6 var(--mono); }
+.tally-cell { display: grid; }
+/* The final text sits invisibly under the live one and sets the height. */
+.tally-cell > span, .tally-cell::before { grid-area: 1 / 1; }
+.tally-cell::before { content: attr(data-size); visibility: hidden; }
+.tally-note { margin: 6px 0 0; color: var(--stone); }
 @keyframes blink { 50% { opacity: 0; } }
 
 .run-tools { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; padding: 12px 18px; border-bottom: 1px solid var(--rule); }
@@ -108,7 +131,13 @@
 .rt-select select { padding-right: 10px; }
 .rt-count { margin-left: auto; color: var(--stone); font-size: 14px; }
 
-.wall-frame { max-height: 470px; overflow-y: auto; background: var(--paper); padding: 14px; scrollbar-width: thin; }
+.wall-wrap { position: relative; }
+.wall-frame { height: 470px; overflow-y: auto; background: var(--paper); padding: 14px; scrollbar-width: thin; }
+/* A scroll cue, since phones and macOS hide the scrollbar. */
+.wall-cue { position: absolute; left: 0; right: 0; bottom: 0; height: 72px; margin: 0; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 10px; pointer-events: none; background: linear-gradient(rgba(250, 250, 248, 0), #fafaf8 70%); transition: opacity 0.2s; }
+.wall-cue span { font-size: 13px; font-weight: 600; color: var(--ink); background: var(--card); border: 1px solid #dddcd5; border-radius: 999px; padding: 4px 12px; }
+.wall-cue span::after { content: " \2193"; }
+.wall-cue.off { opacity: 0; }
 .wall { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 8px; min-height: 120px; }
 .tile { background: var(--card); border: 1px solid var(--rule); border-radius: 9px; padding: 9px 11px 10px; }
 .tile .tn { font-size: 17px; font-weight: 600; letter-spacing: 0.01em; line-height: 1.3; overflow-wrap: anywhere; }
@@ -126,6 +155,7 @@
 @keyframes chip-flip { from { transform: rotateX(90deg); } to { transform: none; } }
 
 .run-answer { padding: 20px 22px 22px; border-top: 1px solid var(--rule); }
+.ra-note { margin: -4px 0 12px; font-size: 13px; color: var(--stone); font-style: italic; }
 .ra-head { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--stone); font-weight: 650; }
 .ra-pick { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; margin: 0 0 6px; }
 .ra-label { font-weight: 650; }
@@ -253,10 +283,17 @@
   .home .top nav a { display: inline; }
   .home .top nav a[href="#how"], .home .top nav a[href="#check"], .home .top nav a[href="#faq"] { display: none; }
   .sources { flex-direction: column; gap: 10px; margin-top: 40px; }
+  .sources-decide { margin-top: 10px; }
+  .decide-sub { text-align: left; }
   .run-term { font-size: 13px; padding: 14px 14px 10px; }
+  .t-done .t-real { font-size: 12px; white-space: pre-wrap; }
+  .run-bar { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 6px 12px; align-items: center; padding: 12px 14px; }
+  .run-meta { grid-column: 1 / -1; grid-row: 2; font-size: 13px; }
+  .run-replay { grid-column: 2; grid-row: 1; }
   .run-tools { padding: 10px 12px; }
   .rt-count { margin-left: 0; width: 100%; }
-  .wall-frame { max-height: 420px; padding: 10px; }
+  .wall-frame { height: 420px; padding: 10px; }
+  .tally { padding: 10px 14px; }
   .wall { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
   .tile { padding: 8px 9px; }
   .tile .tn { font-size: 15px; }

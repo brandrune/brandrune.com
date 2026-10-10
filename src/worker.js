@@ -1,20 +1,24 @@
 // brandrune.com: static site plus the email signup.
 //
-//   POST /api/subscribe  stores the address in the Resend audience "Brandrune
-//                        updates" as unsubscribed (pending) and emails a
-//                        confirmation link.
+//   POST /api/subscribe  emails a signed confirmation link. Nothing goes into
+//                        the Resend audience yet.
 //   GET  /confirm?t=...  a page with one button. Link scanners follow GETs, so
 //                        the GET never changes anything.
-//   POST /api/confirm    checks the signed token and marks the contact
-//                        subscribed, then sends the browser to /confirmed/.
+//   POST /api/confirm    checks the signed token, adds the address to the
+//                        audience "Brandrune updates" as subscribed, then sends
+//                        the browser to /confirmed/.
 //
-// Nothing else is stored and nothing is tracked.
+// Sending is capped three ways, so the form cannot flood an inbox: one
+// confirmation email per address per day (KV, keyed on a hash of the address
+// with +tags and Gmail dots removed), a short burst limit on the same key, and
+// a site-wide limit on all sends. Nothing else is stored and nothing is tracked.
 
 const CANONICAL_HOST = "brandrune.com";
 const DEFAULT_ORIGIN = "https://brandrune.com";
 const DEFAULT_FROM = "Brandrune <brandrune@kylnor.com>";
 const MAX_BODY_BYTES = 2048;
 const TOKEN_TTL_SECONDS = 48 * 3600;
+const COOLDOWN_SECONDS = 24 * 3600;
 
 const BASE_HEADERS = {
   "X-Content-Type-Options": "nosniff",
@@ -233,18 +237,39 @@ function confirmEmail(link) {
     "",
     "The link works for 48 hours. If this was not you, ignore this email and the address stays off the list.",
     "",
-    "Brandrune, the free naming skill for Claude Code and Codex",
+    "Brandrune, the free naming skill for Claude Code",
     "https://brandrune.com",
   ].join("\n");
   const html = `<!doctype html><html><body style="margin:0;background:#fafaf8;color:#1d1d1b;font:16px/1.6 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif"><div style="max-width:520px;margin:0 auto;padding:32px 24px"><p style="margin:0 0 20px;font-weight:700;font-size:19px;color:#9c3d1c">Brandrune</p><p style="margin:0 0 16px">Someone, hopefully you, asked for Brandrune updates at this address.</p><p style="margin:0 0 24px"><a href="${esc(link)}" style="display:inline-block;background:#9c3d1c;color:#ffffff;text-decoration:none;font-weight:600;padding:12px 18px;border-radius:8px">Confirm my email</a></p><p style="margin:0 0 16px;color:#5f5f5a;font-size:14px">The link works for 48 hours. If this was not you, ignore this email and the address stays off the list.</p><p style="margin:0;color:#5f5f5a;font-size:14px">Or paste this into your browser:<br><a href="${esc(link)}" style="color:#9c3d1c;word-break:break-all">${esc(link)}</a></p></div></body></html>`;
   return { text, html };
 }
 
+// --- send caps ---------------------------------------------------------------
+
+// The address the caps count against: lowercased, +tag dropped, and for Gmail
+// the dots dropped and googlemail.com folded in, since all of those reach the
+// same inbox. Used only for counting; the email goes to what was typed.
+export function capKey(email) {
+  const e = String(email).trim().toLowerCase();
+  const at = e.lastIndexOf("@");
+  let local = e.slice(0, at);
+  let domain = e.slice(at + 1);
+  local = local.split("+")[0];
+  if (domain === "googlemail.com") domain = "gmail.com";
+  if (domain === "gmail.com") local = local.replace(/\./g, "");
+  return `${local}@${domain}`;
+}
+
+async function cooldownKey(email) {
+  const digest = new Uint8Array(await crypto.subtle.digest("SHA-256", enc.encode(capKey(email))));
+  return "confirm-sent:" + Array.from(digest, (b) => b.toString(16).padStart(2, "0")).join("");
+}
+
 // --- POST /api/subscribe -----------------------------------------------------
 
 async function subscribe(request, env) {
   const wantsJson = (request.headers.get("Accept") || "").includes("application/json");
-  const PENDING = "Check your inbox. Click the link in the email from Brandrune to confirm.";
+  const PENDING = "Check your inbox. Click the link in the email from Brandrune to confirm. One confirmation email goes to an address per day.";
   const reply = (ok, status, message) =>
     wantsJson
       ? json(ok ? { ok: true, pending: true } : { ok: false, error: message }, status)
@@ -270,37 +295,43 @@ async function subscribe(request, env) {
   const email = typeof fields.email === "string" ? fields.email.trim().toLowerCase() : "";
   if (!validEmail(email)) return reply(false, 400, "That does not look like an email address.");
 
-  if (!env.RESEND_API_KEY || !env.RESEND_AUDIENCE_ID || !env.CONFIRM_SECRET) {
+  // Every cap has to be in place before anything is sent. Missing one fails closed.
+  if (!env.RESEND_API_KEY || !env.RESEND_AUDIENCE_ID || !env.CONFIRM_SECRET || !env.CONFIRM_COOLDOWN || !env.CONFIRM_EMAIL_LIMITER || !env.GLOBAL_SEND_LIMITER) {
     return reply(false, 503, "Signups are not set up yet. Try again later.");
   }
 
-  // One confirmation email per address per window, whoever asks, so the form
-  // cannot be used to flood someone else's inbox.
-  if (env.CONFIRM_EMAIL_LIMITER) {
-    const { success } = await env.CONFIRM_EMAIL_LIMITER.limit({ key: email });
-    if (!success) return reply(true, 200);
-  }
+  // Burst cap on the same inbox. KV takes up to a minute to agree across
+  // locations, so this covers the gap before the daily cooldown is visible.
+  const key = capKey(email);
+  if (!(await env.CONFIRM_EMAIL_LIMITER.limit({ key })).success) return reply(true, 200);
 
-  const state = await contactState(env, email);
-  if (state === "error") return failed("contact lookup");
+  // Daily cap: one confirmation email per inbox per 24 hours, whoever asks.
+  const coolKey = await cooldownKey(email);
+  if (await env.CONFIRM_COOLDOWN.get(coolKey)) return reply(true, 200);
+
   // Already confirmed: same answer as a new signup, so the form does not
   // reveal who is on the list, and no email goes out.
+  const state = await contactState(env, email);
+  if (state === "error") return failed("contact lookup");
   if (state === "confirmed") return reply(true, 200);
-  if (state === "none") {
-    const res = await resend(env, `/audiences/${env.RESEND_AUDIENCE_ID}/contacts`, {
-      method: "POST",
-      body: JSON.stringify({ email, unsubscribed: true }),
-    });
-    if (!res.ok && res.status !== 409) return failed(`contact create ${res.status}`);
+
+  // Site-wide cap on sends, keyed on a constant.
+  if (!(await env.GLOBAL_SEND_LIMITER.limit({ key: "all-confirmation-sends" })).success) {
+    return reply(false, 429, "Signups are busy right now. Try again in a few minutes.");
   }
 
+  await env.CONFIRM_COOLDOWN.put(coolKey, "1", { expirationTtl: COOLDOWN_SECONDS });
   const link = `${siteOrigin(env)}/confirm?t=${await makeToken(email, env.CONFIRM_SECRET)}`;
   const { text, html } = confirmEmail(link);
   const sent = await resend(env, "/emails", {
     method: "POST",
     body: JSON.stringify({ from: env.CONFIRM_FROM || DEFAULT_FROM, to: [email], subject: "Confirm your Brandrune updates", text, html }),
   });
-  if (!sent.ok) return failed(`confirmation send ${sent.status}`);
+  if (!sent.ok) {
+    // Nothing went out, so the person may try again.
+    await env.CONFIRM_COOLDOWN.delete(coolKey).catch(() => {});
+    return failed(`confirmation send ${sent.status}`);
+  }
   return reply(true, 200);
 
   function failed(what) {
@@ -347,10 +378,12 @@ async function confirm(request, env) {
   if (!read) return page("Link not recognized", para(BAD_LINK) + `<p><a href="/#updates">Sign up again</a></p>`, 400);
   if (read.expired) return page("Link expired", para(EXPIRED) + `<p><a href="/#updates">Sign up again</a></p>`, 410);
 
-  let res = await resend(env, contactPath(env, read.email), { method: "PATCH", body: JSON.stringify({ unsubscribed: false }) });
-  if (res.status === 404) {
-    // The pending contact was removed in between; the signed link is still proof of the request.
-    res = await resend(env, `/audiences/${env.RESEND_AUDIENCE_ID}/contacts`, { method: "POST", body: JSON.stringify({ email: read.email, unsubscribed: false }) });
+  // The contact is created here, at confirmation, and not before. Resend
+  // treats a create for an existing address as an update; a 409 would be the
+  // old behavior, so it falls back to an explicit update.
+  let res = await resend(env, `/audiences/${env.RESEND_AUDIENCE_ID}/contacts`, { method: "POST", body: JSON.stringify({ email: read.email, unsubscribed: false }) });
+  if (res.status === 409) {
+    res = await resend(env, contactPath(env, read.email), { method: "PATCH", body: JSON.stringify({ unsubscribed: false }) });
   }
   if (!res.ok) {
     console.log(`confirm failed: ${res.status}`);

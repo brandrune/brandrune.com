@@ -68,7 +68,51 @@
   // The same rules as the skill's script (brandrune.py 0.3.0), for one
   // extension and no price check: a 404 only counts when it is a real RDAP
   // reply, redirects are not answers, and "no record" is only trusted after
-  // the registry reports a known name as registered.
+  // the registry reports a known name as registered. normalize() and
+  // classifyRecord() are pure and exposed on window.BrandruneCheck for tests.
+
+  var NAME_RE = /^[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?$/;
+  // Kept in step with PARKING_NS and PENDING in brandrune.py.
+  var PARKING_NS = ["sedoparking.com", "parkingcrew.net", "bodis.com", "above.com", "afternic.com", "dan.com",
+    "undeveloped.com", "hugedomains.com", "namebrightdns.com", "domainmarket.com", "uniregistrymarket.link",
+    "parklogic.com", "dnsnameservice.com", "smartname.com", "brandbucket.com", "squadhelp.com", "atom.com"];
+  var PENDING = ["pending delete", "pendingdelete", "redemption period", "redemptionperiod", "pending restore", "pendingrestore"];
+
+  function normalize(raw) {
+    var s = String(raw).trim().toLowerCase().replace(/^[a-z][a-z0-9+.-]*:\/\//, "").replace(/^www\./, "");
+    s = s.split(/[/?#]/)[0].replace(/\.+$/, "");
+    if (s.slice(-4) === ".com") s = s.slice(0, -4);
+    if (!s) return { error: "Type a name first." };
+    if (s.indexOf(".") !== -1) return { error: "This page checks .com only. Type the name without an extension. The skill checks the others." };
+    if (/[^\x00-\x7f]/.test(s)) return { error: "Letters, digits and hyphens only here. For a name with accents, use the skill." };
+    if (!NAME_RE.test(s)) return { error: "A .com name is letters, digits and hyphens, 1 to 63 characters, with no hyphen at either end." };
+    if (s.slice(2, 4) === "--") return { error: "Names with -- in the third and fourth places are reserved for encoded names. Use the skill for those." };
+    return { name: s };
+  }
+
+  // A 200 body to a status. Anything that is not the shape RDAP promises
+  // (status and nameservers are arrays) is unknown, never a guess.
+  function classifyRecord(doc, domain) {
+    if (!doc || typeof doc !== "object") return { status: "unknown", why: "The reply was not a JSON object." };
+    var ldh = String(doc.ldhName || "").toLowerCase().replace(/\.$/, "");
+    if (doc.objectClassName !== "domain" || ldh !== domain) return { status: "unknown", why: "The reply was not this domain's record." };
+    var rawStatus = doc.status === undefined ? [] : doc.status;
+    var rawNs = doc.nameservers === undefined ? [] : doc.nameservers;
+    var rawEvents = doc.events === undefined ? [] : doc.events;
+    if (!Array.isArray(rawStatus) || !Array.isArray(rawNs) || !Array.isArray(rawEvents)) return { status: "unknown", why: "The reply did not have the shape of an RDAP record." };
+    var statuses = rawStatus.map(function (x) { return String(x).toLowerCase(); });
+    var ns = rawNs.map(function (n) { return String((n && n.ldhName) || "").toLowerCase().replace(/\.$/, ""); });
+    var exp = rawEvents.filter(function (e) { return e && e.eventAction === "expiration"; })[0];
+    var out = { expires: exp ? String(exp.eventDate || "").slice(0, 10) : "", nameservers: ns.slice(0, 2) };
+    if (statuses.some(function (x) { return PENDING.indexOf(x) !== -1; })) { out.status = "expiring"; return out; }
+    var parker = null;
+    ns.forEach(function (n) { PARKING_NS.forEach(function (p) { if (!parker && (n === p || n.slice(-p.length - 1) === "." + p)) parker = p; }); });
+    if (parker) { out.status = "parked"; out.parker = parker; return out; }
+    out.status = "taken";
+    return out;
+  }
+
+  if (typeof window !== "undefined") window.BrandruneCheck = { normalize: normalize, classifyRecord: classifyRecord };
 
   (function () {
     var form = document.getElementById("checker");
@@ -77,24 +121,6 @@
     var out = document.getElementById("check-result");
     var button = form.querySelector("button[type=submit]");
     var RDAP = "https://rdap.verisign.com/com/v1/domain/";
-    var NAME_RE = /^[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?$/;
-    // Kept in step with PARKING_NS and PENDING in brandrune.py.
-    var PARKING_NS = ["sedoparking.com", "parkingcrew.net", "bodis.com", "above.com", "afternic.com", "dan.com",
-      "undeveloped.com", "hugedomains.com", "namebrightdns.com", "domainmarket.com", "uniregistrymarket.link",
-      "parklogic.com", "dnsnameservice.com", "smartname.com", "brandbucket.com", "squadhelp.com", "atom.com"];
-    var PENDING = ["pending delete", "pendingdelete", "redemption period", "redemptionperiod", "pending restore", "pendingrestore"];
-
-    function normalize(raw) {
-      var s = raw.trim().toLowerCase().replace(/^[a-z][a-z0-9+.-]*:\/\//, "").replace(/^www\./, "");
-      s = s.split(/[/?#]/)[0].replace(/\.+$/, "");
-      if (s.slice(-4) === ".com") s = s.slice(0, -4);
-      if (!s) return { error: "Type a name first." };
-      if (s.indexOf(".") !== -1) return { error: "This page checks .com only. Type the name without an extension. The skill checks the others." };
-      if (/[^\x00-\x7f]/.test(s)) return { error: "Letters, digits and hyphens only here. For a name with accents, use the skill." };
-      if (!NAME_RE.test(s)) return { error: "A .com name is letters, digits and hyphens, 1 to 63 characters, with no hyphen at either end." };
-      if (s.slice(2, 4) === "--") return { error: "Names with -- in the third and fourth places are reserved for encoded names. Use the skill for those." };
-      return { name: s };
-    }
 
     function ask(domain) {
       var started = new Date();
@@ -115,18 +141,7 @@
         }
         if (res.status !== 200) return Object.assign(answer, { status: "unknown", why: "Verisign answered HTTP " + res.status + "." });
         return res.json().then(function (doc) {
-          var ldh = String((doc && doc.ldhName) || "").toLowerCase().replace(/\.$/, "");
-          if (!doc || doc.objectClassName !== "domain" || ldh !== domain) return Object.assign(answer, { status: "unknown", why: "The reply was not this domain's record." });
-          var statuses = (doc.status || []).map(function (s) { return String(s).toLowerCase(); });
-          var ns = (doc.nameservers || []).map(function (n) { return String((n && n.ldhName) || "").toLowerCase().replace(/\.$/, ""); });
-          var exp = (doc.events || []).filter(function (e) { return e && e.eventAction === "expiration"; })[0];
-          answer.expires = exp ? String(exp.eventDate || "").slice(0, 10) : "";
-          answer.nameservers = ns.slice(0, 2);
-          if (statuses.some(function (s) { return PENDING.indexOf(s) !== -1; })) return Object.assign(answer, { status: "expiring" });
-          var parker = null;
-          ns.forEach(function (n) { PARKING_NS.forEach(function (p) { if (!parker && (n === p || n.slice(-p.length - 1) === "." + p)) parker = p; }); });
-          if (parker) return Object.assign(answer, { status: "parked", parker: parker });
-          return Object.assign(answer, { status: "taken" });
+          return Object.assign(answer, classifyRecord(doc, domain));
         }, function () { return Object.assign(answer, { status: "unknown", why: "The reply could not be read." }); });
       }
       return once().then(function (res) {
@@ -134,6 +149,9 @@
         return res;
       }).then(read, function () {
         return { url: RDAP + domain, at: started, status: "unknown", why: "Verisign did not answer from your browser (a timeout, a blocker, or no network)." };
+      }).catch(function () {
+        // Anything unexpected is an unknown, never a hang.
+        return { url: RDAP + domain, at: started, status: "unknown", why: "The reply could not be read." };
       });
     }
 
@@ -144,7 +162,8 @@
           if (a.status === "taken" || a.status === "parked" || a.status === "expiring") return true;
           return ask("google.com").then(function (b) { return b.status === "taken" || b.status === "parked" || b.status === "expiring"; });
         });
-        sanity.then(function (ok) { if (!ok) sanity = null; });
+        // Only a passed check is remembered; a failure or an error asks again next time.
+        sanity.then(function (ok) { if (!ok) sanity = null; }, function () { sanity = null; });
       }
       return sanity;
     }
@@ -181,6 +200,7 @@
       var n = normalize(input.value);
       if (n.error) { out.textContent = ""; out.appendChild(el("p", "cr-err", n.error)); input.focus(); return; }
       var domain = n.name + ".com";
+      var started = new Date();
       button.disabled = true;
       out.textContent = "";
       out.appendChild(el("p", "cr-idle", "Asking rdap.verisign.com about " + domain + "..."));
@@ -192,6 +212,9 @@
           a.why = "Verisign said no record, but it also failed to report nic.com or google.com as registered, so its answer is not trusted.";
           return a;
         });
+      }).catch(function () {
+        sanity = null;
+        return { url: RDAP + domain, at: started, status: "unknown", why: "Something went wrong reading the answer." };
       }).then(function (a) { render(domain, a); }).finally(function () { button.disabled = false; });
     });
   })();
@@ -203,7 +226,12 @@
     if (!run || !window.fetch) return;
     var wall = document.getElementById("run-wall");
     var typed = document.getElementById("run-typed");
-    var lines = ["run-l1", "run-l2", "run-l3", "run-l4", "run-l5"].map(function (id) { return document.getElementById(id); });
+    var rest = document.getElementById("run-rest");
+    var frame = document.getElementById("run-frame");
+    var cue = document.getElementById("run-cue");
+    // Shown in this order: the agent's note, the command, the script's first
+    // stderr line, then everything the script printed when it finished.
+    var lines = ["run-l1", "run-l2", "run-l3", "run-done"].map(function (id) { return document.getElementById(id); });
     var answer = document.getElementById("run-answer");
     var replay = document.getElementById("run-replay");
     var count = document.getElementById("run-count");
@@ -220,10 +248,18 @@
       return data;
     }
 
-    function tallyText(counts) {
-      var parts = ORDER.filter(function (k) { return counts[k]; }).map(function (k) { return counts[k] + " " + k; });
-      return parts.length ? parts.join(", ") : "asking...";
+    // Always says how many answers are in, so a mid-run frame never reads as final.
+    function tallyText(counts, total) {
+      var n = 0;
+      var parts = ORDER.filter(function (k) { n += counts[k] || 0; return counts[k]; }).map(function (k) { return counts[k] + " " + k; });
+      return (parts.length ? parts.join(", ") : "asking") + " (" + n + " of " + total + ")";
     }
+
+    function updateCue() {
+      var more = frame.scrollHeight - frame.clientHeight - frame.scrollTop > 24;
+      cue.classList.toggle("off", !more);
+    }
+    frame.addEventListener("scroll", updateCue, { passive: true });
 
     function makeTile(row, tlds, final) {
       var li = el("li", "tile");
@@ -266,6 +302,7 @@
         if (ok) shown++;
       });
       count.textContent = shown + " of " + tiles.length;
+      if (frame) updateCue();
     }
 
     function setTools(on) { tools.forEach(function (b) { b.disabled = !on; }); }
@@ -275,6 +312,7 @@
       tiles = d.rows.map(function (row) { return makeTile(row, d.tlds, true); });
       sortWall(d);
       applyFilters();
+      updateCue();
     }
 
     function play(d) {
@@ -287,18 +325,23 @@
       lines.forEach(function (l) { l.classList.add("pending"); });
       answer.classList.add("pending");
       wall.textContent = "";
+      frame.scrollTop = 0;
       tiles = [];
       count.textContent = "0 of " + d.rows.length;
-      var counts = {}; d.tlds.forEach(function (t) { counts[t] = {}; tallyEl[t].textContent = "asking..."; });
+      var counts = {}; d.tlds.forEach(function (t) { counts[t] = {}; tallyEl[t].textContent = tallyText(counts[t], d.rows.length); });
 
+      // The whole prompt stays laid out; typing moves characters from the
+      // hidden span to the visible one.
       typed.textContent = "";
+      rest.textContent = prompt;
       typed.classList.add("t-typing");
       var i = 0;
       return new Promise(function (resolve) {
         (function type() {
           if (!alive()) return resolve();
-          i += 2;
+          i = Math.min(prompt.length, i + 2);
           typed.textContent = prompt.slice(0, i);
+          rest.textContent = prompt.slice(i);
           if (i < prompt.length) setTimeout(type, 22); else resolve();
         })();
       }).then(function () {
@@ -318,6 +361,7 @@
                 wall.appendChild(t.li);
               }
               count.textContent = n + " of " + d.rows.length;
+              updateCue();
               if (n < d.rows.length) setTimeout(stream, 34); else resolve();
             })();
           });
@@ -329,7 +373,6 @@
           return wait(450);
         }).then(function () {
           lines[2].classList.remove("pending");
-          lines[3].classList.remove("pending");
           // Answers land the way they did: .com quickly, .ai slower, and the
           // .ai lookups the registry rate limited come back last, as unknown.
           var events = [];
@@ -358,7 +401,7 @@
                 if (ev.k === 0 && res[0].indexOf("open") === 0) ev.t.li.classList.add("is-open");
                 var word = res[0] === "openstar" ? "open*" : res[0];
                 counts[ev.tld][word] = (counts[ev.tld][word] || 0) + 1;
-                tallyEl[ev.tld].textContent = tallyText(counts[ev.tld]);
+                tallyEl[ev.tld].textContent = tallyText(counts[ev.tld], d.rows.length);
               }
               if (e < events.length) requestAnimationFrame(tick); else resolve();
             })();
@@ -367,8 +410,10 @@
       }).then(function () {
         if (!alive()) return;
         return wait(500).then(function () {
-          lines[4].classList.remove("pending");
+          lines[3].classList.remove("pending");
           sortWall(d);
+          frame.scrollTop = 0;
+          updateCue();
           tiles.forEach(function (t) { t.li.classList.remove("enter"); t.chips.forEach(function (c) { c.classList.remove("flip"); }); });
           return wait(300);
         }).then(function () {
@@ -409,12 +454,15 @@
     // and a reader without JavaScript still sees the whole run.
     if (reduceMotion || !("IntersectionObserver" in window)) { start(); return; }
     var seen = false;
+    // Start once the top of the terminal is in the upper 60% of the screen.
+    // A margin, not a share of the element, so it works however tall the
+    // panel is on a phone.
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) {
         if (en.isIntersecting && !seen) { seen = true; io.disconnect(); start(); }
       });
-    }, { threshold: 0.3 });
-    io.observe(run);
+    }, { threshold: 0, rootMargin: "0px 0px -40% 0px" });
+    io.observe(run.querySelector(".run-term"));
     // Fetch the data early, once the page is idle, so the replay starts on time.
     (window.requestIdleCallback || function (f) { setTimeout(f, 1200); })(function () { load().catch(function () {}); });
   })();
