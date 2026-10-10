@@ -1,0 +1,26 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "brandrune-site",
+  "main": "src/worker.js",
+  "compatibility_date": "2026-10-01",
+  "workers_dev": false,
+  "preview_urls": false,
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": true,
+    "not_found_handling": "404-page",
+    "html_handling": "auto-trailing-slash"
+  },
+  "routes": [
+    { "pattern": "brandrune.com", "custom_domain": true },
+    { "pattern": "www.brandrune.com", "custom_domain": true }
+  ],
+  "vars": {
+    "RESEND_AUDIENCE_ID": "c609e317-d11a-43a2-91e1-3709bd6d6b32"
+  },
+  "ratelimits": [
+    { "name": "SUBSCRIBE_LIMITER", "namespace_id": "4417", "simple": { "limit": 5, "period": 60 } }
+  ],
+  "observability": { "enabled": false }
+}

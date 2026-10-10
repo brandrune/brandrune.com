@@ -1,0 +1,1 @@
+A shared grocery list for roommates that splits the bill when someone checks out

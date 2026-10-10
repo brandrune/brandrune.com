@@ -1,0 +1,2018 @@
+{
+ "tool": "brandrune 0.3.0",
+ "description": "A shared grocery list for roommates that splits the bill when someone checks out",
+ "checked_at": "2026-10-10T13:09:18+00:00",
+ "seconds": 12.7,
+ "tlds": [
+  "com",
+  "ai"
+ ],
+ "registrar": "vercel",
+ "names": [
+  {
+   "name": "cartsplit",
+   "style": "compound",
+   "length": 9,
+   "domains": {
+    "com": {
+     "domain": "cartsplit.com",
+     "status": "parked",
+     "note": "nameservers at atom.com",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/cartsplit.com",
+      "answer": 200,
+      "at": "2026-10-10T13:09:05+00:00"
+     },
+     "nameservers": [
+      "ns1.atom.com",
+      "ns2.atom.com"
+     ],
+     "expires": "2027-06-20"
+    },
+    "ai": {
+     "domain": "cartsplit.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/cartsplit.ai",
+      "answer": 404,
+      "at": "2026-10-10T13:09:06+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T13:09:06+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "splitbasket",
+   "style": "compound",
+   "length": 11,
+   "domains": {
+    "com": {
+     "domain": "splitbasket.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/splitbasket.com",
+      "answer": 200,
+      "at": "2026-10-10T13:09:05+00:00"
+     },
+     "nameservers": [
+      "ns-cloud-b1.googledomains.com",
+      "ns-cloud-b2.googledomains.com",
+      "ns-cloud-b3.googledomains.com",
+      "ns-cloud-b4.googledomains.com"
+     ],
+     "expires": "2027-08-30"
+    },
+    "ai": {
+     "domain": "splitbasket.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/splitbasket.ai",
+      "answer": 404,
+      "at": "2026-10-10T13:09:05+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T13:09:05+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "roomcart",
+   "style": "compound",
+   "length": 8,
+   "domains": {
+    "ai": {
+     "domain": "roomcart.ai",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/roomcart.ai",
+      "answer": 200,
+      "at": "2026-10-10T13:09:05+00:00"
+     },
+     "nameservers": [
+      "ns37.domaincontrol.com",
+      "ns38.domaincontrol.com"
+     ],
+     "expires": "2028-07-12"
+    },
+    "com": {
+     "domain": "roomcart.com",
+     "status": "parked",
+     "note": "nameservers at namebrightdns.com",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/roomcart.com",
+      "answer": 200,
+      "at": "2026-10-10T13:09:05+00:00"
+     },
+     "nameservers": [
+      "nsg1.namebrightdns.com",
+      "nsg2.namebrightdns.com"
+     ],
+     "expires": "2027-02-07"
+    }
+   }
+  },
+  {
+   "name": "listhalves",
+   "style": "compound",
+   "length": 10,
+   "domains": {
+    "ai": {
+     "domain": "listhalves.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/listhalves.ai",
+      "answer": 404,
+      "at": "2026-10-10T13:09:06+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T13:09:06+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    },
+    "com": {
+     "domain": "listhalves.com",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/listhalves.com",
+      "answer": 404,
+      "at": "2026-10-10T13:09:05+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T13:09:06+00:00",
+      "price": 11.25,
+      "years": 1,
+      "standard_price": 11.25
+     }
+    }
+   }
+  },
+  {
+   "name": "tillshare",
+   "style": "compound",
+   "length": 9,
+   "domains": {
+    "com": {
+     "domain": "tillshare.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/tillshare.com",
+      "answer": 200,
+      "at": "2026-10-10T13:09:05+00:00"
+     },
+     "nameservers": [
+      "ns-cloud-e1.googledomains.com",
+      "ns-cloud-e2.googledomains.com",
+      "ns-cloud-e3.googledomains.com",
+      "ns-cloud-e4.googledomains.com"
+     ],
+     "expires": "2027-09-06"
+    },
+    "ai": {
+     "domain": "tillshare.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/tillshare.ai",
+      "answer": 404,
+      "at": "2026-10-10T13:09:05+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T13:09:05+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "pantrypact",
+   "style": "compound",
+   "length": 10,
+   "domains": {
+    "com": {
+     "domain": "pantrypact.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/pantrypact.com",
+      "answer": 200,
+      "at": "2026-10-10T13:09:05+00:00"
+     },
+     "nameservers": [
+      "ns1.svirakdms.com",
+      "ns2.svirakdms.com"
+     ],
+     "expires": "2027-08-03"
+    },
+    "ai": {
+     "domain": "pantrypact.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/pantrypact.ai",
+      "answer": 404,
+      "at": "2026-10-10T13:09:05+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T13:09:05+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "basketmate",
+   "style": "compound",
+   "length": 10,
+   "domains": {
+    "com": {
+     "domain": "basketmate.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/basketmate.com",
+      "answer": 200,
+      "at": "2026-10-10T13:09:06+00:00"
+     },
+     "nameservers": [
+      "ns-cloud-a1.googledomains.com",
+      "ns-cloud-a2.googledomains.com",
+      "ns-cloud-a3.googledomains.com",
+      "ns-cloud-a4.googledomains.com"
+     ],
+     "expires": "2027-11-05"
+    },
+    "ai": {
+     "domain": "basketmate.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/basketmate.ai",
+      "answer": 404,
+      "at": "2026-10-10T13:09:05+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T13:09:05+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "groceryhalf",
+   "style": "compound",
+   "length": 11,
+   "domains": {
+    "ai": {
+     "domain": "groceryhalf.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/groceryhalf.ai",
+      "answer": 404,
+      "at": "2026-10-10T13:09:05+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T13:09:05+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    },
+    "com": {
+     "domain": "groceryhalf.com",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/groceryhalf.com",
+      "answer": 404,
+      "at": "2026-10-10T13:09:06+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T13:09:06+00:00",
+      "price": 11.25,
+      "years": 1,
+      "standard_price": 11.25
+     }
+    }
+   }
+  },
+  {
+   "name": "cartpals",
+   "style": "compound",
+   "length": 8,
+   "domains": {
+    "com": {
+     "domain": "cartpals.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/cartpals.com",
+      "answer": 200,
+      "at": "2026-10-10T13:09:06+00:00"
+     },
+     "nameservers": [
+      "ns41.domaincontrol.com",
+      "ns42.domaincontrol.com"
+     ],
+     "expires": "2028-05-22"
+    },
+    "ai": {
+     "domain": "cartpals.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/cartpals.ai",
+      "answer": 404,
+      "at": "2026-10-10T13:09:06+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T13:09:06+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "dibsbasket",
+   "style": "compound",
+   "length": 10,
+   "domains": {
+    "com": {
+     "domain": "dibsbasket.com",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/dibsbasket.com",
+      "answer": 404,
+      "at": "2026-10-10T13:09:05+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T13:09:06+00:00",
+      "price": 11.25,
+      "years": 1,
+      "standard_price": 11.25
+     }
+    },
+    "ai": {
+     "domain": "dibsbasket.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/dibsbasket.ai",
+      "answer": 404,
+      "at": "2026-10-10T13:09:06+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T13:09:06+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "sharecrate",
+   "style": "compound",
+   "length": 10,
+   "domains": {
+    "com": {
+     "domain": "sharecrate.com",
+     "status": "parked",
+     "note": "nameservers at afternic.com",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/sharecrate.com",
+      "answer": 200,
+      "at": "2026-10-10T13:09:06+00:00"
+     },
+     "nameservers": [
+      "ns1.afternic.com",
+      "ns2.afternic.com"
+     ],
+     "expires": "2026-12-20"
+    },
+    "ai": {
+     "domain": "sharecrate.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/sharecrate.ai",
+      "answer": 404,
+      "at": "2026-10-10T13:09:06+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T13:09:06+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "billbasket",
+   "style": "compound",
+   "length": 10,
+   "domains": {
+    "com": {
+     "domain": "billbasket.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/billbasket.com",
+      "answer": 200,
+      "at": "2026-10-10T13:09:06+00:00"
+     },
+     "nameservers": [
+      "domain-for-sale.hugedomainsdns.com",
+      "forsale.hugedomainsdns.com"
+     ],
+     "expires": "2027-03-31"
+    },
+    "ai": {
+     "domain": "billbasket.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/billbasket.ai",
+      "answer": 404,
+      "at": "2026-10-10T13:09:06+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T13:09:06+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "splitpantry",
+   "style": "compound",
+   "length": 11,
+   "domains": {
+    "com": {
+     "domain": "splitpantry.com",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/splitpantry.com",
+      "answer": 404,
+      "at": "2026-10-10T13:09:06+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T13:09:06+00:00",
+      "price": 11.25,
+      "years": 1,
+      "standard_price": 11.25
+     }
+    },
+    "ai": {
+     "domain": "splitpantry.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/splitpantry.ai",
+      "answer": 404,
+      "at": "2026-10-10T13:09:06+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T13:09:06+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "housecart",
+   "style": "compound",
+   "length": 9,
+   "domains": {
+    "com": {
+     "domain": "housecart.com",
+     "status": "parked",
+     "note": "nameservers at afternic.com",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/housecart.com",
+      "answer": 200,
+      "at": "2026-10-10T13:09:07+00:00"
+     },
+     "nameservers": [
+      "ns1.afternic.com",
+      "ns2.afternic.com",
+      "verification-iryqusbri9xlks4ssi7d4w.ns101.verify.hn"
+     ],
+     "expires": "2027-10-12"
+    },
+    "ai": {
+     "domain": "housecart.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/housecart.ai",
+      "answer": 404,
+      "at": "2026-10-10T13:09:07+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T13:09:07+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "listsettle",
+   "style": "compound",
+   "length": 10,
+   "domains": {
+    "com": {
+     "domain": "listsettle.com",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/listsettle.com",
+      "answer": 404,
+      "at": "2026-10-10T13:09:07+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T13:09:07+00:00",
+      "price": 11.25,
+      "years": 1,
+      "standard_price": 11.25
+     }
+    },
+    "ai": {
+     "domain": "listsettle.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/listsettle.ai",
+      "answer": 404,
+      "at": "2026-10-10T13:09:07+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T13:09:07+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "cartmates",
+   "style": "compound",
+   "length": 9,
+   "domains": {
+    "com": {
+     "domain": "cartmates.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/cartmates.com",
+      "answer": 200,
+      "at": "2026-10-10T13:09:07+00:00"
+     },
+     "nameservers": [
+      "ns45.domaincontrol.com",
+      "ns46.domaincontrol.com"
+     ],
+     "expires": "2027-06-01"
+    },
+    "ai": {
+     "domain": "cartmates.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/cartmates.ai",
+      "answer": 404,
+      "at": "2026-10-10T13:09:07+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T13:09:07+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "evenbasket",
+   "style": "compound",
+   "length": 10,
+   "domains": {
+    "com": {
+     "domain": "evenbasket.com",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/evenbasket.com",
+      "answer": 404,
+      "at": "2026-10-10T13:09:07+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T13:09:07+00:00",
+      "price": 11.25,
+      "years": 1,
+      "standard_price": 11.25
+     }
+    },
+    "ai": {
+     "domain": "evenbasket.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/evenbasket.ai",
+      "answer": 404,
+      "at": "2026-10-10T13:09:08+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T13:09:08+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "roomtab",
+   "style": "compound",
+   "length": 7,
+   "domains": {
+    "com": {
+     "domain": "roomtab.com",
+     "status": "parked",
+     "note": "nameservers at namebrightdns.com",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/roomtab.com",
+      "answer": 200,
+      "at": "2026-10-10T13:09:08+00:00"
+     },
+     "nameservers": [
+      "nsg1.namebrightdns.com",
+      "nsg2.namebrightdns.com"
+     ],
+     "expires": "2027-03-15"
+    },
+    "ai": {
+     "domain": "roomtab.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/roomtab.ai",
+      "answer": 404,
+      "at": "2026-10-10T13:09:08+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T13:09:08+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "grocerly",
+   "style": "blend",
+   "length": 8,
+   "domains": {
+    "com": {
+     "domain": "grocerly.com",
+     "status": "parked",
+     "note": "nameservers at afternic.com",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/grocerly.com",
+      "answer": 200,
+      "at": "2026-10-10T13:09:08+00:00"
+     },
+     "nameservers": [
+      "ns3.afternic.com",
+      "ns4.afternic.com"
+     ],
+     "expires": "2028-05-28"
+    },
+    "ai": {
+     "domain": "grocerly.ai",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/grocerly.ai",
+      "answer": 200,
+      "at": "2026-10-10T13:09:08+00:00"
+     },
+     "nameservers": [
+      "yichun.ns.cloudflare.com",
+      "oaklyn.ns.cloudflare.com"
+     ],
+     "expires": "2027-07-11"
+    }
+   }
+  },
+  {
+   "name": "splitchen",
+   "style": "blend",
+   "length": 9,
+   "domains": {
+    "com": {
+     "domain": "splitchen.com",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/splitchen.com",
+      "answer": 404,
+      "at": "2026-10-10T13:09:08+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T13:09:08+00:00",
+      "price": 11.25,
+      "years": 1,
+      "standard_price": 11.25
+     }
+    },
+    "ai": {
+     "domain": "splitchen.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/splitchen.ai",
+      "answer": 404,
+      "at": "2026-10-10T13:09:08+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T13:09:08+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "pantrio",
+   "style": "blend",
+   "length": 7,
+   "domains": {
+    "com": {
+     "domain": "pantrio.com",
+     "status": "parked",
+     "note": "nameservers at afternic.com",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/pantrio.com",
+      "answer": 200,
+      "at": "2026-10-10T13:09:08+00:00"
+     },
+     "nameservers": [
+      "ns1.afternic.com",
+      "ns2.afternic.com"
+     ],
+     "expires": "2027-05-14"
+    },
+    "ai": {
+     "domain": "pantrio.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/pantrio.ai",
+      "answer": 404,
+      "at": "2026-10-10T13:09:09+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T13:09:09+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "basketeer",
+   "style": "blend",
+   "length": 9,
+   "domains": {
+    "com": {
+     "domain": "basketeer.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/basketeer.com",
+      "answer": 200,
+      "at": "2026-10-10T13:09:09+00:00"
+     },
+     "nameservers": [
+      "audrey.ns.cloudflare.com",
+      "uriah.ns.cloudflare.com"
+     ],
+     "expires": "2027-01-19"
+    },
+    "ai": {
+     "domain": "basketeer.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/basketeer.ai",
+      "answer": 404,
+      "at": "2026-10-10T13:09:09+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T13:09:09+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "carteven",
+   "style": "blend",
+   "length": 8,
+   "domains": {
+    "ai": {
+     "domain": "carteven.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/carteven.ai",
+      "answer": 404,
+      "at": "2026-10-10T13:09:09+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T13:09:09+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    },
+    "com": {
+     "domain": "carteven.com",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/carteven.com",
+      "answer": 404,
+      "at": "2026-10-10T13:09:09+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T13:09:09+00:00",
+      "price": 11.25,
+      "years": 1,
+      "standard_price": 11.25
+     }
+    }
+   }
+  },
+  {
+   "name": "roomatey",
+   "style": "blend",
+   "length": 8,
+   "domains": {
+    "com": {
+     "domain": "roomatey.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/roomatey.com",
+      "answer": 200,
+      "at": "2026-10-10T13:09:09+00:00"
+     },
+     "nameservers": [
+      "ns13.domaincontrol.com",
+      "ns14.domaincontrol.com"
+     ],
+     "expires": "2027-05-18"
+    },
+    "ai": {
+     "domain": "roomatey.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/roomatey.ai",
+      "answer": 404,
+      "at": "2026-10-10T13:09:09+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T13:09:09+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "halfsies",
+   "style": "real-word",
+   "length": 8,
+   "domains": {
+    "com": {
+     "domain": "halfsies.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/halfsies.com",
+      "answer": 200,
+      "at": "2026-10-10T13:09:09+00:00"
+     },
+     "nameservers": [
+      "ns07.domaincontrol.com",
+      "ns08.domaincontrol.com"
+     ],
+     "expires": "2027-08-10"
+    },
+    "ai": {
+     "domain": "halfsies.ai",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/halfsies.ai",
+      "answer": 200,
+      "at": "2026-10-10T13:09:10+00:00"
+     },
+     "nameservers": [
+      "robotns3.second-ns.com",
+      "robotns2.second-ns.de",
+      "ns1.first-ns.de",
+      "dns.r3.do"
+     ],
+     "expires": "2026-12-18"
+    }
+   }
+  },
+  {
+   "name": "larder",
+   "style": "real-word",
+   "length": 6,
+   "domains": {
+    "ai": {
+     "domain": "larder.ai",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/larder.ai",
+      "answer": 200,
+      "at": "2026-10-10T13:09:10+00:00"
+     },
+     "nameservers": [
+      "pdns1.registrar-servers.com",
+      "pdns2.registrar-servers.com"
+     ],
+     "expires": "2028-02-02"
+    },
+    "com": {
+     "domain": "larder.com",
+     "status": "parked",
+     "note": "nameservers at afternic.com",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/larder.com",
+      "answer": 200,
+      "at": "2026-10-10T13:09:10+00:00"
+     },
+     "nameservers": [
+      "ns5.afternic.com",
+      "ns6.afternic.com"
+     ],
+     "expires": "2027-03-07"
+    }
+   }
+  },
+  {
+   "name": "tally",
+   "style": "real-word",
+   "length": 5,
+   "domains": {
+    "ai": {
+     "domain": "tally.ai",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/tally.ai",
+      "answer": 200,
+      "at": "2026-10-10T13:09:10+00:00"
+     },
+     "nameservers": [
+      "launch1.spaceship.net",
+      "launch2.spaceship.net"
+     ],
+     "expires": "2027-09-07"
+    },
+    "com": {
+     "domain": "tally.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/tally.com",
+      "answer": 200,
+      "at": "2026-10-10T13:09:10+00:00"
+     },
+     "nameservers": [
+      "ns1.digitalocean.com",
+      "ns2.digitalocean.com",
+      "ns3.digitalocean.com"
+     ],
+     "expires": "2027-07-07"
+    }
+   }
+  },
+  {
+   "name": "whosegot",
+   "style": "phrase",
+   "length": 8,
+   "domains": {
+    "com": {
+     "domain": "whosegot.com",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/whosegot.com",
+      "answer": 404,
+      "at": "2026-10-10T13:09:10+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T13:09:10+00:00",
+      "price": 11.25,
+      "years": 1,
+      "standard_price": 11.25
+     }
+    },
+    "ai": {
+     "domain": "whosegot.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/whosegot.ai",
+      "answer": 404,
+      "at": "2026-10-10T13:09:10+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T13:09:10+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "splitthecart",
+   "style": "phrase",
+   "length": 12,
+   "domains": {
+    "com": {
+     "domain": "splitthecart.com",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/splitthecart.com",
+      "answer": 404,
+      "at": "2026-10-10T13:09:10+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T13:09:10+00:00",
+      "price": 11.25,
+      "years": 1,
+      "standard_price": 11.25
+     }
+    },
+    "ai": {
+     "domain": "splitthecart.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/splitthecart.ai",
+      "answer": 404,
+      "at": "2026-10-10T13:09:10+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T13:09:10+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "ourlistnow",
+   "style": "phrase",
+   "length": 10,
+   "domains": {
+    "com": {
+     "domain": "ourlistnow.com",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/ourlistnow.com",
+      "answer": 404,
+      "at": "2026-10-10T13:09:10+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T13:09:10+00:00",
+      "price": 11.25,
+      "years": 1,
+      "standard_price": 11.25
+     }
+    },
+    "ai": {
+     "domain": "ourlistnow.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/ourlistnow.ai",
+      "answer": 404,
+      "at": "2026-10-10T13:09:10+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T13:09:10+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "cartandsplit",
+   "style": "phrase",
+   "length": 12,
+   "domains": {
+    "ai": {
+     "domain": "cartandsplit.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/cartandsplit.ai",
+      "answer": 404,
+      "at": "2026-10-10T13:09:11+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T13:09:11+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    },
+    "com": {
+     "domain": "cartandsplit.com",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/cartandsplit.com",
+      "answer": 404,
+      "at": "2026-10-10T13:09:11+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T13:09:11+00:00",
+      "price": 11.25,
+      "years": 1,
+      "standard_price": 11.25
+     }
+    }
+   }
+  },
+  {
+   "name": "fairshareshop",
+   "style": "phrase",
+   "length": 13,
+   "domains": {
+    "com": {
+     "domain": "fairshareshop.com",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/fairshareshop.com",
+      "answer": 404,
+      "at": "2026-10-10T13:09:11+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T13:09:11+00:00",
+      "price": 11.25,
+      "years": 1,
+      "standard_price": 11.25
+     }
+    },
+    "ai": {
+     "domain": "fairshareshop.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/fairshareshop.ai",
+      "answer": 404,
+      "at": "2026-10-10T13:09:11+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T13:09:11+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "groshare",
+   "style": "respelled",
+   "length": 8,
+   "domains": {
+    "com": {
+     "domain": "groshare.com",
+     "status": "parked",
+     "note": "nameservers at afternic.com",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/groshare.com",
+      "answer": 200,
+      "at": "2026-10-10T13:09:12+00:00"
+     },
+     "nameservers": [
+      "ns1.afternic.com",
+      "ns2.afternic.com"
+     ],
+     "expires": "2027-03-17"
+    },
+    "ai": {
+     "domain": "groshare.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/groshare.ai",
+      "answer": 404,
+      "at": "2026-10-10T13:09:12+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T13:09:12+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "kartsplit",
+   "style": "respelled",
+   "length": 9,
+   "domains": {
+    "ai": {
+     "domain": "kartsplit.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/kartsplit.ai",
+      "answer": 404,
+      "at": "2026-10-10T13:09:12+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T13:09:12+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    },
+    "com": {
+     "domain": "kartsplit.com",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/kartsplit.com",
+      "answer": 404,
+      "at": "2026-10-10T13:09:12+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T13:09:12+00:00",
+      "price": 11.25,
+      "years": 1,
+      "standard_price": 11.25
+     }
+    }
+   }
+  },
+  {
+   "name": "splytt",
+   "style": "respelled",
+   "length": 6,
+   "domains": {
+    "com": {
+     "domain": "splytt.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/splytt.com",
+      "answer": 200,
+      "at": "2026-10-10T13:09:12+00:00"
+     },
+     "nameservers": [
+      "ns0.wixdns.net",
+      "ns1.wixdns.net"
+     ],
+     "expires": "2027-04-17"
+    },
+    "ai": {
+     "domain": "splytt.ai",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/splytt.ai",
+      "answer": 200,
+      "at": "2026-10-10T13:09:12+00:00"
+     },
+     "nameservers": [
+      "ram.ns.cloudflare.com",
+      "carlane.ns.cloudflare.com"
+     ],
+     "expires": "2028-04-05"
+    }
+   }
+  },
+  {
+   "name": "roomz",
+   "style": "respelled",
+   "length": 5,
+   "domains": {
+    "com": {
+     "domain": "roomz.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/roomz.com",
+      "answer": 200,
+      "at": "2026-10-10T13:09:12+00:00"
+     },
+     "nameservers": [
+      "phil.ns.cloudflare.com",
+      "rita.ns.cloudflare.com"
+     ],
+     "expires": "2027-08-23"
+    },
+    "ai": {
+     "domain": "roomz.ai",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/roomz.ai",
+      "answer": 200,
+      "at": "2026-10-10T13:09:12+00:00"
+     },
+     "nameservers": [
+      "ns31.domaincontrol.com",
+      "ns32.domaincontrol.com"
+     ],
+     "expires": "2027-01-28"
+    }
+   }
+  },
+  {
+   "name": "getcartsplit",
+   "style": "prefixed",
+   "length": 12,
+   "domains": {
+    "ai": {
+     "domain": "getcartsplit.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/getcartsplit.ai",
+      "answer": 404,
+      "at": "2026-10-10T13:09:12+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T13:09:12+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    },
+    "com": {
+     "domain": "getcartsplit.com",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/getcartsplit.com",
+      "answer": 404,
+      "at": "2026-10-10T13:09:12+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T13:09:12+00:00",
+      "price": 11.25,
+      "years": 1,
+      "standard_price": 11.25
+     }
+    }
+   }
+  },
+  {
+   "name": "usehalfsies",
+   "style": "prefixed",
+   "length": 11,
+   "domains": {
+    "com": {
+     "domain": "usehalfsies.com",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/usehalfsies.com",
+      "answer": 404,
+      "at": "2026-10-10T13:09:12+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T13:09:12+00:00",
+      "price": 11.25,
+      "years": 1,
+      "standard_price": 11.25
+     }
+    },
+    "ai": {
+     "domain": "usehalfsies.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/usehalfsies.ai",
+      "answer": 404,
+      "at": "2026-10-10T13:09:13+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T13:09:13+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "tryroomtab",
+   "style": "prefixed",
+   "length": 10,
+   "domains": {
+    "com": {
+     "domain": "tryroomtab.com",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/tryroomtab.com",
+      "answer": 404,
+      "at": "2026-10-10T13:09:13+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T13:09:13+00:00",
+      "price": 11.25,
+      "years": 1,
+      "standard_price": 11.25
+     }
+    },
+    "ai": {
+     "domain": "tryroomtab.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/tryroomtab.ai",
+      "answer": 404,
+      "at": "2026-10-10T13:09:13+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T13:09:13+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "mypantrypact",
+   "style": "prefixed",
+   "length": 12,
+   "domains": {
+    "com": {
+     "domain": "mypantrypact.com",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/mypantrypact.com",
+      "answer": 404,
+      "at": "2026-10-10T13:09:13+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T13:09:13+00:00",
+      "price": 11.25,
+      "years": 1,
+      "standard_price": 11.25
+     }
+    },
+    "ai": {
+     "domain": "mypantrypact.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/mypantrypact.ai",
+      "answer": 404,
+      "at": "2026-10-10T13:09:14+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T13:09:14+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "splitly",
+   "style": "suffixed",
+   "length": 7,
+   "domains": {
+    "com": {
+     "domain": "splitly.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/splitly.com",
+      "answer": 200,
+      "at": "2026-10-10T13:09:14+00:00"
+     },
+     "nameservers": [
+      "joel.ns.cloudflare.com",
+      "sara.ns.cloudflare.com"
+     ],
+     "expires": "2027-05-24"
+    },
+    "ai": {
+     "domain": "splitly.ai",
+     "status": "parked",
+     "note": "nameservers at afternic.com",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/splitly.ai",
+      "answer": 200,
+      "at": "2026-10-10T13:09:14+00:00"
+     },
+     "nameservers": [
+      "ns1.afternic.com",
+      "ns2.afternic.com"
+     ],
+     "expires": "2027-11-04"
+    }
+   }
+  },
+  {
+   "name": "cartify",
+   "style": "suffixed",
+   "length": 7,
+   "domains": {
+    "ai": {
+     "domain": "cartify.ai",
+     "status": "expiring",
+     "note": "registry status: client transfer prohibited, redemption period",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/cartify.ai",
+      "answer": 200,
+      "at": "2026-10-10T13:09:14+00:00"
+     },
+     "nameservers": [
+      "5014.ns1.abovedomains.com",
+      "5014.ns2.abovedomains.com"
+     ],
+     "expires": "2026-08-06"
+    },
+    "com": {
+     "domain": "cartify.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/cartify.com",
+      "answer": 200,
+      "at": "2026-10-10T13:09:14+00:00"
+     },
+     "nameservers": [
+      "ns-1415.awsdns-48.org",
+      "ns-1832.awsdns-37.co.uk",
+      "ns-698.awsdns-23.net",
+      "ns-89.awsdns-11.com"
+     ],
+     "expires": "2028-07-24"
+    }
+   }
+  },
+  {
+   "name": "basketsy",
+   "style": "suffixed",
+   "length": 8,
+   "domains": {
+    "com": {
+     "domain": "basketsy.com",
+     "status": "parked",
+     "note": "nameservers at afternic.com",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/basketsy.com",
+      "answer": 200,
+      "at": "2026-10-10T13:09:14+00:00"
+     },
+     "nameservers": [
+      "ns5.afternic.com",
+      "ns6.afternic.com"
+     ],
+     "expires": "2027-09-11"
+    },
+    "ai": {
+     "domain": "basketsy.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/basketsy.ai",
+      "answer": 404,
+      "at": "2026-10-10T13:09:14+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T13:09:14+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "tallyhq",
+   "style": "suffixed",
+   "length": 7,
+   "domains": {
+    "com": {
+     "domain": "tallyhq.com",
+     "status": "parked",
+     "note": "nameservers at namebrightdns.com",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/tallyhq.com",
+      "answer": 200,
+      "at": "2026-10-10T13:09:14+00:00"
+     },
+     "nameservers": [
+      "ns1.namebrightdns.com",
+      "ns2.namebrightdns.com"
+     ],
+     "expires": "2027-05-28"
+    },
+    "ai": {
+     "domain": "tallyhq.ai",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/tallyhq.ai",
+      "answer": 200,
+      "at": "2026-10-10T13:09:14+00:00"
+     },
+     "nameservers": [
+      "norah.ns.cloudflare.com",
+      "garrett.ns.cloudflare.com"
+     ],
+     "expires": "2028-09-27"
+    }
+   }
+  },
+  {
+   "name": "vellora",
+   "style": "invented",
+   "length": 7,
+   "domains": {
+    "ai": {
+     "domain": "vellora.ai",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/vellora.ai",
+      "answer": 200,
+      "at": "2026-10-10T13:09:14+00:00"
+     },
+     "nameservers": [
+      "ns1.vercel-dns.com",
+      "ns2.vercel-dns.com"
+     ],
+     "expires": "2029-05-05"
+    },
+    "com": {
+     "domain": "vellora.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/vellora.com",
+      "answer": 200,
+      "at": "2026-10-10T13:09:14+00:00"
+     },
+     "nameservers": [
+      "ns21.worldnic.com",
+      "ns22.worldnic.com"
+     ],
+     "expires": "2031-03-27"
+    }
+   }
+  },
+  {
+   "name": "pantroa",
+   "style": "invented",
+   "length": 7,
+   "domains": {
+    "com": {
+     "domain": "pantroa.com",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/pantroa.com",
+      "answer": 404,
+      "at": "2026-10-10T13:09:15+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T13:09:15+00:00",
+      "price": 11.25,
+      "years": 1,
+      "standard_price": 11.25
+     }
+    },
+    "ai": {
+     "domain": "pantroa.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/pantroa.ai",
+      "answer": 404,
+      "at": "2026-10-10T13:09:15+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T13:09:15+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "divvaro",
+   "style": "invented",
+   "length": 7,
+   "domains": {
+    "ai": {
+     "domain": "divvaro.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/divvaro.ai",
+      "answer": 404,
+      "at": "2026-10-10T13:09:15+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T13:09:15+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    },
+    "com": {
+     "domain": "divvaro.com",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/divvaro.com",
+      "answer": 404,
+      "at": "2026-10-10T13:09:15+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T13:09:15+00:00",
+      "price": 11.25,
+      "years": 1,
+      "standard_price": 11.25
+     }
+    }
+   }
+  },
+  {
+   "name": "quorra",
+   "style": "invented",
+   "length": 6,
+   "domains": {
+    "com": {
+     "domain": "quorra.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/quorra.com",
+      "answer": 200,
+      "at": "2026-10-10T13:09:15+00:00"
+     },
+     "nameservers": [
+      "dns3.hichina.com",
+      "dns4.hichina.com"
+     ],
+     "expires": "2029-03-21"
+    },
+    "ai": {
+     "domain": "quorra.ai",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/quorra.ai",
+      "answer": 200,
+      "at": "2026-10-10T13:09:15+00:00"
+     },
+     "nameservers": [
+      "ajay.ns.cloudflare.com",
+      "keyla.ns.cloudflare.com"
+     ],
+     "expires": "2027-10-07"
+    }
+   }
+  },
+  {
+   "name": "mitad",
+   "style": "foreign",
+   "length": 5,
+   "domains": {
+    "com": {
+     "domain": "mitad.com",
+     "status": "parked",
+     "note": "nameservers at afternic.com",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/mitad.com",
+      "answer": 200,
+      "at": "2026-10-10T13:09:15+00:00"
+     },
+     "nameservers": [
+      "ns1.afternic.com",
+      "ns2.afternic.com",
+      "verification-fnaubphhz3uofkgpvkuwpk.ns101.verify.hn"
+     ],
+     "expires": "2027-06-17"
+    },
+    "ai": {
+     "domain": "mitad.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/mitad.ai",
+      "answer": 404,
+      "at": "2026-10-10T13:09:15+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T13:09:15+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "compartir",
+   "style": "foreign",
+   "length": 9,
+   "domains": {
+    "ai": {
+     "domain": "compartir.ai",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/compartir.ai",
+      "answer": 200,
+      "at": "2026-10-10T13:09:15+00:00"
+     },
+     "nameservers": [
+      "ns65.domaincontrol.com",
+      "ns66.domaincontrol.com"
+     ],
+     "expires": "2027-02-24"
+    },
+    "com": {
+     "domain": "compartir.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/compartir.com",
+      "answer": 200,
+      "at": "2026-10-10T13:09:15+00:00"
+     },
+     "nameservers": [
+      "ns.servatica.com",
+      "ns.servatica.net"
+     ],
+     "expires": "2027-11-06"
+    }
+   }
+  }
+ ]
+}
