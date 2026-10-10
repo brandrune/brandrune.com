@@ -1,0 +1,1 @@
+A plant-care app that tells you when to water, based on the light in your room and the weather outside.

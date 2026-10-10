@@ -17,10 +17,20 @@
     { "pattern": "www.brandrune.com", "custom_domain": true }
   ],
   "vars": {
-    "RESEND_AUDIENCE_ID": "c609e317-d11a-43a2-91e1-3709bd6d6b32"
+    "RESEND_AUDIENCE_ID": "c609e317-d11a-43a2-91e1-3709bd6d6b32",
+    "SITE_ORIGIN": "https://brandrune.com",
+    // Confirmation emails go out from kylnor.com until brandrune.com is a
+    // verified Resend domain (the Resend plan is at its domain limit).
+    "CONFIRM_FROM": "Brandrune <brandrune@kylnor.com>"
   },
   "ratelimits": [
-    { "name": "SUBSCRIBE_LIMITER", "namespace_id": "4417", "simple": { "limit": 5, "period": 60 } }
+    { "name": "SUBSCRIBE_LIMITER", "namespace_id": "4417", "simple": { "limit": 5, "period": 60 } },
+    { "name": "CONFIRM_EMAIL_LIMITER", "namespace_id": "4420", "simple": { "limit": 2, "period": 60 } },
+    { "name": "GLOBAL_SEND_LIMITER", "namespace_id": "4421", "simple": { "limit": 10, "period": 60 } }
+  ],
+  // One confirmation email per inbox per day: keys are hashes, values expire after 24 hours.
+  "kv_namespaces": [
+    { "binding": "CONFIRM_COOLDOWN", "id": "5bffc292f4bc482a992105f1dc2c5d74" }
   ],
   "observability": { "enabled": false }
 }

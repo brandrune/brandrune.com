@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "wrangler dev",
     "deploy": "wrangler deploy",
-    "test": "node --test test/worker.test.js test/static.test.js"
+    "test": "node --test test/worker.test.js test/static.test.js test/checker.test.js"
   },
   "devDependencies": {
     "wrangler": "^4"

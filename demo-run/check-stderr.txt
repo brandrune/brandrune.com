@@ -1,0 +1,1 @@
+checking 150 names on .com, .ai with Vercel pricing

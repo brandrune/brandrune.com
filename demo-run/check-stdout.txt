@@ -1,0 +1,158 @@
+150 of 150 names, checked 2026-10-10 12:03 MDT
+
+name             len  style      .com      .ai
+folij            5    respelled  open $11  open $160/2y
+shadule          7    blend      open $11  open $160/2y
+palmpace         8    compound   open $11  open $160/2y
+frondfeed        9    compound   open $11  open $160/2y
+humidaily        9    blend      open $11  open $160/2y
+sprigtime        9    compound   open $11  open $160/2y
+verdinity        9    blend      open $11  open $160/2y
+lushglance       10   compound   open $11  open $160/2y
+pourittoday      11   phrase     open $11  open $160/2y
+askyourplant     12   phrase     open $11  open $160/2y
+feedtheferns     12   phrase     open $11  open $160/2y
+giveitadrink     12   phrase     open $11  open $160/2y
+isitwaterday     12   phrase     open $11  open $160/2y
+callmewhendry    13   phrase     open $11  open*
+herecomesrain    13   phrase     open $11  open $160/2y
+notyetthirsty    13   phrase     open $11  open $160/2y
+calloa           6    invented   parked    open $160/2y
+chlora           6    invented   parked    open $160/2y
+frondo           6    invented   parked    open $160/2y
+greevo           6    invented   parked    open*
+terrao           6    invented   parked    open*
+skysill          7    compound   parked    open $160/2y
+florasia         8    blend      parked    open $160/2y
+leafsure         8    blend      parked    open $160/2y
+plantern         8    blend      parked    open $160/2y
+potpulse         8    compound   parked    open $160/2y
+sapsense         8    compound   parked    open $160/2y
+stemsync         8    compound   parked    open $160/2y
+hydrodial        9    compound   parked    open $160/2y
+lilywatch        9    compound   parked    open $160/2y
+petalogue        9    blend      parked    open $160/2y
+chlorofeel       10   blend      parked    open $160/2y
+dropbydrop       10   phrase     parked    open $160/2y
+shadeshift       10   compound   parked    open $160/2y
+aquaintance      11   blend      parked    open $160/2y
+mistmorning      11   compound   parked    open $160/2y
+wilt             4    real-word  parked    unknown
+kloro            5    respelled  parked    taken
+botanu           6    invented   parked    taken
+sunova           6    invented   parked    taken
+thurst           6    respelled  parked    taken
+tryivy           6    prefixed   parked    unknown
+usemist          7    prefixed   parked    unknown
+seedsignal       10   compound   parked    taken
+windowsill       10   real-word  parked    unknown
+poure            5    respelled  taken     open $160/2y
+sylvo            5    invented   taken     open $160/2y
+aquavi           6    invented   taken     open $160/2y
+botaro           6    invented   taken     open $160/2y
+plantz           6    respelled  taken     open $160/2y
+sunsip           6    compound   taken     open $160/2y
+tendro           6    invented   taken     open $160/2y
+budbell          7    compound   taken     open $160/2y
+dewnote          7    compound   taken     open $160/2y
+foliert          7    blend      taken     open $160/2y
+ivyhour          7    compound   taken     open $160/2y
+moistro          7    blend      taken     open $160/2y
+fernfolk         8    compound   taken     open $160/2y
+hydrella         8    invented   taken     open $160/2y
+lightlog         8    compound   taken     open $160/2y
+noonglow         8    compound   taken     open $160/2y
+rootcall         8    compound   taken     open $160/2y
+vinetime         8    compound   taken     open $160/2y
+budbeacon        9    compound   taken     open $160/2y
+canopycue        9    compound   taken     open $160/2y
+dewcision        9    blend      taken     open $160/2y
+florecast        9    blend      taken     open $160/2y
+glowgauge        9    compound   taken     open $160/2y
+greenhour        9    compound   taken     open $160/2y
+leafclock        9    compound   taken     open $160/2y
+letitgrow        9    phrase     taken     open $160/2y
+mossmeter        9    compound   taken     open $160/2y
+mosswatch        9    compound   taken     open $160/2y
+petalpost        9    compound   taken     open $160/2y
+pourmeone        9    phrase     taken     open $160/2y
+puddlepal        9    compound   taken     open $160/2y
+rainready        9    compound   taken     open $160/2y
+soilution        9    blend      taken     open $160/2y
+sproutine        9    blend      taken     open $160/2y
+thirstday        9    blend      taken     open $160/2y
+bloomclock       10   compound   taken     open $160/2y
+botanomics       10   blend      taken     open $160/2y
+drinkornot       10   phrase     taken     open $160/2y
+ferntastic       10   blend      taken     open $160/2y
+mintenance       10   blend      taken     open $160/2y
+mistminder       10   compound   taken     open $160/2y
+rootrhythm       10   compound   taken     open $160/2y
+sproutlook       10   blend      taken     open $160/2y
+sunorshade       10   phrase     taken     open $160/2y
+thirstypot       10   compound   taken     open $160/2y
+onemoredrop      11   phrase     taken     open $160/2y
+rainorshine      11   phrase     taken     open $160/2y
+sproutcheck      11   compound   taken     open $160/2y
+whentowater      11   phrase     taken     open $160/2y
+happylittleleaf  15   phrase     taken     open $160/2y
+hana             4    foreign    taken     unknown
+hoja             4    foreign    taken     unknown
+mizu             4    foreign    taken     unknown
+sapp             4    respelled  taken     unknown
+soyl             4    respelled  taken     taken
+vyne             4    respelled  taken     parked
+watr             4    respelled  taken     taken
+blatt            5    foreign    taken     unknown
+folha            5    foreign    taken     unknown
+frond            5    real-word  taken     unknown
+grean            5    respelled  taken     taken
+leefy            5    respelled  taken     taken
+mossa            5    invented   taken     taken
+olumi            5    invented   taken     taken
+rayne            5    respelled  taken     taken
+regen            5    foreign    taken     unknown
+sprig            5    real-word  taken     unknown
+tendr            5    respelled  taken     taken
+verde            5    foreign    taken     unknown
+verlo            5    invented   taken     taken
+bloomr           6    respelled  taken     taken
+canopy           6    real-word  taken     unknown
+floreo           6    invented   taken     taken
+lumbra           6    invented   taken     taken
+midori           6    foreign    taken     unknown
+mysill           6    prefixed   taken     unknown
+pelora           6    invented   taken     taken
+pluvia           6    foreign    taken     unknown
+solara           6    invented   taken     parked
+sprowt           6    respelled  taken     taken
+verimo           6    invented   taken     taken
+dropday          7    compound   taken     taken
+feuille          7    foreign    taken     unknown
+gobloom          7    prefixed   taken     unknown
+rootine          7    blend      taken     taken
+sapling          7    real-word  taken     unknown
+tendril          7    real-word  taken     unknown
+thymely          7    blend      taken     taken
+verdure          7    real-word  taken     unknown
+cloudcan         8    compound   taken     taken
+dewpoint         8    real-word  taken     unknown
+getsprig         8    prefixed   taken     unknown
+myjungle         8    prefixed   taken     unknown
+soilmate         8    blend      taken     taken
+uselight         8    prefixed   taken     unknown
+getpotted        9    prefixed   taken     unknown
+greenergy        9    blend      taken     taken
+photosync        9    blend      taken     taken
+soilsense        9    compound   taken     taken
+trycactus        9    prefixed   taken     unknown
+greenhouse       10   real-word  taken     unknown
+growwithme       10   phrase     taken     taken
+mymonstera       10   prefixed   taken     unknown
+leaveittome      11   phrase     taken     taken
+justaddwater     12   phrase     taken     taken
+
+.com across all 150: 16 open, 105 taken, 29 parked
+open* = the registry has no record, but the price was not verified, so a premium
+        or reserved name is not ruled out. See the row's note in results.json.
+unknown = no usable registry answer. Not counted as open.

@@ -1,0 +1,5632 @@
+{
+ "tool": "brandrune 0.3.0",
+ "description": "A plant-care app that tells you when to water, based on the light in your room and the weather outside.",
+ "checked_at": "2026-10-10T18:03:10+00:00",
+ "seconds": 278.9,
+ "tlds": [
+  "com",
+  "ai"
+ ],
+ "registrar": "vercel",
+ "names": [
+  {
+   "name": "leafclock",
+   "style": "compound",
+   "length": 9,
+   "domains": {
+    "com": {
+     "domain": "leafclock.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/leafclock.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:31+00:00"
+     },
+     "nameservers": [
+      "janet.ns.cloudflare.com",
+      "karl.ns.cloudflare.com"
+     ],
+     "expires": "2027-03-10"
+    },
+    "ai": {
+     "domain": "leafclock.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/leafclock.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:31+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:31+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "sunsip",
+   "style": "compound",
+   "length": 6,
+   "domains": {
+    "com": {
+     "domain": "sunsip.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/sunsip.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:31+00:00"
+     },
+     "nameservers": [
+      "nsgbr.comlaude.co.uk",
+      "nssui.comlaude.ch",
+      "nsusa.comlaude.net"
+     ],
+     "expires": "2027-06-17"
+    },
+    "ai": {
+     "domain": "sunsip.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/sunsip.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:31+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:31+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "potpulse",
+   "style": "compound",
+   "length": 8,
+   "domains": {
+    "com": {
+     "domain": "potpulse.com",
+     "status": "parked",
+     "note": "nameservers at namebrightdns.com",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/potpulse.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:31+00:00"
+     },
+     "nameservers": [
+      "ns1.namebrightdns.com",
+      "ns2.namebrightdns.com"
+     ],
+     "expires": "2027-02-19"
+    },
+    "ai": {
+     "domain": "potpulse.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/potpulse.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:31+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:31+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "rootcall",
+   "style": "compound",
+   "length": 8,
+   "domains": {
+    "com": {
+     "domain": "rootcall.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/rootcall.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:31+00:00"
+     },
+     "nameservers": [
+      "domain-for-sale.hugedomainsdns.com",
+      "forsale.hugedomainsdns.com"
+     ],
+     "expires": "2027-02-18"
+    },
+    "ai": {
+     "domain": "rootcall.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/rootcall.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:31+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:31+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "dewnote",
+   "style": "compound",
+   "length": 7,
+   "domains": {
+    "com": {
+     "domain": "dewnote.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/dewnote.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:31+00:00"
+     },
+     "nameservers": [
+      "ns53.domaincontrol.com",
+      "ns54.domaincontrol.com"
+     ],
+     "expires": "2026-11-12"
+    },
+    "ai": {
+     "domain": "dewnote.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/dewnote.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:31+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:31+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "lilywatch",
+   "style": "compound",
+   "length": 9,
+   "domains": {
+    "com": {
+     "domain": "lilywatch.com",
+     "status": "parked",
+     "note": "nameservers at afternic.com",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/lilywatch.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:31+00:00"
+     },
+     "nameservers": [
+      "ns1.afternic.com",
+      "ns2.afternic.com",
+      "verification-kqnr5ht7z8pnvuelk6t645.ns101.verify.hn"
+     ],
+     "expires": "2026-10-24"
+    },
+    "ai": {
+     "domain": "lilywatch.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/lilywatch.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:31+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:31+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "greenhour",
+   "style": "compound",
+   "length": 9,
+   "domains": {
+    "com": {
+     "domain": "greenhour.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/greenhour.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:31+00:00"
+     },
+     "nameservers": [
+      "dilbert.ns.cloudflare.com",
+      "simone.ns.cloudflare.com"
+     ],
+     "expires": "2028-03-04"
+    },
+    "ai": {
+     "domain": "greenhour.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/greenhour.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:31+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:31+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "soilsense",
+   "style": "compound",
+   "length": 9,
+   "domains": {
+    "ai": {
+     "domain": "soilsense.ai",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/soilsense.ai",
+      "answer": 200,
+      "at": "2026-10-10T17:58:31+00:00"
+     },
+     "nameservers": [
+      "ns69.domaincontrol.com",
+      "ns70.domaincontrol.com"
+     ],
+     "expires": "2028-03-15"
+    },
+    "com": {
+     "domain": "soilsense.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/soilsense.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:31+00:00"
+     },
+     "nameservers": [
+      "customer.buydomains.com",
+      "customer2.buydomains.com"
+     ],
+     "expires": "2027-02-19"
+    }
+   }
+  },
+  {
+   "name": "sprigtime",
+   "style": "compound",
+   "length": 9,
+   "domains": {
+    "ai": {
+     "domain": "sprigtime.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/sprigtime.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:31+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:31+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    },
+    "com": {
+     "domain": "sprigtime.com",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/sprigtime.com",
+      "answer": 404,
+      "at": "2026-10-10T17:58:31+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:32+00:00",
+      "price": 11.25,
+      "years": 1,
+      "standard_price": 11.25
+     }
+    }
+   }
+  },
+  {
+   "name": "lightlog",
+   "style": "compound",
+   "length": 8,
+   "domains": {
+    "com": {
+     "domain": "lightlog.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/lightlog.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:31+00:00"
+     },
+     "nameservers": [
+      "ns.dandomain.dk",
+      "ns2.dandomain.dk"
+     ],
+     "expires": "2027-06-10"
+    },
+    "ai": {
+     "domain": "lightlog.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/lightlog.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:31+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:31+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "mossmeter",
+   "style": "compound",
+   "length": 9,
+   "domains": {
+    "com": {
+     "domain": "mossmeter.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/mossmeter.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:31+00:00"
+     },
+     "nameservers": [
+      "abdullah.ns.cloudflare.com",
+      "grannbo.ns.cloudflare.com"
+     ],
+     "expires": "2027-09-16"
+    },
+    "ai": {
+     "domain": "mossmeter.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/mossmeter.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:31+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:31+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "noonglow",
+   "style": "compound",
+   "length": 8,
+   "domains": {
+    "com": {
+     "domain": "noonglow.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/noonglow.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:31+00:00"
+     },
+     "nameservers": [
+      "ns1.markmonitor.com",
+      "ns2.markmonitor.com",
+      "ns3.markmonitor.com",
+      "ns4.markmonitor.com"
+     ],
+     "expires": "2027-05-01"
+    },
+    "ai": {
+     "domain": "noonglow.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/noonglow.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:31+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:31+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "rainready",
+   "style": "compound",
+   "length": 9,
+   "domains": {
+    "com": {
+     "domain": "rainready.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/rainready.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:32+00:00"
+     },
+     "nameservers": [
+      "ns69.domaincontrol.com",
+      "ns70.domaincontrol.com"
+     ],
+     "expires": "2027-10-13"
+    },
+    "ai": {
+     "domain": "rainready.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/rainready.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:32+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:32+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "sproutcheck",
+   "style": "compound",
+   "length": 11,
+   "domains": {
+    "com": {
+     "domain": "sproutcheck.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/sproutcheck.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:32+00:00"
+     },
+     "nameservers": [
+      "ns1.netregistry.net",
+      "ns2.netregistry.net",
+      "ns3.netregistry.net"
+     ],
+     "expires": "2027-06-12"
+    },
+    "ai": {
+     "domain": "sproutcheck.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/sproutcheck.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:32+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:32+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "thirstypot",
+   "style": "compound",
+   "length": 10,
+   "domains": {
+    "com": {
+     "domain": "thirstypot.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/thirstypot.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:32+00:00"
+     },
+     "nameservers": [
+      "ns21.domaincontrol.com",
+      "ns22.domaincontrol.com"
+     ],
+     "expires": "2027-02-21"
+    },
+    "ai": {
+     "domain": "thirstypot.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/thirstypot.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:32+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:32+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "fernfolk",
+   "style": "compound",
+   "length": 8,
+   "domains": {
+    "com": {
+     "domain": "fernfolk.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/fernfolk.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:32+00:00"
+     },
+     "nameservers": [
+      "ns-cloud-c1.googledomains.com",
+      "ns-cloud-c2.googledomains.com",
+      "ns-cloud-c3.googledomains.com",
+      "ns-cloud-c4.googledomains.com"
+     ],
+     "expires": "2027-01-09"
+    },
+    "ai": {
+     "domain": "fernfolk.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/fernfolk.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:32+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:32+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "dropday",
+   "style": "compound",
+   "length": 7,
+   "domains": {
+    "ai": {
+     "domain": "dropday.ai",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/dropday.ai",
+      "answer": 200,
+      "at": "2026-10-10T17:58:32+00:00"
+     },
+     "nameservers": [
+      "ns3fqs.name.com",
+      "ns2hjl.name.com",
+      "ns1kpv.name.com",
+      "ns4cjp.name.com"
+     ],
+     "expires": "2028-06-11"
+    },
+    "com": {
+     "domain": "dropday.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/dropday.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:32+00:00"
+     },
+     "nameservers": [
+      "jason.ns.cloudflare.com",
+      "teresa.ns.cloudflare.com"
+     ],
+     "expires": "2026-10-31"
+    }
+   }
+  },
+  {
+   "name": "bloomclock",
+   "style": "compound",
+   "length": 10,
+   "domains": {
+    "com": {
+     "domain": "bloomclock.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/bloomclock.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:32+00:00"
+     },
+     "nameservers": [
+      "ns01.domaincontrol.com",
+      "ns02.domaincontrol.com"
+     ],
+     "expires": "2026-12-09"
+    },
+    "ai": {
+     "domain": "bloomclock.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/bloomclock.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:32+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:32+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "canopycue",
+   "style": "compound",
+   "length": 9,
+   "domains": {
+    "com": {
+     "domain": "canopycue.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/canopycue.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:32+00:00"
+     },
+     "nameservers": [
+      "earl.ns.cloudflare.com",
+      "elisabeth.ns.cloudflare.com"
+     ],
+     "expires": "2027-08-28"
+    },
+    "ai": {
+     "domain": "canopycue.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/canopycue.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:32+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:32+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "stemsync",
+   "style": "compound",
+   "length": 8,
+   "domains": {
+    "com": {
+     "domain": "stemsync.com",
+     "status": "parked",
+     "note": "nameservers at namebrightdns.com",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/stemsync.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:33+00:00"
+     },
+     "nameservers": [
+      "nsg1.namebrightdns.com",
+      "nsg2.namebrightdns.com"
+     ],
+     "expires": "2027-01-22"
+    },
+    "ai": {
+     "domain": "stemsync.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/stemsync.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:33+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:33+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "palmpace",
+   "style": "compound",
+   "length": 8,
+   "domains": {
+    "com": {
+     "domain": "palmpace.com",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/palmpace.com",
+      "answer": 404,
+      "at": "2026-10-10T17:58:33+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:33+00:00",
+      "price": 11.25,
+      "years": 1,
+      "standard_price": 11.25
+     }
+    },
+    "ai": {
+     "domain": "palmpace.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/palmpace.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:33+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:33+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "rootrhythm",
+   "style": "compound",
+   "length": 10,
+   "domains": {
+    "com": {
+     "domain": "rootrhythm.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/rootrhythm.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:33+00:00"
+     },
+     "nameservers": [
+      "ns1.bluehost.com",
+      "ns2.bluehost.com"
+     ],
+     "expires": "2027-02-09"
+    },
+    "ai": {
+     "domain": "rootrhythm.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/rootrhythm.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:33+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:33+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "mistminder",
+   "style": "compound",
+   "length": 10,
+   "domains": {
+    "com": {
+     "domain": "mistminder.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/mistminder.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:33+00:00"
+     },
+     "nameservers": [
+      "ns1.hostmetro.com",
+      "ns2.hostmetro.com"
+     ],
+     "expires": "2027-03-31"
+    },
+    "ai": {
+     "domain": "mistminder.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/mistminder.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:33+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:33+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "budbell",
+   "style": "compound",
+   "length": 7,
+   "domains": {
+    "com": {
+     "domain": "budbell.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/budbell.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:34+00:00"
+     },
+     "nameservers": [
+      "ns1.bellcumbie.org",
+      "ns2.bellcumbie.org"
+     ],
+     "expires": "2027-01-15"
+    },
+    "ai": {
+     "domain": "budbell.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/budbell.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:34+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:34+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "seedsignal",
+   "style": "compound",
+   "length": 10,
+   "domains": {
+    "com": {
+     "domain": "seedsignal.com",
+     "status": "parked",
+     "note": "nameservers at brandbucket.com",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/seedsignal.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:34+00:00"
+     },
+     "nameservers": [
+      "ns1.brandbucket.com",
+      "ns2.brandbucket.com"
+     ],
+     "expires": "2026-12-24"
+    },
+    "ai": {
+     "domain": "seedsignal.ai",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/seedsignal.ai",
+      "answer": 200,
+      "at": "2026-10-10T17:58:34+00:00"
+     },
+     "nameservers": [
+      "ns59.worldnic.com",
+      "ns60.worldnic.com"
+     ],
+     "expires": "2027-05-09"
+    }
+   }
+  },
+  {
+   "name": "vinetime",
+   "style": "compound",
+   "length": 8,
+   "domains": {
+    "com": {
+     "domain": "vinetime.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/vinetime.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:34+00:00"
+     },
+     "nameservers": [
+      "ns.buydomains.com",
+      "this-domain-for-sale.com"
+     ],
+     "expires": "2027-04-16"
+    },
+    "ai": {
+     "domain": "vinetime.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/vinetime.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:34+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:34+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "petalpost",
+   "style": "compound",
+   "length": 9,
+   "domains": {
+    "com": {
+     "domain": "petalpost.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/petalpost.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:34+00:00"
+     },
+     "nameservers": [
+      "dahlia.ns.cloudflare.com",
+      "maciej.ns.cloudflare.com"
+     ],
+     "expires": "2027-06-14"
+    },
+    "ai": {
+     "domain": "petalpost.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/petalpost.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:34+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:34+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "shadeshift",
+   "style": "compound",
+   "length": 10,
+   "domains": {
+    "com": {
+     "domain": "shadeshift.com",
+     "status": "parked",
+     "note": "nameservers at afternic.com",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/shadeshift.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:34+00:00"
+     },
+     "nameservers": [
+      "ns1.afternic.com",
+      "ns2.afternic.com",
+      "verification-ilzyovyxkjcylcmj8rbffy.ns101.verify.hn"
+     ],
+     "expires": "2027-01-28"
+    },
+    "ai": {
+     "domain": "shadeshift.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/shadeshift.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:34+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:34+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "glowgauge",
+   "style": "compound",
+   "length": 9,
+   "domains": {
+    "com": {
+     "domain": "glowgauge.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/glowgauge.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:34+00:00"
+     },
+     "nameservers": [
+      "ns1.dan.hosting",
+      "ns2.dan.hosting"
+     ],
+     "expires": "2026-10-17"
+    },
+    "ai": {
+     "domain": "glowgauge.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/glowgauge.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:35+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:35+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "ivyhour",
+   "style": "compound",
+   "length": 7,
+   "domains": {
+    "com": {
+     "domain": "ivyhour.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/ivyhour.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:35+00:00"
+     },
+     "nameservers": [
+      "curitiba.ns.porkbun.com",
+      "fortaleza.ns.porkbun.com",
+      "maceio.ns.porkbun.com",
+      "salvador.ns.porkbun.com"
+     ],
+     "expires": "2026-12-21"
+    },
+    "ai": {
+     "domain": "ivyhour.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/ivyhour.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:35+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:35+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "sapsense",
+   "style": "compound",
+   "length": 8,
+   "domains": {
+    "com": {
+     "domain": "sapsense.com",
+     "status": "parked",
+     "note": "nameservers at namebrightdns.com",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/sapsense.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:35+00:00"
+     },
+     "nameservers": [
+      "nsg1.namebrightdns.com",
+      "nsg2.namebrightdns.com"
+     ],
+     "expires": "2027-04-29"
+    },
+    "ai": {
+     "domain": "sapsense.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/sapsense.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:35+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:35+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "cloudcan",
+   "style": "compound",
+   "length": 8,
+   "domains": {
+    "com": {
+     "domain": "cloudcan.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/cloudcan.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:35+00:00"
+     },
+     "nameservers": [
+      "ns09.domaincontrol.com",
+      "ns10.domaincontrol.com"
+     ],
+     "expires": "2027-01-28"
+    },
+    "ai": {
+     "domain": "cloudcan.ai",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/cloudcan.ai",
+      "answer": 200,
+      "at": "2026-10-10T17:58:35+00:00"
+     },
+     "nameservers": [
+      "coco.ns.cloudflare.com",
+      "mack.ns.cloudflare.com"
+     ],
+     "expires": "2027-12-26"
+    }
+   }
+  },
+  {
+   "name": "skysill",
+   "style": "compound",
+   "length": 7,
+   "domains": {
+    "com": {
+     "domain": "skysill.com",
+     "status": "parked",
+     "note": "nameservers at afternic.com",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/skysill.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:35+00:00"
+     },
+     "nameservers": [
+      "ns1.afternic.com",
+      "ns2.afternic.com"
+     ],
+     "expires": "2027-06-14"
+    },
+    "ai": {
+     "domain": "skysill.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/skysill.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:35+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:35+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "puddlepal",
+   "style": "compound",
+   "length": 9,
+   "domains": {
+    "com": {
+     "domain": "puddlepal.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/puddlepal.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:35+00:00"
+     },
+     "nameservers": [
+      "ns11.domaincontrol.com",
+      "ns12.domaincontrol.com"
+     ],
+     "expires": "2027-04-12"
+    },
+    "ai": {
+     "domain": "puddlepal.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/puddlepal.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:35+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:35+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "mistmorning",
+   "style": "compound",
+   "length": 11,
+   "domains": {
+    "com": {
+     "domain": "mistmorning.com",
+     "status": "parked",
+     "note": "nameservers at atom.com",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/mistmorning.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:36+00:00"
+     },
+     "nameservers": [
+      "ns1.atom.com",
+      "ns2.atom.com"
+     ],
+     "expires": "2027-07-29"
+    },
+    "ai": {
+     "domain": "mistmorning.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/mistmorning.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:36+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:36+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "hydrodial",
+   "style": "compound",
+   "length": 9,
+   "domains": {
+    "com": {
+     "domain": "hydrodial.com",
+     "status": "parked",
+     "note": "nameservers at afternic.com",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/hydrodial.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:36+00:00"
+     },
+     "nameservers": [
+      "ns1.afternic.com",
+      "ns2.afternic.com"
+     ],
+     "expires": "2027-05-07"
+    },
+    "ai": {
+     "domain": "hydrodial.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/hydrodial.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:36+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:36+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "frondfeed",
+   "style": "compound",
+   "length": 9,
+   "domains": {
+    "com": {
+     "domain": "frondfeed.com",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/frondfeed.com",
+      "answer": 404,
+      "at": "2026-10-10T17:58:36+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:36+00:00",
+      "price": 11.25,
+      "years": 1,
+      "standard_price": 11.25
+     }
+    },
+    "ai": {
+     "domain": "frondfeed.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/frondfeed.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:36+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:36+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "lushglance",
+   "style": "compound",
+   "length": 10,
+   "domains": {
+    "com": {
+     "domain": "lushglance.com",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/lushglance.com",
+      "answer": 404,
+      "at": "2026-10-10T17:58:37+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:37+00:00",
+      "price": 11.25,
+      "years": 1,
+      "standard_price": 11.25
+     }
+    },
+    "ai": {
+     "domain": "lushglance.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/lushglance.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:37+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:37+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "budbeacon",
+   "style": "compound",
+   "length": 9,
+   "domains": {
+    "com": {
+     "domain": "budbeacon.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/budbeacon.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:38+00:00"
+     },
+     "nameservers": [
+      "ns65.domaincontrol.com",
+      "ns66.domaincontrol.com"
+     ],
+     "expires": "2026-11-10"
+    },
+    "ai": {
+     "domain": "budbeacon.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/budbeacon.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:38+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:38+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "mosswatch",
+   "style": "compound",
+   "length": 9,
+   "domains": {
+    "com": {
+     "domain": "mosswatch.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/mosswatch.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:38+00:00"
+     },
+     "nameservers": [
+      "olivia.ns.cloudflare.com",
+      "razvan.ns.cloudflare.com"
+     ],
+     "expires": "2027-08-26"
+    },
+    "ai": {
+     "domain": "mosswatch.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/mosswatch.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:38+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:38+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "sproutine",
+   "style": "blend",
+   "length": 9,
+   "domains": {
+    "com": {
+     "domain": "sproutine.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/sproutine.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:38+00:00"
+     },
+     "nameservers": [
+      "mosca.dnspod.net",
+      "taro.dnspod.net"
+     ],
+     "expires": "2027-11-04"
+    },
+    "ai": {
+     "domain": "sproutine.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/sproutine.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:39+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:39+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "plantern",
+   "style": "blend",
+   "length": 8,
+   "domains": {
+    "com": {
+     "domain": "plantern.com",
+     "status": "parked",
+     "note": "nameservers at afternic.com",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/plantern.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:39+00:00"
+     },
+     "nameservers": [
+      "ns1.afternic.com",
+      "ns2.afternic.com"
+     ],
+     "expires": "2027-12-06"
+    },
+    "ai": {
+     "domain": "plantern.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/plantern.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:39+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:39+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "greenergy",
+   "style": "blend",
+   "length": 9,
+   "domains": {
+    "com": {
+     "domain": "greenergy.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/greenergy.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:39+00:00"
+     },
+     "nameservers": [
+      "ns1.netnames.net",
+      "ns2.netnames.net",
+      "ns5.netnames.net",
+      "ns6.netnames.net"
+     ],
+     "expires": "2027-09-29"
+    },
+    "ai": {
+     "domain": "greenergy.ai",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/greenergy.ai",
+      "answer": 200,
+      "at": "2026-10-10T17:58:39+00:00"
+     },
+     "nameservers": [
+      "ns67.domaincontrol.com",
+      "ns68.domaincontrol.com"
+     ],
+     "expires": "2027-10-10"
+    }
+   }
+  },
+  {
+   "name": "rootine",
+   "style": "blend",
+   "length": 7,
+   "domains": {
+    "com": {
+     "domain": "rootine.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/rootine.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:39+00:00"
+     },
+     "nameservers": [
+      "huxley.ns.cloudflare.com",
+      "zelda.ns.cloudflare.com"
+     ],
+     "expires": "2027-10-01"
+    },
+    "ai": {
+     "domain": "rootine.ai",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/rootine.ai",
+      "answer": 200,
+      "at": "2026-10-10T17:58:39+00:00"
+     },
+     "nameservers": [
+      "ns73.domaincontrol.com",
+      "ns74.domaincontrol.com"
+     ],
+     "expires": "2027-11-14"
+    }
+   }
+  },
+  {
+   "name": "verdinity",
+   "style": "blend",
+   "length": 9,
+   "domains": {
+    "com": {
+     "domain": "verdinity.com",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/verdinity.com",
+      "answer": 404,
+      "at": "2026-10-10T17:58:40+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:40+00:00",
+      "price": 11.25,
+      "years": 1,
+      "standard_price": 11.25
+     }
+    },
+    "ai": {
+     "domain": "verdinity.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/verdinity.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:40+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:40+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "thirstday",
+   "style": "blend",
+   "length": 9,
+   "domains": {
+    "com": {
+     "domain": "thirstday.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/thirstday.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:40+00:00"
+     },
+     "nameservers": [
+      "ns1.abac.com",
+      "ns2.abac.com"
+     ],
+     "expires": "2027-01-06"
+    },
+    "ai": {
+     "domain": "thirstday.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/thirstday.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:40+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:40+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "florasia",
+   "style": "blend",
+   "length": 8,
+   "domains": {
+    "com": {
+     "domain": "florasia.com",
+     "status": "parked",
+     "note": "nameservers at afternic.com",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/florasia.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:40+00:00"
+     },
+     "nameservers": [
+      "ns1.afternic.com",
+      "ns2.afternic.com"
+     ],
+     "expires": "2027-08-18"
+    },
+    "ai": {
+     "domain": "florasia.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/florasia.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:40+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:40+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "soilution",
+   "style": "blend",
+   "length": 9,
+   "domains": {
+    "com": {
+     "domain": "soilution.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/soilution.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:40+00:00"
+     },
+     "nameservers": [
+      "ns1.locaweb.com.br",
+      "ns2.locaweb.com.br",
+      "ns3.locaweb.com.br"
+     ],
+     "expires": "2027-05-09"
+    },
+    "ai": {
+     "domain": "soilution.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/soilution.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:40+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:40+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "florecast",
+   "style": "blend",
+   "length": 9,
+   "domains": {
+    "com": {
+     "domain": "florecast.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/florecast.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:40+00:00"
+     },
+     "nameservers": [
+      "nsn1.mijndomein.nl",
+      "nsn2.mijndomein.nl"
+     ],
+     "expires": "2027-02-02"
+    },
+    "ai": {
+     "domain": "florecast.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/florecast.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:40+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:40+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "petalogue",
+   "style": "blend",
+   "length": 9,
+   "domains": {
+    "com": {
+     "domain": "petalogue.com",
+     "status": "parked",
+     "note": "nameservers at afternic.com",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/petalogue.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:40+00:00"
+     },
+     "nameservers": [
+      "ns1.afternic.com",
+      "ns2.afternic.com"
+     ],
+     "expires": "2027-09-24"
+    },
+    "ai": {
+     "domain": "petalogue.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/petalogue.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:41+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:41+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "soilmate",
+   "style": "blend",
+   "length": 8,
+   "domains": {
+    "com": {
+     "domain": "soilmate.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/soilmate.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:41+00:00"
+     },
+     "nameservers": [
+      "ns01.domaincontrol.com",
+      "ns02.domaincontrol.com"
+     ],
+     "expires": "2028-12-16"
+    },
+    "ai": {
+     "domain": "soilmate.ai",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/soilmate.ai",
+      "answer": 200,
+      "at": "2026-10-10T17:58:41+00:00"
+     },
+     "nameservers": [
+      "ns-1075.awsdns-06.org",
+      "ns-277.awsdns-34.com",
+      "ns-745.awsdns-29.net",
+      "ns-1542.awsdns-00.co.uk"
+     ],
+     "expires": "2027-01-22"
+    }
+   }
+  },
+  {
+   "name": "leafsure",
+   "style": "blend",
+   "length": 8,
+   "domains": {
+    "com": {
+     "domain": "leafsure.com",
+     "status": "parked",
+     "note": "nameservers at namebrightdns.com",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/leafsure.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:41+00:00"
+     },
+     "nameservers": [
+      "nsg1.namebrightdns.com",
+      "nsg2.namebrightdns.com"
+     ],
+     "expires": "2027-06-26"
+    },
+    "ai": {
+     "domain": "leafsure.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/leafsure.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:41+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:41+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "thymely",
+   "style": "blend",
+   "length": 7,
+   "domains": {
+    "com": {
+     "domain": "thymely.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/thymely.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:41+00:00"
+     },
+     "nameservers": [
+      "ns19.domaincontrol.com",
+      "ns20.domaincontrol.com"
+     ],
+     "expires": "2028-02-07"
+    },
+    "ai": {
+     "domain": "thymely.ai",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/thymely.ai",
+      "answer": 200,
+      "at": "2026-10-10T17:58:41+00:00"
+     },
+     "nameservers": [
+      "guss.ns.cloudflare.com",
+      "jewel.ns.cloudflare.com"
+     ],
+     "expires": "2027-03-13"
+    }
+   }
+  },
+  {
+   "name": "mintenance",
+   "style": "blend",
+   "length": 10,
+   "domains": {
+    "com": {
+     "domain": "mintenance.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/mintenance.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:41+00:00"
+     },
+     "nameservers": [
+      "dns1.registrar-servers.com",
+      "dns2.registrar-servers.com"
+     ],
+     "expires": "2027-10-18"
+    },
+    "ai": {
+     "domain": "mintenance.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/mintenance.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:41+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:41+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "dewcision",
+   "style": "blend",
+   "length": 9,
+   "domains": {
+    "com": {
+     "domain": "dewcision.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/dewcision.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:41+00:00"
+     },
+     "nameservers": [
+      "ns1.pbsg.com",
+      "ns2.pbsg.com",
+      "ns3.pbsg.com",
+      "ns4.pbsg.com"
+     ],
+     "expires": "2028-03-17"
+    },
+    "ai": {
+     "domain": "dewcision.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/dewcision.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:41+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:41+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "shadule",
+   "style": "blend",
+   "length": 7,
+   "domains": {
+    "ai": {
+     "domain": "shadule.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/shadule.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:42+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:42+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    },
+    "com": {
+     "domain": "shadule.com",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/shadule.com",
+      "answer": 404,
+      "at": "2026-10-10T17:58:42+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:42+00:00",
+      "price": 11.25,
+      "years": 1,
+      "standard_price": 11.25
+     }
+    }
+   }
+  },
+  {
+   "name": "sproutlook",
+   "style": "blend",
+   "length": 10,
+   "domains": {
+    "com": {
+     "domain": "sproutlook.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/sproutlook.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:42+00:00"
+     },
+     "nameservers": [
+      "james.ns.cloudflare.com",
+      "macy.ns.cloudflare.com"
+     ],
+     "expires": "2027-05-24"
+    },
+    "ai": {
+     "domain": "sproutlook.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/sproutlook.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:42+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:42+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "chlorofeel",
+   "style": "blend",
+   "length": 10,
+   "domains": {
+    "com": {
+     "domain": "chlorofeel.com",
+     "status": "parked",
+     "note": "nameservers at atom.com",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/chlorofeel.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:42+00:00"
+     },
+     "nameservers": [
+      "ns1.atom.com",
+      "ns2.atom.com"
+     ],
+     "expires": "2028-01-24"
+    },
+    "ai": {
+     "domain": "chlorofeel.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/chlorofeel.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:42+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:42+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "aquaintance",
+   "style": "blend",
+   "length": 11,
+   "domains": {
+    "com": {
+     "domain": "aquaintance.com",
+     "status": "parked",
+     "note": "nameservers at namebrightdns.com",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/aquaintance.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:42+00:00"
+     },
+     "nameservers": [
+      "nsg1.namebrightdns.com",
+      "nsg2.namebrightdns.com"
+     ],
+     "expires": "2026-10-13"
+    },
+    "ai": {
+     "domain": "aquaintance.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/aquaintance.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:42+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:42+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "foliert",
+   "style": "blend",
+   "length": 7,
+   "domains": {
+    "com": {
+     "domain": "foliert.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/foliert.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:42+00:00"
+     },
+     "nameservers": [
+      "ns5.kasserver.com",
+      "ns6.kasserver.com"
+     ],
+     "expires": "2027-04-06"
+    },
+    "ai": {
+     "domain": "foliert.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/foliert.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:42+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:42+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "ferntastic",
+   "style": "blend",
+   "length": 10,
+   "domains": {
+    "com": {
+     "domain": "ferntastic.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/ferntastic.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:43+00:00"
+     },
+     "nameservers": [
+      "ns1.aplus.net",
+      "ns2.aplus.net",
+      "ns3.aplus.net"
+     ],
+     "expires": "2027-07-01"
+    },
+    "ai": {
+     "domain": "ferntastic.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/ferntastic.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:43+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:43+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "moistro",
+   "style": "blend",
+   "length": 7,
+   "domains": {
+    "com": {
+     "domain": "moistro.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/moistro.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:43+00:00"
+     },
+     "nameservers": [
+      "dijkstra.ihsdns.com",
+      "knuth.ihsdns.com"
+     ],
+     "expires": "2027-03-21"
+    },
+    "ai": {
+     "domain": "moistro.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/moistro.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:43+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:43+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "botanomics",
+   "style": "blend",
+   "length": 10,
+   "domains": {
+    "com": {
+     "domain": "botanomics.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/botanomics.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:43+00:00"
+     },
+     "nameservers": [
+      "dns1.registrar-servers.com",
+      "dns2.registrar-servers.com"
+     ],
+     "expires": "2027-01-13"
+    },
+    "ai": {
+     "domain": "botanomics.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/botanomics.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:43+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:43+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "photosync",
+   "style": "blend",
+   "length": 9,
+   "domains": {
+    "com": {
+     "domain": "photosync.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/photosync.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:43+00:00"
+     },
+     "nameservers": [
+      "ns1.fabulous.com",
+      "ns2.fabulous.com",
+      "ns3.fabulous.com",
+      "ns4.fabulous.com"
+     ],
+     "expires": "2029-06-14"
+    },
+    "ai": {
+     "domain": "photosync.ai",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/photosync.ai",
+      "answer": 200,
+      "at": "2026-10-10T17:58:43+00:00"
+     },
+     "nameservers": [
+      "pdns05.domaincontrol.com",
+      "pdns06.domaincontrol.com"
+     ],
+     "expires": "2027-11-10"
+    }
+   }
+  },
+  {
+   "name": "humidaily",
+   "style": "blend",
+   "length": 9,
+   "domains": {
+    "com": {
+     "domain": "humidaily.com",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/humidaily.com",
+      "answer": 404,
+      "at": "2026-10-10T17:58:43+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:43+00:00",
+      "price": 11.25,
+      "years": 1,
+      "standard_price": 11.25
+     }
+    },
+    "ai": {
+     "domain": "humidaily.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/humidaily.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:43+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:43+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "whentowater",
+   "style": "phrase",
+   "length": 11,
+   "domains": {
+    "com": {
+     "domain": "whentowater.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/whentowater.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:43+00:00"
+     },
+     "nameservers": [
+      "ns.liquidweb.com",
+      "ns1.liquidweb.com"
+     ],
+     "expires": "2027-06-25"
+    },
+    "ai": {
+     "domain": "whentowater.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/whentowater.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:43+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:43+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "isitwaterday",
+   "style": "phrase",
+   "length": 12,
+   "domains": {
+    "ai": {
+     "domain": "isitwaterday.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/isitwaterday.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:44+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:44+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    },
+    "com": {
+     "domain": "isitwaterday.com",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/isitwaterday.com",
+      "answer": 404,
+      "at": "2026-10-10T17:58:44+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:44+00:00",
+      "price": 11.25,
+      "years": 1,
+      "standard_price": 11.25
+     }
+    }
+   }
+  },
+  {
+   "name": "justaddwater",
+   "style": "phrase",
+   "length": 12,
+   "domains": {
+    "com": {
+     "domain": "justaddwater.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/justaddwater.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:45+00:00"
+     },
+     "nameservers": [
+      "ns59.worldnic.com",
+      "ns60.worldnic.com"
+     ],
+     "expires": "2029-04-15"
+    },
+    "ai": {
+     "domain": "justaddwater.ai",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/justaddwater.ai",
+      "answer": 200,
+      "at": "2026-10-10T17:58:45+00:00"
+     },
+     "nameservers": [
+      "ns49.domaincontrol.com",
+      "ns50.domaincontrol.com"
+     ],
+     "expires": "2027-07-03"
+    }
+   }
+  },
+  {
+   "name": "drinkornot",
+   "style": "phrase",
+   "length": 10,
+   "domains": {
+    "com": {
+     "domain": "drinkornot.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/drinkornot.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:45+00:00"
+     },
+     "nameservers": [
+      "ns1.wordpress.com",
+      "ns2.wordpress.com",
+      "ns3.wordpress.com"
+     ],
+     "expires": "2027-10-10"
+    },
+    "ai": {
+     "domain": "drinkornot.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/drinkornot.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:45+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:45+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "notyetthirsty",
+   "style": "phrase",
+   "length": 13,
+   "domains": {
+    "com": {
+     "domain": "notyetthirsty.com",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/notyetthirsty.com",
+      "answer": 404,
+      "at": "2026-10-10T17:58:45+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:45+00:00",
+      "price": 11.25,
+      "years": 1,
+      "standard_price": 11.25
+     }
+    },
+    "ai": {
+     "domain": "notyetthirsty.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/notyetthirsty.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:45+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:45+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "leaveittome",
+   "style": "phrase",
+   "length": 11,
+   "domains": {
+    "com": {
+     "domain": "leaveittome.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/leaveittome.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:45+00:00"
+     },
+     "nameservers": [
+      "lunlun.ns.giantpanda.com",
+      "yangyang.ns.giantpanda.com"
+     ],
+     "expires": "2027-08-09"
+    },
+    "ai": {
+     "domain": "leaveittome.ai",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/leaveittome.ai",
+      "answer": 200,
+      "at": "2026-10-10T17:58:45+00:00"
+     },
+     "nameservers": [
+      "ns53.domaincontrol.com",
+      "ns54.domaincontrol.com"
+     ],
+     "expires": "2028-09-05"
+    }
+   }
+  },
+  {
+   "name": "giveitadrink",
+   "style": "phrase",
+   "length": 12,
+   "domains": {
+    "ai": {
+     "domain": "giveitadrink.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/giveitadrink.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:45+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:45+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    },
+    "com": {
+     "domain": "giveitadrink.com",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/giveitadrink.com",
+      "answer": 404,
+      "at": "2026-10-10T17:58:45+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:45+00:00",
+      "price": 11.25,
+      "years": 1,
+      "standard_price": 11.25
+     }
+    }
+   }
+  },
+  {
+   "name": "sunorshade",
+   "style": "phrase",
+   "length": 10,
+   "domains": {
+    "com": {
+     "domain": "sunorshade.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/sunorshade.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:46+00:00"
+     },
+     "nameservers": [
+      "ns8.wixdns.net",
+      "ns9.wixdns.net"
+     ],
+     "expires": "2027-02-18"
+    },
+    "ai": {
+     "domain": "sunorshade.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/sunorshade.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:46+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:46+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "dropbydrop",
+   "style": "phrase",
+   "length": 10,
+   "domains": {
+    "com": {
+     "domain": "dropbydrop.com",
+     "status": "parked",
+     "note": "nameservers at afternic.com",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/dropbydrop.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:46+00:00"
+     },
+     "nameservers": [
+      "ns1.afternic.com",
+      "ns2.afternic.com"
+     ],
+     "expires": "2027-08-25"
+    },
+    "ai": {
+     "domain": "dropbydrop.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/dropbydrop.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:46+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:46+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "happylittleleaf",
+   "style": "phrase",
+   "length": 15,
+   "domains": {
+    "com": {
+     "domain": "happylittleleaf.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/happylittleleaf.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:46+00:00"
+     },
+     "nameservers": [
+      "ns1.dnsowl.com",
+      "ns2.dnsowl.com",
+      "ns3.dnsowl.com"
+     ],
+     "expires": "2027-03-27"
+    },
+    "ai": {
+     "domain": "happylittleleaf.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/happylittleleaf.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:46+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:46+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "askyourplant",
+   "style": "phrase",
+   "length": 12,
+   "domains": {
+    "ai": {
+     "domain": "askyourplant.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/askyourplant.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:47+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:47+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    },
+    "com": {
+     "domain": "askyourplant.com",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/askyourplant.com",
+      "answer": 404,
+      "at": "2026-10-10T17:58:46+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:46+00:00",
+      "price": 11.25,
+      "years": 1,
+      "standard_price": 11.25
+     }
+    }
+   }
+  },
+  {
+   "name": "pourittoday",
+   "style": "phrase",
+   "length": 11,
+   "domains": {
+    "com": {
+     "domain": "pourittoday.com",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/pourittoday.com",
+      "answer": 404,
+      "at": "2026-10-10T17:58:47+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:47+00:00",
+      "price": 11.25,
+      "years": 1,
+      "standard_price": 11.25
+     }
+    },
+    "ai": {
+     "domain": "pourittoday.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/pourittoday.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:47+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:47+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "feedtheferns",
+   "style": "phrase",
+   "length": 12,
+   "domains": {
+    "ai": {
+     "domain": "feedtheferns.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/feedtheferns.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:47+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:47+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    },
+    "com": {
+     "domain": "feedtheferns.com",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/feedtheferns.com",
+      "answer": 404,
+      "at": "2026-10-10T17:58:47+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:47+00:00",
+      "price": 11.25,
+      "years": 1,
+      "standard_price": 11.25
+     }
+    }
+   }
+  },
+  {
+   "name": "rainorshine",
+   "style": "phrase",
+   "length": 11,
+   "domains": {
+    "com": {
+     "domain": "rainorshine.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/rainorshine.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:48+00:00"
+     },
+     "nameservers": [
+      "ns1.bluehost.com",
+      "ns2.bluehost.com"
+     ],
+     "expires": "2028-10-19"
+    },
+    "ai": {
+     "domain": "rainorshine.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/rainorshine.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:48+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:48+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "onemoredrop",
+   "style": "phrase",
+   "length": 11,
+   "domains": {
+    "com": {
+     "domain": "onemoredrop.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/onemoredrop.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:48+00:00"
+     },
+     "nameservers": [
+      "ns.wedos.com",
+      "ns.wedos.cz",
+      "ns.wedos.eu",
+      "ns.wedos.net"
+     ],
+     "expires": "2027-02-03"
+    },
+    "ai": {
+     "domain": "onemoredrop.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/onemoredrop.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:48+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:48+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "letitgrow",
+   "style": "phrase",
+   "length": 9,
+   "domains": {
+    "com": {
+     "domain": "letitgrow.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/letitgrow.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:48+00:00"
+     },
+     "nameservers": [
+      "ns85.worldnic.com",
+      "ns86.worldnic.com"
+     ],
+     "expires": "2028-07-15"
+    },
+    "ai": {
+     "domain": "letitgrow.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/letitgrow.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:48+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:48+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "growwithme",
+   "style": "phrase",
+   "length": 10,
+   "domains": {
+    "com": {
+     "domain": "growwithme.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/growwithme.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:49+00:00"
+     },
+     "nameservers": [
+      "ns1.abac.com",
+      "ns2.abac.com"
+     ],
+     "expires": "2027-04-28"
+    },
+    "ai": {
+     "domain": "growwithme.ai",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/growwithme.ai",
+      "answer": 200,
+      "at": "2026-10-10T17:58:49+00:00"
+     },
+     "nameservers": [
+      "ns63.domaincontrol.com",
+      "ns64.domaincontrol.com"
+     ],
+     "expires": "2027-07-08"
+    }
+   }
+  },
+  {
+   "name": "herecomesrain",
+   "style": "phrase",
+   "length": 13,
+   "domains": {
+    "ai": {
+     "domain": "herecomesrain.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/herecomesrain.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:49+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:49+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    },
+    "com": {
+     "domain": "herecomesrain.com",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/herecomesrain.com",
+      "answer": 404,
+      "at": "2026-10-10T17:58:49+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:49+00:00",
+      "price": 11.25,
+      "years": 1,
+      "standard_price": 11.25
+     }
+    }
+   }
+  },
+  {
+   "name": "callmewhendry",
+   "style": "phrase",
+   "length": 13,
+   "domains": {
+    "com": {
+     "domain": "callmewhendry.com",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/callmewhendry.com",
+      "answer": 404,
+      "at": "2026-10-10T17:58:49+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:49+00:00",
+      "price": 11.25,
+      "years": 1,
+      "standard_price": 11.25
+     }
+    },
+    "ai": {
+     "domain": "callmewhendry.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/callmewhendry.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:49+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "answer": null,
+      "verified": false,
+      "at": "2026-10-10T17:58:49+00:00"
+     },
+     "note": "registrar check failed; price not verified"
+    }
+   }
+  },
+  {
+   "name": "pourmeone",
+   "style": "phrase",
+   "length": 9,
+   "domains": {
+    "com": {
+     "domain": "pourmeone.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/pourmeone.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:49+00:00"
+     },
+     "nameservers": [
+      "ns45.domaincontrol.com",
+      "ns46.domaincontrol.com"
+     ],
+     "expires": "2027-01-18"
+    },
+    "ai": {
+     "domain": "pourmeone.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/pourmeone.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:49+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:49+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "verimo",
+   "style": "invented",
+   "length": 6,
+   "domains": {
+    "com": {
+     "domain": "verimo.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/verimo.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:49+00:00"
+     },
+     "nameservers": [
+      "ns1.power-dns.com",
+      "ns2.power-dns.com",
+      "ns3.power-dns.com"
+     ],
+     "expires": "2028-05-24"
+    },
+    "ai": {
+     "domain": "verimo.ai",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/verimo.ai",
+      "answer": 200,
+      "at": "2026-10-10T17:58:50+00:00"
+     },
+     "nameservers": [
+      "heidi.ns.cloudflare.com",
+      "chance.ns.cloudflare.com"
+     ],
+     "expires": "2028-06-28"
+    }
+   }
+  },
+  {
+   "name": "sylvo",
+   "style": "invented",
+   "length": 5,
+   "domains": {
+    "com": {
+     "domain": "sylvo.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/sylvo.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:50+00:00"
+     },
+     "nameservers": [
+      "ns31.domaincontrol.com",
+      "ns32.domaincontrol.com"
+     ],
+     "expires": "2027-05-03"
+    },
+    "ai": {
+     "domain": "sylvo.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/sylvo.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:50+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:50+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "tendro",
+   "style": "invented",
+   "length": 6,
+   "domains": {
+    "com": {
+     "domain": "tendro.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/tendro.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:50+00:00"
+     },
+     "nameservers": [
+      "faye.ns.cloudflare.com",
+      "martin.ns.cloudflare.com"
+     ],
+     "expires": "2027-05-24"
+    },
+    "ai": {
+     "domain": "tendro.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/tendro.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:50+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:50+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "floreo",
+   "style": "invented",
+   "length": 6,
+   "domains": {
+    "com": {
+     "domain": "floreo.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/floreo.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:50+00:00"
+     },
+     "nameservers": [
+      "ns1.wordpress.com",
+      "ns2.wordpress.com",
+      "ns3.wordpress.com"
+     ],
+     "expires": "2031-08-24"
+    },
+    "ai": {
+     "domain": "floreo.ai",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/floreo.ai",
+      "answer": 200,
+      "at": "2026-10-10T17:58:50+00:00"
+     },
+     "nameservers": [
+      "launch1.spaceship.net",
+      "launch2.spaceship.net"
+     ],
+     "expires": "2029-11-02"
+    }
+   }
+  },
+  {
+   "name": "botanu",
+   "style": "invented",
+   "length": 6,
+   "domains": {
+    "com": {
+     "domain": "botanu.com",
+     "status": "parked",
+     "note": "nameservers at afternic.com",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/botanu.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:50+00:00"
+     },
+     "nameservers": [
+      "ns1.afternic.com",
+      "ns2.afternic.com"
+     ],
+     "expires": "2027-03-17"
+    },
+    "ai": {
+     "domain": "botanu.ai",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/botanu.ai",
+      "answer": 200,
+      "at": "2026-10-10T17:58:50+00:00"
+     },
+     "nameservers": [
+      "ns-1627.awsdns-11.co.uk",
+      "ns-815.awsdns-37.net",
+      "ns-1238.awsdns-26.org",
+      "ns-129.awsdns-16.com"
+     ],
+     "expires": "2027-09-26"
+    }
+   }
+  },
+  {
+   "name": "calloa",
+   "style": "invented",
+   "length": 6,
+   "domains": {
+    "com": {
+     "domain": "calloa.com",
+     "status": "parked",
+     "note": "nameservers at afternic.com",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/calloa.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:50+00:00"
+     },
+     "nameservers": [
+      "ns1.afternic.com",
+      "ns2.afternic.com"
+     ],
+     "expires": "2027-10-28"
+    },
+    "ai": {
+     "domain": "calloa.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/calloa.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:50+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:50+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "verlo",
+   "style": "invented",
+   "length": 5,
+   "domains": {
+    "ai": {
+     "domain": "verlo.ai",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/verlo.ai",
+      "answer": 200,
+      "at": "2026-10-10T17:58:50+00:00"
+     },
+     "nameservers": [
+      "ns-233.awsdns-29.com",
+      "ns-744.awsdns-29.net",
+      "ns-1614.awsdns-09.co.uk",
+      "ns-1192.awsdns-21.org"
+     ],
+     "expires": "2026-10-25"
+    },
+    "com": {
+     "domain": "verlo.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/verlo.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:50+00:00"
+     },
+     "nameservers": [
+      "miguel.ns.cloudflare.com",
+      "saanvi.ns.cloudflare.com"
+     ],
+     "expires": "2028-08-01"
+    }
+   }
+  },
+  {
+   "name": "frondo",
+   "style": "invented",
+   "length": 6,
+   "domains": {
+    "com": {
+     "domain": "frondo.com",
+     "status": "parked",
+     "note": "nameservers at namebrightdns.com",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/frondo.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:50+00:00"
+     },
+     "nameservers": [
+      "nsg1.namebrightdns.com",
+      "nsg2.namebrightdns.com"
+     ],
+     "expires": "2027-05-17"
+    },
+    "ai": {
+     "domain": "frondo.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/frondo.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:50+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:50+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "pelora",
+   "style": "invented",
+   "length": 6,
+   "domains": {
+    "ai": {
+     "domain": "pelora.ai",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/pelora.ai",
+      "answer": 200,
+      "at": "2026-10-10T17:58:50+00:00"
+     },
+     "nameservers": [
+      "ns69.domaincontrol.com",
+      "ns70.domaincontrol.com"
+     ],
+     "expires": "2027-08-09"
+    },
+    "com": {
+     "domain": "pelora.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/pelora.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:50+00:00"
+     },
+     "nameservers": [
+      "ns1.power-dns.com",
+      "ns2.power-dns.com",
+      "ns3.power-dns.com"
+     ],
+     "expires": "2028-03-14"
+    }
+   }
+  },
+  {
+   "name": "mossa",
+   "style": "invented",
+   "length": 5,
+   "domains": {
+    "ai": {
+     "domain": "mossa.ai",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/mossa.ai",
+      "answer": 200,
+      "at": "2026-10-10T17:58:51+00:00"
+     },
+     "nameservers": [
+      "dns1.registrar-servers.com",
+      "dns2.registrar-servers.com"
+     ],
+     "expires": "2027-05-17"
+    },
+    "com": {
+     "domain": "mossa.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/mossa.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:51+00:00"
+     },
+     "nameservers": [
+      "dns.technorail.com",
+      "dns2.technorail.com",
+      "dns3.arubadns.net",
+      "dns4.arubadns.cz"
+     ],
+     "expires": "2027-05-03"
+    }
+   }
+  },
+  {
+   "name": "solara",
+   "style": "invented",
+   "length": 6,
+   "domains": {
+    "ai": {
+     "domain": "solara.ai",
+     "status": "parked",
+     "note": "nameservers at atom.com",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/solara.ai",
+      "answer": 200,
+      "at": "2026-10-10T17:58:51+00:00"
+     },
+     "nameservers": [
+      "ns1.atom.com",
+      "ns2.atom.com"
+     ],
+     "expires": "2027-02-20"
+    },
+    "com": {
+     "domain": "solara.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/solara.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:51+00:00"
+     },
+     "nameservers": [
+      "ns67.worldnic.com",
+      "ns68.worldnic.com"
+     ],
+     "expires": "2027-04-02"
+    }
+   }
+  },
+  {
+   "name": "hydrella",
+   "style": "invented",
+   "length": 8,
+   "domains": {
+    "com": {
+     "domain": "hydrella.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/hydrella.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:51+00:00"
+     },
+     "nameservers": [
+      "ns0.aware-soft.net",
+      "ns1.aware-soft.net"
+     ],
+     "expires": "2027-10-31"
+    },
+    "ai": {
+     "domain": "hydrella.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/hydrella.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:51+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:51+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "chlora",
+   "style": "invented",
+   "length": 6,
+   "domains": {
+    "com": {
+     "domain": "chlora.com",
+     "status": "parked",
+     "note": "nameservers at namebrightdns.com",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/chlora.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:51+00:00"
+     },
+     "nameservers": [
+      "nsg1.namebrightdns.com",
+      "nsg2.namebrightdns.com"
+     ],
+     "expires": "2027-02-01"
+    },
+    "ai": {
+     "domain": "chlora.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/chlora.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:51+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:51+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "sunova",
+   "style": "invented",
+   "length": 6,
+   "domains": {
+    "com": {
+     "domain": "sunova.com",
+     "status": "parked",
+     "note": "nameservers at atom.com",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/sunova.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:51+00:00"
+     },
+     "nameservers": [
+      "ns1.atom.com",
+      "ns2.atom.com"
+     ],
+     "expires": "2028-01-28"
+    },
+    "ai": {
+     "domain": "sunova.ai",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/sunova.ai",
+      "answer": 200,
+      "at": "2026-10-10T17:58:51+00:00"
+     },
+     "nameservers": [
+      "dns1.registrar-servers.com",
+      "dns2.registrar-servers.com"
+     ],
+     "expires": "2027-01-23"
+    }
+   }
+  },
+  {
+   "name": "terrao",
+   "style": "invented",
+   "length": 6,
+   "domains": {
+    "com": {
+     "domain": "terrao.com",
+     "status": "parked",
+     "note": "nameservers at parklogic.com",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/terrao.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:51+00:00"
+     },
+     "nameservers": [
+      "ns1.parklogic.com",
+      "ns2.parklogic.com"
+     ],
+     "expires": "2027-05-04"
+    },
+    "ai": {
+     "domain": "terrao.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/terrao.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:51+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "answer": null,
+      "verified": false,
+      "at": "2026-10-10T17:58:51+00:00"
+     },
+     "note": "registrar check failed; price not verified"
+    }
+   }
+  },
+  {
+   "name": "olumi",
+   "style": "invented",
+   "length": 5,
+   "domains": {
+    "com": {
+     "domain": "olumi.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/olumi.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:51+00:00"
+     },
+     "nameservers": [
+      "421.ns1.abovedomains.com",
+      "421.ns2.abovedomains.com"
+     ],
+     "expires": "2027-06-03"
+    },
+    "ai": {
+     "domain": "olumi.ai",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/olumi.ai",
+      "answer": 200,
+      "at": "2026-10-10T17:58:52+00:00"
+     },
+     "nameservers": [
+      "dns1.registrar-servers.com",
+      "dns2.registrar-servers.com"
+     ],
+     "expires": "2027-05-30"
+    }
+   }
+  },
+  {
+   "name": "botaro",
+   "style": "invented",
+   "length": 6,
+   "domains": {
+    "com": {
+     "domain": "botaro.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/botaro.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:52+00:00"
+     },
+     "nameservers": [
+      "docks13.rzone.de",
+      "shades19.rzone.de"
+     ],
+     "expires": "2027-03-24"
+    },
+    "ai": {
+     "domain": "botaro.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/botaro.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:52+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:52+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "greevo",
+   "style": "invented",
+   "length": 6,
+   "domains": {
+    "com": {
+     "domain": "greevo.com",
+     "status": "parked",
+     "note": "nameservers at afternic.com",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/greevo.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:52+00:00"
+     },
+     "nameservers": [
+      "ns1.afternic.com",
+      "ns2.afternic.com"
+     ],
+     "expires": "2027-10-22"
+    },
+    "ai": {
+     "domain": "greevo.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/greevo.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:52+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "answer": null,
+      "verified": false,
+      "at": "2026-10-10T17:58:52+00:00"
+     },
+     "note": "registrar check failed; price not verified"
+    }
+   }
+  },
+  {
+   "name": "lumbra",
+   "style": "invented",
+   "length": 6,
+   "domains": {
+    "com": {
+     "domain": "lumbra.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/lumbra.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:54+00:00"
+     },
+     "nameservers": [
+      "amanda.ns.cloudflare.com",
+      "ben.ns.cloudflare.com"
+     ],
+     "expires": "2027-08-14"
+    },
+    "ai": {
+     "domain": "lumbra.ai",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/lumbra.ai",
+      "answer": 200,
+      "at": "2026-10-10T17:58:54+00:00"
+     },
+     "nameservers": [
+      "ben.ns.cloudflare.com",
+      "amanda.ns.cloudflare.com"
+     ],
+     "expires": "2029-02-20"
+    }
+   }
+  },
+  {
+   "name": "aquavi",
+   "style": "invented",
+   "length": 6,
+   "domains": {
+    "com": {
+     "domain": "aquavi.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/aquavi.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:54+00:00"
+     },
+     "nameservers": [
+      "dns1.evonik.com",
+      "qdns2.degussa.de"
+     ],
+     "expires": "2027-11-05"
+    },
+    "ai": {
+     "domain": "aquavi.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/aquavi.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:54+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:54+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "leefy",
+   "style": "respelled",
+   "length": 5,
+   "domains": {
+    "com": {
+     "domain": "leefy.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/leefy.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:54+00:00"
+     },
+     "nameservers": [
+      "ns01.domaincontrol.com",
+      "ns02.domaincontrol.com"
+     ],
+     "expires": "2027-12-18"
+    },
+    "ai": {
+     "domain": "leefy.ai",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/leefy.ai",
+      "answer": 200,
+      "at": "2026-10-10T17:58:54+00:00"
+     },
+     "nameservers": [
+      "ns75.domaincontrol.com",
+      "ns76.domaincontrol.com"
+     ],
+     "expires": "2028-07-19"
+    }
+   }
+  },
+  {
+   "name": "grean",
+   "style": "respelled",
+   "length": 5,
+   "domains": {
+    "com": {
+     "domain": "grean.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/grean.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:54+00:00"
+     },
+     "nameservers": [
+      "ns1.dnsimple-edge.com",
+      "ns2.dnsimple-edge.net",
+      "ns3.dnsimple-edge.io",
+      "ns4.dnsimple-edge.org"
+     ],
+     "expires": "2027-07-08"
+    },
+    "ai": {
+     "domain": "grean.ai",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/grean.ai",
+      "answer": 200,
+      "at": "2026-10-10T17:58:55+00:00"
+     },
+     "nameservers": [
+      "ns41.domaincontrol.com",
+      "ns42.domaincontrol.com"
+     ],
+     "expires": "2027-01-09"
+    }
+   }
+  },
+  {
+   "name": "watr",
+   "style": "respelled",
+   "length": 4,
+   "domains": {
+    "com": {
+     "domain": "watr.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/watr.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:55+00:00"
+     },
+     "nameservers": [
+      "ns25.domaincontrol.com",
+      "ns26.domaincontrol.com"
+     ],
+     "expires": "2027-03-11"
+    },
+    "ai": {
+     "domain": "watr.ai",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/watr.ai",
+      "answer": 200,
+      "at": "2026-10-10T17:58:55+00:00"
+     },
+     "nameservers": [
+      "nola.ns.cloudflare.com",
+      "norman.ns.cloudflare.com"
+     ],
+     "expires": "2028-03-01"
+    }
+   }
+  },
+  {
+   "name": "plantz",
+   "style": "respelled",
+   "length": 6,
+   "domains": {
+    "com": {
+     "domain": "plantz.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/plantz.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:55+00:00"
+     },
+     "nameservers": [
+      "ns73.domaincontrol.com",
+      "ns74.domaincontrol.com"
+     ],
+     "expires": "2035-01-17"
+    },
+    "ai": {
+     "domain": "plantz.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/plantz.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:55+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:55+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "sprowt",
+   "style": "respelled",
+   "length": 6,
+   "domains": {
+    "com": {
+     "domain": "sprowt.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/sprowt.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:55+00:00"
+     },
+     "nameservers": [
+      "dns.m6.net",
+      "ns1.m6.net",
+      "ns2.m6.net",
+      "ns3.m6.net"
+     ],
+     "expires": "2027-01-31"
+    },
+    "ai": {
+     "domain": "sprowt.ai",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/sprowt.ai",
+      "answer": 200,
+      "at": "2026-10-10T17:58:55+00:00"
+     },
+     "nameservers": [
+      "ns25.domaincontrol.com",
+      "ns26.domaincontrol.com"
+     ],
+     "expires": "2028-10-03"
+    }
+   }
+  },
+  {
+   "name": "bloomr",
+   "style": "respelled",
+   "length": 6,
+   "domains": {
+    "com": {
+     "domain": "bloomr.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/bloomr.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:56+00:00"
+     },
+     "nameservers": [
+      "ns47.domaincontrol.com",
+      "ns48.domaincontrol.com"
+     ],
+     "expires": "2029-03-03"
+    },
+    "ai": {
+     "domain": "bloomr.ai",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/bloomr.ai",
+      "answer": 200,
+      "at": "2026-10-10T17:58:56+00:00"
+     },
+     "nameservers": [
+      "ns1.dyna-ns.net",
+      "ns2.dyna-ns.net"
+     ],
+     "expires": "2027-02-23"
+    }
+   }
+  },
+  {
+   "name": "thurst",
+   "style": "respelled",
+   "length": 6,
+   "domains": {
+    "com": {
+     "domain": "thurst.com",
+     "status": "parked",
+     "note": "nameservers at parklogic.com",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/thurst.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:56+00:00"
+     },
+     "nameservers": [
+      "ns1.parklogic.com",
+      "ns2.parklogic.com"
+     ],
+     "expires": "2027-09-05"
+    },
+    "ai": {
+     "domain": "thurst.ai",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/thurst.ai",
+      "answer": 200,
+      "at": "2026-10-10T17:58:56+00:00"
+     },
+     "nameservers": [
+      "dns1.registrar-servers.com",
+      "dns2.registrar-servers.com"
+     ],
+     "expires": "2027-01-28"
+    }
+   }
+  },
+  {
+   "name": "folij",
+   "style": "respelled",
+   "length": 5,
+   "domains": {
+    "com": {
+     "domain": "folij.com",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/folij.com",
+      "answer": 404,
+      "at": "2026-10-10T17:58:56+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:56+00:00",
+      "price": 11.25,
+      "years": 1,
+      "standard_price": 11.25
+     }
+    },
+    "ai": {
+     "domain": "folij.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/folij.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:56+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:56+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "rayne",
+   "style": "respelled",
+   "length": 5,
+   "domains": {
+    "com": {
+     "domain": "rayne.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/rayne.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:57+00:00"
+     },
+     "nameservers": [
+      "aitana.ns.cloudflare.com",
+      "jihoon.ns.cloudflare.com"
+     ],
+     "expires": "2029-03-28"
+    },
+    "ai": {
+     "domain": "rayne.ai",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/rayne.ai",
+      "answer": 200,
+      "at": "2026-10-10T17:58:57+00:00"
+     },
+     "nameservers": [
+      "dns1.registrar-servers.com",
+      "dns2.registrar-servers.com"
+     ],
+     "expires": "2028-05-22"
+    }
+   }
+  },
+  {
+   "name": "soyl",
+   "style": "respelled",
+   "length": 4,
+   "domains": {
+    "com": {
+     "domain": "soyl.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/soyl.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:57+00:00"
+     },
+     "nameservers": [
+      "ns1.eurodns.com",
+      "ns2.eurodns.com",
+      "ns3.eurodns.com",
+      "ns4.eurodns.com"
+     ],
+     "expires": "2027-06-05"
+    },
+    "ai": {
+     "domain": "soyl.ai",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/soyl.ai",
+      "answer": 200,
+      "at": "2026-10-10T17:58:57+00:00"
+     },
+     "nameservers": [
+      "ns-cloud-e1.googledomains.com",
+      "ns-cloud-e2.googledomains.com",
+      "ns-cloud-e3.googledomains.com",
+      "ns-cloud-e4.googledomains.com"
+     ],
+     "expires": "2028-03-09"
+    }
+   }
+  },
+  {
+   "name": "poure",
+   "style": "respelled",
+   "length": 5,
+   "domains": {
+    "com": {
+     "domain": "poure.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/poure.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:57+00:00"
+     },
+     "nameservers": [
+      "dns14.ovh.net",
+      "ns14.ovh.net"
+     ],
+     "expires": "2029-04-17"
+    },
+    "ai": {
+     "domain": "poure.ai",
+     "status": "open",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/poure.ai",
+      "answer": 404,
+      "at": "2026-10-10T17:58:58+00:00"
+     },
+     "registrar": {
+      "source": "vercel",
+      "available": true,
+      "verified": true,
+      "at": "2026-10-10T17:58:58+00:00",
+      "price": 160.0,
+      "years": 2,
+      "standard_price": 160.0
+     }
+    }
+   }
+  },
+  {
+   "name": "tendr",
+   "style": "respelled",
+   "length": 5,
+   "domains": {
+    "com": {
+     "domain": "tendr.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/tendr.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:58+00:00"
+     },
+     "nameservers": [
+      "ns13.worldnic.com",
+      "ns14.worldnic.com"
+     ],
+     "expires": "2027-04-04"
+    },
+    "ai": {
+     "domain": "tendr.ai",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/tendr.ai",
+      "answer": 200,
+      "at": "2026-10-10T17:58:58+00:00"
+     },
+     "nameservers": [
+      "ns57.domaincontrol.com",
+      "ns58.domaincontrol.com"
+     ],
+     "expires": "2028-04-25"
+    }
+   }
+  },
+  {
+   "name": "kloro",
+   "style": "respelled",
+   "length": 5,
+   "domains": {
+    "com": {
+     "domain": "kloro.com",
+     "status": "parked",
+     "note": "nameservers at afternic.com",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/kloro.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:59+00:00"
+     },
+     "nameservers": [
+      "ns1.afternic.com",
+      "ns2.afternic.com"
+     ],
+     "expires": "2027-06-27"
+    },
+    "ai": {
+     "domain": "kloro.ai",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/kloro.ai",
+      "answer": 200,
+      "at": "2026-10-10T17:58:59+00:00"
+     },
+     "nameservers": [
+      "nsa1.squarespacedns.com",
+      "nsa2.squarespacedns.com",
+      "nsa3.squarespacedns.com",
+      "nsa4.squarespacedns.com"
+     ],
+     "expires": "2028-05-21"
+    }
+   }
+  },
+  {
+   "name": "vyne",
+   "style": "respelled",
+   "length": 4,
+   "domains": {
+    "com": {
+     "domain": "vyne.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/vyne.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:59+00:00"
+     },
+     "nameservers": [
+      "ns1.dnsimple-edge.com",
+      "ns2.dnsimple-edge.net",
+      "ns3.dnsimple-edge.io",
+      "ns4.dnsimple-edge.org"
+     ],
+     "expires": "2027-08-25"
+    },
+    "ai": {
+     "domain": "vyne.ai",
+     "status": "parked",
+     "note": "nameservers at afternic.com",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/vyne.ai",
+      "answer": 200,
+      "at": "2026-10-10T17:58:59+00:00"
+     },
+     "nameservers": [
+      "ns1.afternic.com",
+      "ns2.afternic.com",
+      "ns1.sedo.com",
+      "ns2.sedo.com"
+     ],
+     "expires": "2027-11-15"
+    }
+   }
+  },
+  {
+   "name": "sapp",
+   "style": "respelled",
+   "length": 4,
+   "domains": {
+    "com": {
+     "domain": "sapp.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/sapp.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:59+00:00"
+     },
+     "nameservers": [
+      "ns1.mailbank.com",
+      "ns2.mailbank.com"
+     ],
+     "expires": "2027-06-16"
+    },
+    "ai": {
+     "domain": "sapp.ai",
+     "status": "unknown",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/sapp.ai",
+      "answer": "HTTP 429",
+      "at": "2026-10-10T18:00:59+00:00"
+     },
+     "note": "registry did not answer (HTTP 429)"
+    }
+   }
+  },
+  {
+   "name": "sprig",
+   "style": "real-word",
+   "length": 5,
+   "domains": {
+    "com": {
+     "domain": "sprig.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/sprig.com",
+      "answer": 200,
+      "at": "2026-10-10T17:58:59+00:00"
+     },
+     "nameservers": [
+      "ns-1076.awsdns-06.org",
+      "ns-15.awsdns-01.com",
+      "ns-1691.awsdns-19.co.uk",
+      "ns-647.awsdns-16.net"
+     ],
+     "expires": "2030-01-28"
+    },
+    "ai": {
+     "domain": "sprig.ai",
+     "status": "unknown",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/sprig.ai",
+      "answer": "HTTP 429",
+      "at": "2026-10-10T18:00:59+00:00"
+     },
+     "note": "registry did not answer (HTTP 429)"
+    }
+   }
+  },
+  {
+   "name": "tendril",
+   "style": "real-word",
+   "length": 7,
+   "domains": {
+    "com": {
+     "domain": "tendril.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/tendril.com",
+      "answer": 200,
+      "at": "2026-10-10T17:59:01+00:00"
+     },
+     "nameservers": [
+      "ns1.eftydns.com",
+      "ns2.eftydns.com"
+     ],
+     "expires": "2027-09-09"
+    },
+    "ai": {
+     "domain": "tendril.ai",
+     "status": "unknown",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/tendril.ai",
+      "answer": "HTTP 429",
+      "at": "2026-10-10T18:01:01+00:00"
+     },
+     "note": "registry did not answer (HTTP 429)"
+    }
+   }
+  },
+  {
+   "name": "canopy",
+   "style": "real-word",
+   "length": 6,
+   "domains": {
+    "com": {
+     "domain": "canopy.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/canopy.com",
+      "answer": 200,
+      "at": "2026-10-10T17:59:02+00:00"
+     },
+     "nameservers": [
+      "ns1.dyna-ns.net",
+      "ns2.dyna-ns.net"
+     ],
+     "expires": "2031-07-09"
+    },
+    "ai": {
+     "domain": "canopy.ai",
+     "status": "unknown",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/canopy.ai",
+      "answer": "HTTP 429",
+      "at": "2026-10-10T18:01:02+00:00"
+     },
+     "note": "registry did not answer (HTTP 429)"
+    }
+   }
+  },
+  {
+   "name": "verdure",
+   "style": "real-word",
+   "length": 7,
+   "domains": {
+    "com": {
+     "domain": "verdure.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/verdure.com",
+      "answer": 200,
+      "at": "2026-10-10T17:59:02+00:00"
+     },
+     "nameservers": [
+      "ns1.venture.com",
+      "ns2.venture.com"
+     ],
+     "expires": "2027-05-03"
+    },
+    "ai": {
+     "domain": "verdure.ai",
+     "status": "unknown",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/verdure.ai",
+      "answer": "HTTP 429",
+      "at": "2026-10-10T18:01:02+00:00"
+     },
+     "note": "registry did not answer (HTTP 429)"
+    }
+   }
+  },
+  {
+   "name": "dewpoint",
+   "style": "real-word",
+   "length": 8,
+   "domains": {
+    "com": {
+     "domain": "dewpoint.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/dewpoint.com",
+      "answer": 200,
+      "at": "2026-10-10T17:59:05+00:00"
+     },
+     "nameservers": [
+      "deb.ns.cloudflare.com",
+      "duke.ns.cloudflare.com"
+     ],
+     "expires": "2029-01-29"
+    },
+    "ai": {
+     "domain": "dewpoint.ai",
+     "status": "unknown",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/dewpoint.ai",
+      "answer": "HTTP 429",
+      "at": "2026-10-10T18:01:05+00:00"
+     },
+     "note": "registry did not answer (HTTP 429)"
+    }
+   }
+  },
+  {
+   "name": "frond",
+   "style": "real-word",
+   "length": 5,
+   "domains": {
+    "com": {
+     "domain": "frond.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/frond.com",
+      "answer": 200,
+      "at": "2026-10-10T17:59:08+00:00"
+     },
+     "nameservers": [
+      "casey.ns.cloudflare.com",
+      "rosemary.ns.cloudflare.com"
+     ],
+     "expires": "2027-04-15"
+    },
+    "ai": {
+     "domain": "frond.ai",
+     "status": "unknown",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/frond.ai",
+      "answer": "HTTP 429",
+      "at": "2026-10-10T18:01:08+00:00"
+     },
+     "note": "registry did not answer (HTTP 429)"
+    }
+   }
+  },
+  {
+   "name": "sapling",
+   "style": "real-word",
+   "length": 7,
+   "domains": {
+    "com": {
+     "domain": "sapling.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/sapling.com",
+      "answer": 200,
+      "at": "2026-10-10T17:59:08+00:00"
+     },
+     "nameservers": [
+      "edna.ns.cloudflare.com",
+      "will.ns.cloudflare.com"
+     ],
+     "expires": "2028-02-20"
+    },
+    "ai": {
+     "domain": "sapling.ai",
+     "status": "unknown",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/sapling.ai",
+      "answer": "HTTP 429",
+      "at": "2026-10-10T18:01:08+00:00"
+     },
+     "note": "registry did not answer (HTTP 429)"
+    }
+   }
+  },
+  {
+   "name": "windowsill",
+   "style": "real-word",
+   "length": 10,
+   "domains": {
+    "com": {
+     "domain": "windowsill.com",
+     "status": "parked",
+     "note": "nameservers at dan.com",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/windowsill.com",
+      "answer": 200,
+      "at": "2026-10-10T17:59:09+00:00"
+     },
+     "nameservers": [
+      "ns1.dan.com",
+      "ns2.dan.com"
+     ],
+     "expires": "2028-09-16"
+    },
+    "ai": {
+     "domain": "windowsill.ai",
+     "status": "unknown",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/windowsill.ai",
+      "answer": "HTTP 429",
+      "at": "2026-10-10T18:01:09+00:00"
+     },
+     "note": "registry did not answer (HTTP 429)"
+    }
+   }
+  },
+  {
+   "name": "greenhouse",
+   "style": "real-word",
+   "length": 10,
+   "domains": {
+    "com": {
+     "domain": "greenhouse.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/greenhouse.com",
+      "answer": 200,
+      "at": "2026-10-10T17:59:09+00:00"
+     },
+     "nameservers": [
+      "ns-1101.awsdns-09.org",
+      "ns-154.awsdns-19.com",
+      "ns-2024.awsdns-61.co.uk",
+      "ns-814.awsdns-37.net"
+     ],
+     "expires": "2026-12-27"
+    },
+    "ai": {
+     "domain": "greenhouse.ai",
+     "status": "unknown",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/greenhouse.ai",
+      "answer": "HTTP 429",
+      "at": "2026-10-10T18:01:09+00:00"
+     },
+     "note": "registry did not answer (HTTP 429)"
+    }
+   }
+  },
+  {
+   "name": "wilt",
+   "style": "real-word",
+   "length": 4,
+   "domains": {
+    "com": {
+     "domain": "wilt.com",
+     "status": "parked",
+     "note": "nameservers at atom.com",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/wilt.com",
+      "answer": 200,
+      "at": "2026-10-10T17:59:09+00:00"
+     },
+     "nameservers": [
+      "ns1.atom.com",
+      "ns2.atom.com"
+     ],
+     "expires": "2029-06-02"
+    },
+    "ai": {
+     "domain": "wilt.ai",
+     "status": "unknown",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/wilt.ai",
+      "answer": "HTTP 429",
+      "at": "2026-10-10T18:01:09+00:00"
+     },
+     "note": "registry did not answer (HTTP 429)"
+    }
+   }
+  },
+  {
+   "name": "getsprig",
+   "style": "prefixed",
+   "length": 8,
+   "domains": {
+    "com": {
+     "domain": "getsprig.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/getsprig.com",
+      "answer": 200,
+      "at": "2026-10-10T17:59:09+00:00"
+     },
+     "nameservers": [
+      "ns10.digicertdns.com",
+      "ns11.digicertdns.com",
+      "ns12.digicertdns.com",
+      "ns13.digicertdns.net"
+     ],
+     "expires": "2027-07-14"
+    },
+    "ai": {
+     "domain": "getsprig.ai",
+     "status": "unknown",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/getsprig.ai",
+      "answer": "HTTP 429",
+      "at": "2026-10-10T18:01:09+00:00"
+     },
+     "note": "registry did not answer (HTTP 429)"
+    }
+   }
+  },
+  {
+   "name": "tryivy",
+   "style": "prefixed",
+   "length": 6,
+   "domains": {
+    "com": {
+     "domain": "tryivy.com",
+     "status": "parked",
+     "note": "nameservers at afternic.com",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/tryivy.com",
+      "answer": 200,
+      "at": "2026-10-10T17:59:10+00:00"
+     },
+     "nameservers": [
+      "ns5.afternic.com",
+      "ns6.afternic.com"
+     ],
+     "expires": "2027-08-15"
+    },
+    "ai": {
+     "domain": "tryivy.ai",
+     "status": "unknown",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/tryivy.ai",
+      "answer": "HTTP 429",
+      "at": "2026-10-10T18:01:09+00:00"
+     },
+     "note": "registry did not answer (HTTP 429)"
+    }
+   }
+  },
+  {
+   "name": "usemist",
+   "style": "prefixed",
+   "length": 7,
+   "domains": {
+    "com": {
+     "domain": "usemist.com",
+     "status": "parked",
+     "note": "nameservers at afternic.com",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/usemist.com",
+      "answer": 200,
+      "at": "2026-10-10T17:59:10+00:00"
+     },
+     "nameservers": [
+      "ns1.afternic.com",
+      "ns2.afternic.com",
+      "verification-d3jclucsp89ganyqbydeny.ns101.verify.hn"
+     ],
+     "expires": "2026-12-17"
+    },
+    "ai": {
+     "domain": "usemist.ai",
+     "status": "unknown",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/usemist.ai",
+      "answer": "HTTP 429",
+      "at": "2026-10-10T18:01:10+00:00"
+     },
+     "note": "registry did not answer (HTTP 429)"
+    }
+   }
+  },
+  {
+   "name": "myjungle",
+   "style": "prefixed",
+   "length": 8,
+   "domains": {
+    "com": {
+     "domain": "myjungle.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/myjungle.com",
+      "answer": 200,
+      "at": "2026-10-10T17:59:10+00:00"
+     },
+     "nameservers": [
+      "ns1.jadeinc.com",
+      "ns2.jadeinc.com"
+     ],
+     "expires": "2027-02-10"
+    },
+    "ai": {
+     "domain": "myjungle.ai",
+     "status": "unknown",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/myjungle.ai",
+      "answer": "HTTP 429",
+      "at": "2026-10-10T18:01:10+00:00"
+     },
+     "note": "registry did not answer (HTTP 429)"
+    }
+   }
+  },
+  {
+   "name": "getpotted",
+   "style": "prefixed",
+   "length": 9,
+   "domains": {
+    "com": {
+     "domain": "getpotted.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/getpotted.com",
+      "answer": 200,
+      "at": "2026-10-10T17:59:11+00:00"
+     },
+     "nameservers": [
+      "cora.ns.cloudflare.com",
+      "porter.ns.cloudflare.com"
+     ],
+     "expires": "2030-05-22"
+    },
+    "ai": {
+     "domain": "getpotted.ai",
+     "status": "unknown",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/getpotted.ai",
+      "answer": "HTTP 429",
+      "at": "2026-10-10T18:01:11+00:00"
+     },
+     "note": "registry did not answer (HTTP 429)"
+    }
+   }
+  },
+  {
+   "name": "mymonstera",
+   "style": "prefixed",
+   "length": 10,
+   "domains": {
+    "com": {
+     "domain": "mymonstera.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/mymonstera.com",
+      "answer": 200,
+      "at": "2026-10-10T18:00:59+00:00"
+     },
+     "nameservers": [
+      "dns1.onamae.com",
+      "dns2.onamae.com"
+     ],
+     "expires": "2027-06-15"
+    },
+    "ai": {
+     "domain": "mymonstera.ai",
+     "status": "unknown",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/mymonstera.ai",
+      "answer": "HTTP 429",
+      "at": "2026-10-10T18:02:59+00:00"
+     },
+     "note": "registry did not answer (HTTP 429)"
+    }
+   }
+  },
+  {
+   "name": "trycactus",
+   "style": "prefixed",
+   "length": 9,
+   "domains": {
+    "com": {
+     "domain": "trycactus.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/trycactus.com",
+      "answer": 200,
+      "at": "2026-10-10T18:00:59+00:00"
+     },
+     "nameservers": [
+      "ns-cloud-a1.googledomains.com",
+      "ns-cloud-a2.googledomains.com",
+      "ns-cloud-a3.googledomains.com",
+      "ns-cloud-a4.googledomains.com"
+     ],
+     "expires": "2027-06-13"
+    },
+    "ai": {
+     "domain": "trycactus.ai",
+     "status": "unknown",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/trycactus.ai",
+      "answer": "HTTP 429",
+      "at": "2026-10-10T18:03:00+00:00"
+     },
+     "note": "registry did not answer (HTTP 429)"
+    }
+   }
+  },
+  {
+   "name": "uselight",
+   "style": "prefixed",
+   "length": 8,
+   "domains": {
+    "com": {
+     "domain": "uselight.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/uselight.com",
+      "answer": 200,
+      "at": "2026-10-10T18:01:01+00:00"
+     },
+     "nameservers": [
+      "ns17.domaincontrol.com",
+      "ns18.domaincontrol.com"
+     ],
+     "expires": "2027-12-28"
+    },
+    "ai": {
+     "domain": "uselight.ai",
+     "status": "unknown",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/uselight.ai",
+      "answer": "HTTP 429",
+      "at": "2026-10-10T18:03:01+00:00"
+     },
+     "note": "registry did not answer (HTTP 429)"
+    }
+   }
+  },
+  {
+   "name": "gobloom",
+   "style": "prefixed",
+   "length": 7,
+   "domains": {
+    "com": {
+     "domain": "gobloom.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/gobloom.com",
+      "answer": 200,
+      "at": "2026-10-10T18:01:02+00:00"
+     },
+     "nameservers": [
+      "ns43.worldnic.com",
+      "ns44.worldnic.com"
+     ],
+     "expires": "2028-05-03"
+    },
+    "ai": {
+     "domain": "gobloom.ai",
+     "status": "unknown",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/gobloom.ai",
+      "answer": "HTTP 429",
+      "at": "2026-10-10T18:03:02+00:00"
+     },
+     "note": "registry did not answer (HTTP 429)"
+    }
+   }
+  },
+  {
+   "name": "mysill",
+   "style": "prefixed",
+   "length": 6,
+   "domains": {
+    "com": {
+     "domain": "mysill.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/mysill.com",
+      "answer": 200,
+      "at": "2026-10-10T18:01:03+00:00"
+     },
+     "nameservers": [
+      "craig.ns.cloudflare.com",
+      "priscilla.ns.cloudflare.com"
+     ],
+     "expires": "2027-01-21"
+    },
+    "ai": {
+     "domain": "mysill.ai",
+     "status": "unknown",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/mysill.ai",
+      "answer": "HTTP 429",
+      "at": "2026-10-10T18:03:03+00:00"
+     },
+     "note": "registry did not answer (HTTP 429)"
+    }
+   }
+  },
+  {
+   "name": "hoja",
+   "style": "foreign",
+   "length": 4,
+   "domains": {
+    "com": {
+     "domain": "hoja.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/hoja.com",
+      "answer": 200,
+      "at": "2026-10-10T18:01:06+00:00"
+     },
+     "nameservers": [
+      "ns1.fabulous.com",
+      "ns2.fabulous.com"
+     ],
+     "expires": "2028-09-29"
+    },
+    "ai": {
+     "domain": "hoja.ai",
+     "status": "unknown",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/hoja.ai",
+      "answer": "HTTP 429",
+      "at": "2026-10-10T18:03:06+00:00"
+     },
+     "note": "registry did not answer (HTTP 429)"
+    }
+   }
+  },
+  {
+   "name": "verde",
+   "style": "foreign",
+   "length": 5,
+   "domains": {
+    "com": {
+     "domain": "verde.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/verde.com",
+      "answer": 200,
+      "at": "2026-10-10T18:01:08+00:00"
+     },
+     "nameservers": [
+      "ns.layer1hk.com",
+      "ns1.layer1hk.com"
+     ],
+     "expires": "2033-01-08"
+    },
+    "ai": {
+     "domain": "verde.ai",
+     "status": "unknown",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/verde.ai",
+      "answer": "HTTP 429",
+      "at": "2026-10-10T18:03:09+00:00"
+     },
+     "note": "registry did not answer (HTTP 429)"
+    }
+   }
+  },
+  {
+   "name": "blatt",
+   "style": "foreign",
+   "length": 5,
+   "domains": {
+    "com": {
+     "domain": "blatt.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/blatt.com",
+      "answer": 200,
+      "at": "2026-10-10T18:01:09+00:00"
+     },
+     "nameservers": [
+      "bristol.ns.cloudflare.com",
+      "miguel.ns.cloudflare.com"
+     ],
+     "expires": "2027-05-10"
+    },
+    "ai": {
+     "domain": "blatt.ai",
+     "status": "unknown",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/blatt.ai",
+      "answer": "HTTP 429",
+      "at": "2026-10-10T18:03:09+00:00"
+     },
+     "note": "registry did not answer (HTTP 429)"
+    }
+   }
+  },
+  {
+   "name": "regen",
+   "style": "foreign",
+   "length": 5,
+   "domains": {
+    "com": {
+     "domain": "regen.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/regen.com",
+      "answer": 200,
+      "at": "2026-10-10T18:01:09+00:00"
+     },
+     "nameservers": [
+      "ns77.worldnic.com",
+      "ns78.worldnic.com"
+     ],
+     "expires": "2029-01-03"
+    },
+    "ai": {
+     "domain": "regen.ai",
+     "status": "unknown",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/regen.ai",
+      "answer": "HTTP 429",
+      "at": "2026-10-10T18:03:09+00:00"
+     },
+     "note": "registry did not answer (HTTP 429)"
+    }
+   }
+  },
+  {
+   "name": "mizu",
+   "style": "foreign",
+   "length": 4,
+   "domains": {
+    "com": {
+     "domain": "mizu.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/mizu.com",
+      "answer": 200,
+      "at": "2026-10-10T18:01:09+00:00"
+     },
+     "nameservers": [
+      "cash.ns.cloudflare.com",
+      "emerie.ns.cloudflare.com"
+     ],
+     "expires": "2030-10-02"
+    },
+    "ai": {
+     "domain": "mizu.ai",
+     "status": "unknown",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/mizu.ai",
+      "answer": "HTTP 429",
+      "at": "2026-10-10T18:03:09+00:00"
+     },
+     "note": "registry did not answer (HTTP 429)"
+    }
+   }
+  },
+  {
+   "name": "midori",
+   "style": "foreign",
+   "length": 6,
+   "domains": {
+    "com": {
+     "domain": "midori.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/midori.com",
+      "answer": 200,
+      "at": "2026-10-10T18:01:09+00:00"
+     },
+     "nameservers": [
+      "ns23.worldnic.com",
+      "ns24.worldnic.com"
+     ],
+     "expires": "2034-04-24"
+    },
+    "ai": {
+     "domain": "midori.ai",
+     "status": "unknown",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/midori.ai",
+      "answer": "HTTP 429",
+      "at": "2026-10-10T18:03:09+00:00"
+     },
+     "note": "registry did not answer (HTTP 429)"
+    }
+   }
+  },
+  {
+   "name": "folha",
+   "style": "foreign",
+   "length": 5,
+   "domains": {
+    "com": {
+     "domain": "folha.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/folha.com",
+      "answer": 200,
+      "at": "2026-10-10T18:01:09+00:00"
+     },
+     "nameservers": [
+      "cartman.folha.com.br",
+      "kyle.folha.com.br"
+     ],
+     "expires": "2027-06-21"
+    },
+    "ai": {
+     "domain": "folha.ai",
+     "status": "unknown",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/folha.ai",
+      "answer": "HTTP 429",
+      "at": "2026-10-10T18:03:10+00:00"
+     },
+     "note": "registry did not answer (HTTP 429)"
+    }
+   }
+  },
+  {
+   "name": "pluvia",
+   "style": "foreign",
+   "length": 6,
+   "domains": {
+    "com": {
+     "domain": "pluvia.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/pluvia.com",
+      "answer": 200,
+      "at": "2026-10-10T18:01:10+00:00"
+     },
+     "nameservers": [
+      "dns1.registrar-servers.com",
+      "dns2.registrar-servers.com"
+     ],
+     "expires": "2027-11-29"
+    },
+    "ai": {
+     "domain": "pluvia.ai",
+     "status": "unknown",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/pluvia.ai",
+      "answer": "HTTP 429",
+      "at": "2026-10-10T18:03:10+00:00"
+     },
+     "note": "registry did not answer (HTTP 429)"
+    }
+   }
+  },
+  {
+   "name": "feuille",
+   "style": "foreign",
+   "length": 7,
+   "domains": {
+    "com": {
+     "domain": "feuille.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/feuille.com",
+      "answer": 200,
+      "at": "2026-10-10T18:01:10+00:00"
+     },
+     "nameservers": [
+      "ns1.dyna-ns.net",
+      "ns2.dyna-ns.net"
+     ],
+     "expires": "2027-08-05"
+    },
+    "ai": {
+     "domain": "feuille.ai",
+     "status": "unknown",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/feuille.ai",
+      "answer": "HTTP 429",
+      "at": "2026-10-10T18:03:10+00:00"
+     },
+     "note": "registry did not answer (HTTP 429)"
+    }
+   }
+  },
+  {
+   "name": "hana",
+   "style": "foreign",
+   "length": 4,
+   "domains": {
+    "com": {
+     "domain": "hana.com",
+     "status": "taken",
+     "registry": {
+      "source": "https://rdap.verisign.com/com/v1/domain/hana.com",
+      "answer": 200,
+      "at": "2026-10-10T18:01:10+00:00"
+     },
+     "nameservers": [
+      "01.dnsv.jp",
+      "02.dnsv.jp",
+      "03.dnsv.jp",
+      "04.dnsv.jp"
+     ],
+     "expires": "2027-01-21"
+    },
+    "ai": {
+     "domain": "hana.ai",
+     "status": "unknown",
+     "registry": {
+      "source": "https://rdap.identitydigital.services/rdap/domain/hana.ai",
+      "answer": "HTTP 429",
+      "at": "2026-10-10T18:03:10+00:00"
+     },
+     "note": "registry did not answer (HTTP 429)"
+    }
+   }
+  }
+ ]
+}
