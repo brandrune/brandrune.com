@@ -5,22 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light">
 <meta name="theme-color" content="#fafaf8">
-<title>Brandrune: names you can read, domains that are really open</title>
-<meta name="description" content="A free Claude Code skill for naming what you build. Claude writes about 150 names, a script asks the domain registries about every one, and only a registry's 'no such domain' counts as open.">
+<title>Brandrune: names you can read, registry-checked domains</title>
+<meta name="description" content="A free Claude Code skill for naming what you build. About 150 names, checked with domain registries. Premium or reserved names remain possible until pricing is verified.">
 <link rel="canonical" href="https://brandrune.com/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Brandrune">
 <meta property="og:url" content="https://brandrune.com/">
-<meta property="og:title" content="Brandrune: names you can read, domains that are really open">
-<meta property="og:description" content="A free Claude Code skill for naming what you build. Plain-text names, real filters, and a domain is only called open when the registry says it has no record of it.">
+<meta property="og:title" content="Brandrune: names you can read, registry-checked domains">
+<meta property="og:description" content="A free Claude Code skill. Plain-text names, real filters, registry-checked domains. Price checks need an optional Vercel token.">
 <meta property="og:image" content="https://brandrune.com/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Brandrune: names you can read, domains that are really open.">
+<meta property="og:image:alt" content="Brandrune: names you can read, registry-checked domains.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Brandrune: names you can read, domains that are really open">
+<meta name="twitter:title" content="Brandrune: names you can read, registry-checked domains">
 <meta name="twitter:description" content="A free Claude Code skill for naming what you build. Plain-text names, real filters, registry-checked domains.">
 <meta name="twitter:image" content="https://brandrune.com/og.png">
 <link rel="stylesheet" href="/style.css">
@@ -49,13 +49,13 @@
     <div class="wrap hero-grid">
       <div class="hero-copy">
         <p class="kicker">A free Claude Code skill</p>
-        <h1 id="hero-h">Names you can read. <span class="h1-line">Domains that are really open.</span></h1>
-        <p class="lede">Describe what you are building in a sentence. Claude writes about 150 names, and a small script asks the domain registries about every one. A name is only called open when the registry says it has no record of it.</p>
+        <h1 id="hero-h">Names you can read. <span class="h1-line">Registry-checked domains.</span></h1>
+        <p class="lede">Describe what you are building. Claude writes about 150 names; Brandrune checks each with the domain registries. <code>open*</code> means no registry record, with premium or reserved names still possible until pricing is verified.</p>
         <div class="cta-row">
           <a class="btn btn-primary" href="#install">Install it, free</a>
           <a class="btn btn-ghost" href="#run">Watch a run</a>
         </div>
-        <p class="hero-note">Free, forever. No account, no API key, no paid tier.</p>
+        <p class="hero-note">Brandrune itself is free. Requires Claude Code; price checks use an optional Vercel token.</p>
         <p class="hero-proof">Checked with the registries themselves, never guessed.</p>
       </div>
       <div class="hero-art">
@@ -108,7 +108,7 @@
       <ol class="steps">
         <li><span class="n" aria-hidden="true">1</span><h3>You describe it</h3><p>One or two sentences, plus any rules: a length, a word it must contain, the extensions you care about.</p></li>
         <li><span class="n" aria-hidden="true">2</span><h3>Claude writes the names</h3><p>Your own Claude Code session writes about 150, spread across eight styles, held to names a person can say after reading once.</p></li>
-        <li><span class="n" aria-hidden="true">3</span><h3>A script asks the registries</h3><p>Every name, every extension, in the same run. Only a registry's "no such domain" counts as open.</p></li>
+        <li><span class="n" aria-hidden="true">3</span><h3>A script asks the registries</h3><p>Every name, every extension. Filter the checked list by length, style or domain status.</p></li>
       </ol>
 
       <div class="run" id="run" data-src="/demo/run.json">
@@ -119,7 +119,7 @@
         </div>
         <div class="run-term">
           <p class="t-line t-prompt"><span class="t-caret">&gt;</span> <span id="run-typed">Name my app. A plant-care app that tells you when to water, based on the light in your room and the weather outside.</span><span class="t-rest" id="run-rest"></span></p>
-          <p class="t-note" id="run-l1">Claude writes 150 names to names.txt in 8 styles (40 compound, 25 blend, 20 phrase, 20 invented, 15 respelled, 10 real-word, 10 prefixed, 10 foreign), then runs the checker with a Vercel token set (Vercel sells domains, so its API can confirm the real price and catch premium and reserved names). Below, the lines in monospace are the script's output for this run.</p>
+          <p class="t-note" id="run-l1">Claude writes 150 names in eight styles. This run used a Vercel token to check prices too. The monospace lines below are the script's recorded output.</p>
           <p class="t-line t-cmd" id="run-l2"><span class="t-dollar">$</span> python3 brandrune.py check names.txt --tlds com,ai --description-file about.txt --out results.json --html names.html</p>
           <p class="t-line t-real" id="run-l3">checking 150 names on .com, .ai with Vercel pricing</p>
           <div class="t-done" id="run-done">
@@ -168,13 +168,39 @@
     </div>
   </section>
 
+  <section id="install" class="install-sec" aria-labelledby="install-h">
+    <div class="wrap">
+      <p class="kicker">Install</p>
+      <h2 id="install-h">Install it, then ask in plain words</h2>
+      <p class="section-lede">Brandrune itself is free and MIT licensed. Bring your own Claude Code access and Python 3.9 or newer.</p>
+      <div class="install-grid">
+        <div class="install-card">
+          <h3>Claude Code</h3>
+          <div class="cmd"><code>/plugin marketplace add brandrune/brandrune</code><button type="button" class="copy" data-copy="/plugin marketplace add brandrune/brandrune" aria-label="Copy the marketplace command">Copy</button></div>
+          <div class="cmd"><code>/plugin install brandrune@brandrune</code><button type="button" class="copy" data-copy="/plugin install brandrune@brandrune" aria-label="Copy the install command">Copy</button></div>
+        </div>
+        <div class="install-card">
+          <h3>Or copy the skill by hand</h3>
+          <div class="cmd"><code>git clone https://github.com/brandrune/brandrune</code><button type="button" class="copy" data-copy="git clone https://github.com/brandrune/brandrune" aria-label="Copy the clone command">Copy</button></div>
+          <div class="cmd"><code>cp -r brandrune/skills/brandrune ~/.claude/skills/</code><button type="button" class="copy" data-copy="cp -r brandrune/skills/brandrune ~/.claude/skills/" aria-label="Copy the copy command">Copy</button></div>
+        </div>
+      </div>
+      <div class="ask">
+        <p class="ask-label">Then ask:</p>
+        <p class="ask-quote">"Name my app. It's a plant-care app that tells you when to water. Short, and the .com has to be open."</p>
+        <p class="ask-quote">"Only 8 letters or fewer. Has to have 'leaf' in it. Just compounds."</p>
+      </div>
+      <p class="small">No Python packages to install. Optional: add a Vercel token to check prices and flag premium or reserved names. If no price comes back, the result stays <code>open*</code>. Setup and source are on <a href="https://github.com/brandrune/brandrune">GitHub</a>.</p>
+    </div>
+  </section>
+
   <section id="check" class="check" aria-labelledby="check-h">
     <div class="wrap check-grid">
       <div class="check-copy">
         <p class="kicker">Try the registry yourself</p>
         <h2 id="check-h">Is yourname.com open?</h2>
         <p>This asks Verisign, the registry for .com, straight from your browser. brandrune.com never sees the name you type.</p>
-        <p class="small">One extension, no price check. A name with no record shows as <span class="chip openstar">open*</span> here; the skill also asks a registrar for the price, and checks .ai, .dev, .io and most other extensions.</p>
+        <p class="small">No registry record shows as <span class="chip openstar">open*</span>; premium or reserved names are still possible. The skill checks more extensions and, with an optional Vercel token, prices too.</p>
       </div>
       <div class="check-box">
         <form id="checker" class="checker" novalidate>
@@ -220,7 +246,7 @@
         <div class="vs-row" role="row">
           <span class="vs-topic" role="rowheader"><span class="vs-n">4</span>What "available" means</span>
           <span class="vs-them" role="cell"><span class="vs-mobile">Namelix</span>A check mark on the card. The card does not say which server answered, or when.</span>
-          <span class="vs-us" role="cell"><span class="vs-mobile">Brandrune</span>Open only when that extension's registry said "no such domain" in this run. Every answer is saved with the server and the time.</span>
+          <span class="vs-us" role="cell"><span class="vs-mobile">Brandrune</span>Registry answers with the server and time saved. <code>open*</code> means no record; a priced <code>open</code> also has a confirmed standard price.</span>
         </div>
       </div>
       <p class="footnote">Namelix as read at namelix.com on 2026-10-10.</p>
@@ -231,7 +257,9 @@
     <div class="wrap">
       <p class="kicker">How it decides</p>
       <h2 id="decide-h">Every domain gets one word</h2>
-      <p class="section-lede">The script asks the registry for <code>name.ext</code> and sorts the answer into exactly one status. It never rounds a guess up to open.</p>
+      <p class="section-lede"><code>open*</code>: no registry record, price unverified. Priced <code>open</code>: standard price confirmed too. <code>unknown</code>: no usable answer, never counted as open.</p>
+      <details class="registry-details">
+        <summary>See how every status is decided</summary>
       <div class="tree">
         <div class="tree-root">The registry for the extension answers</div>
         <ol class="branches">
@@ -273,32 +301,8 @@
         <li><span class="src-tld">most others</span> the registry's RDAP server, from IANA's list</li>
         <li><span class="src-tld">.io .co .sh .me .so .gg</span> the registry's WHOIS</li>
       </ul>
-      <p class="decide-note">Redirects are never followed. Every answer is saved in <code>results.json</code> with the URL or server that gave it and the time.</p>
-    </div>
-  </section>
-
-  <section id="install" class="install-sec" aria-labelledby="install-h">
-    <div class="wrap">
-      <p class="kicker">Install</p>
-      <h2 id="install-h">Install it, then ask in plain words</h2>
-      <div class="install-grid">
-        <div class="install-card">
-          <h3>Claude Code</h3>
-          <div class="cmd"><code>/plugin marketplace add brandrune/brandrune</code><button type="button" class="copy" data-copy="/plugin marketplace add brandrune/brandrune" aria-label="Copy the marketplace command">Copy</button></div>
-          <div class="cmd"><code>/plugin install brandrune@brandrune</code><button type="button" class="copy" data-copy="/plugin install brandrune@brandrune" aria-label="Copy the install command">Copy</button></div>
-        </div>
-        <div class="install-card">
-          <h3>Or copy the skill by hand</h3>
-          <div class="cmd"><code>git clone https://github.com/brandrune/brandrune</code><button type="button" class="copy" data-copy="git clone https://github.com/brandrune/brandrune" aria-label="Copy the clone command">Copy</button></div>
-          <div class="cmd"><code>cp -r brandrune/skills/brandrune ~/.claude/skills/</code><button type="button" class="copy" data-copy="cp -r brandrune/skills/brandrune ~/.claude/skills/" aria-label="Copy the copy command">Copy</button></div>
-        </div>
-      </div>
-      <div class="ask">
-        <p class="ask-label">Then ask:</p>
-        <p class="ask-quote">"Name my app. It's a plant-care app that tells you when to water. Short, and the .com has to be open."</p>
-        <p class="ask-quote">"Only 8 letters or fewer. Has to have 'leaf' in it. Just compounds."</p>
-      </div>
-      <p class="small">It needs Python 3.9 or newer, which macOS and most Linux systems already have. Nothing to pip install. Optional: a free Vercel token turns <code>open*</code> into a priced <code>open</code>. Vercel sells domains, so its API can confirm the real price and catch premium and reserved names. Source and docs are on <a href="https://github.com/brandrune/brandrune">GitHub</a>.</p>
+      <p class="decide-note">Every answer is saved with its source and time in <code>results.json</code>.</p>
+      </details>
     </div>
   </section>
 
@@ -311,7 +315,7 @@
       <div class="faq-list">
         <details>
           <summary>Why is it free?</summary>
-          <p>Because it costs almost nothing to run. Your own Claude Code writes the names, and the registries answer lookups for free. There is no server doing the work, so there is nothing to charge for. It is MIT licensed, and there is no paid tier coming.</p>
+          <p>Brandrune itself is free and MIT licensed. It runs in your own Claude Code session, whose access and usage costs are separate. Registry lookups need no account; optional price checks require a Vercel account and token. Registering a domain costs extra.</p>
         </details>
         <details>
           <summary>What data leaves my machine?</summary>

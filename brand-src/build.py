@@ -284,7 +284,7 @@ def construction():
 
 # ------------------------------------------------------------- OG template
 
-def og_template(headline=("Names you can read.", "Domains that are really open."), foot="A free Claude Code skill. Registry-checked."):
+def og_template(headline=("Names you can read.", "Registry-checked domains."), foot="A free Claude Code skill. Registry-checked."):
     """1200x630. The lockup and the big rune are paths; the headline and
     the foot line are live text so the template can be edited."""
     W, H = 1200, 630
@@ -328,7 +328,7 @@ def main():
     emit("brandrune-app-icon", app_icon(), png=[16, 32, 64, 180, 192, 512, 1024])
     emit("brandrune-github-avatar", app_icon(full_bleed=True), png=[512], transparent=False)
     emit("favicon", favicon(), png=[16, 32, 48])
-    emit("brandrune-og-template", og_template(), png=[1200], transparent=False, label="Brandrune: names you can read, domains that are really open")
+    emit("brandrune-og-template", og_template(), png=[1200], transparent=False, label="Brandrune: names you can read, registry-checked domains")
 
     emit("explore-carved", square_mark(), png=[512])
     emit("explore-monogram-b", exploration_monogram(), png=[512])
