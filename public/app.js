@@ -260,6 +260,7 @@
       cue.classList.toggle("off", !more);
     }
     frame.addEventListener("scroll", updateCue, { passive: true });
+    window.addEventListener("resize", updateCue);
 
     function makeTile(row, tlds, final) {
       var li = el("li", "tile");
@@ -302,7 +303,8 @@
         if (ok) shown++;
       });
       count.textContent = shown + " of " + tiles.length;
-      if (frame) updateCue();
+      frame.scrollTop = 0;
+      updateCue();
     }
 
     function setTools(on) { tools.forEach(function (b) { b.disabled = !on; }); }

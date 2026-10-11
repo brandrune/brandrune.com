@@ -132,7 +132,9 @@
 .rt-count { margin-left: auto; color: var(--stone); font-size: 14px; }
 
 .wall-wrap { position: relative; }
-.wall-frame { height: 470px; overflow-y: auto; background: var(--paper); padding: 14px; scrollbar-width: thin; }
+/* Keep the replay steady, then let filtered results fit their content. */
+.run.playing .wall-frame { height: 470px; }
+.wall-frame { max-height: 470px; overflow-y: auto; background: var(--paper); padding: 14px; scrollbar-width: thin; }
 /* A scroll cue, since phones and macOS hide the scrollbar. */
 .wall-cue { position: absolute; left: 0; right: 0; bottom: 0; height: 72px; margin: 0; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 10px; pointer-events: none; background: linear-gradient(rgba(250, 250, 248, 0), #fafaf8 70%); transition: opacity 0.2s; }
 .wall-cue span { font-size: 13px; font-weight: 600; color: var(--ink); background: var(--card); border: 1px solid #dddcd5; border-radius: 999px; padding: 4px 12px; }
@@ -208,7 +210,9 @@
 /* --- how it decides ----------------------------------------------------- */
 
 .decide .section-lede code { font-size: 0.9em; }
-.tree { margin-top: 40px; }
+.registry-details { border: 1px solid var(--rule); border-radius: 12px; padding: 16px 20px; background: var(--card); }
+.registry-details summary { cursor: pointer; font-weight: 650; color: var(--ochre); }
+.tree { margin-top: 28px; }
 .tree-root { width: max-content; max-width: 100%; margin: 0 auto; background: var(--ochre-tint); border: 1px solid #e7cdbf; color: var(--ochre-dark); font-weight: 650; padding: 12px 20px; border-radius: 10px; position: relative; }
 .tree-root::after { content: ""; position: absolute; left: 50%; top: 100%; height: 24px; border-left: 1.5px solid #c9c7bf; }
 .branches { list-style: none; margin: 24px 0 0; padding: 24px 0 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; position: relative; }
@@ -292,7 +296,8 @@
   .run-replay { grid-column: 2; grid-row: 1; }
   .run-tools { padding: 10px 12px; }
   .rt-count { margin-left: 0; width: 100%; }
-  .wall-frame { height: 420px; padding: 10px; }
+  .run.playing .wall-frame { height: 420px; }
+  .wall-frame { max-height: 420px; padding: 10px; }
   .tally { padding: 10px 14px; }
   .wall { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
   .tile { padding: 8px 9px; }
