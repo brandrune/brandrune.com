@@ -11,7 +11,7 @@
 // Sending is capped three ways, so the form cannot flood an inbox: one
 // confirmation email per address per day (KV, keyed on a hash of the address
 // with +tags and Gmail dots removed), a short burst limit on the same key, and
-// a site-wide limit on all sends. Nothing else is stored and nothing is tracked.
+// a site-wide limit on all sends. Nothing else is stored and no usage is tracked (pageviews only, see /ph.js).
 
 const CANONICAL_HOST = "brandrune.com";
 const DEFAULT_ORIGIN = "https://brandrune.com";
@@ -29,9 +29,9 @@ const BASE_HEADERS = {
 };
 // The home page's name checker asks Verisign's RDAP server straight from the
 // browser, so that one host is allowed for fetch. Nothing else leaves 'self'.
-const SITE_CSP = "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self' https://rdap.verisign.com; form-action 'self'; base-uri 'none'; frame-ancestors 'none'";
+const SITE_CSP = "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self' https://rdap.verisign.com https://us.i.posthog.com; form-action 'self'; base-uri 'none'; frame-ancestors 'none'";
 // The sample pages are the skill's own results pages, which inline their data, script and styles.
-const SAMPLE_CSP = "default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src 'self' data:; base-uri 'none'; frame-ancestors 'none'";
+const SAMPLE_CSP = "default-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'unsafe-inline'; img-src 'self' data:; connect-src https://us.i.posthog.com; base-uri 'none'; frame-ancestors 'none'";
 
 export default {
   async fetch(request, env) {
@@ -45,8 +45,13 @@ export default {
     }
 
     if (url.pathname === "/api/subscribe") return withHeaders(await subscribe(request, env), SITE_CSP);
-    if (url.pathname === "/api/confirm") return withHeaders(await confirm(request, env), SITE_CSP);
-    if (url.pathname === "/confirm" || url.pathname === "/confirm/") return withHeaders(await confirmPage(request, env), SITE_CSP);
+    // The confirm URL carries the subscriber's email and token, and /confirmed/
+    // counts pageviews with its referrer, so neither hop may pass the URL on.
+    // /confirm sends only its origin (no-referrer would make the button's POST
+    // carry Origin: null, which the CSRF check refuses); the 303 from
+    // /api/confirm sends nothing, so /confirmed/ sees no referrer at all.
+    if (url.pathname === "/api/confirm") return referrer(withHeaders(await confirm(request, env), SITE_CSP), "no-referrer");
+    if (url.pathname === "/confirm" || url.pathname === "/confirm/") return referrer(withHeaders(await confirmPage(request, env), SITE_CSP), "origin");
     if (url.pathname.startsWith("/api/")) return withHeaders(json({ ok: false, error: "Not found." }, 404), SITE_CSP);
 
     const res = await env.ASSETS.fetch(request);
@@ -55,12 +60,18 @@ export default {
   },
 };
 
+function referrer(res, policy) {
+  res.headers.set("Referrer-Policy", policy);
+  return res;
+}
+
 function withHeaders(res, csp) {
   const out = new Response(res.body, res);
   for (const [k, v] of Object.entries(BASE_HEADERS)) out.headers.set(k, v);
   out.headers.set("Content-Security-Policy", csp);
   // no-transform stops the edge from rewriting pages, which is how a hosted
-  // analytics beacon would otherwise get injected. This site tracks nothing.
+  // analytics beacon would otherwise get injected. The only counting is our own
+  // pageviews and referrers (/ph.js); nothing you type or name is tracked.
   const cc = out.headers.get("Cache-Control");
   if (!cc || !/no-transform/.test(cc)) out.headers.set("Cache-Control", cc ? `${cc}, no-transform` : "no-transform");
   return out;
@@ -77,6 +88,7 @@ const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&
 
 // A plain page in the site's style. `body` is trusted HTML built here; every
 // value from the request goes through esc() before it gets in.
+// No PostHog here: /confirm carries the subscriber's email and token in its URL.
 function page(title, body, status = 200) {
   const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><meta name="robots" content="noindex"><title>${esc(title)}: Brandrune</title><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/style.css"></head><body><main class="wrap narrow page-msg"><a class="page-mark" href="/" aria-label="Brandrune home"><img src="/brand/assets/brandrune-lockup-flat.svg" alt="Brandrune" width="141" height="30"></a><h1>${esc(title)}</h1>${body}</main></body></html>`;
   return new Response(html, { status, headers: { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "no-store" } });

@@ -1,6 +1,6 @@
 "use strict";
 // brandrune.com: copy buttons, the email signup, the .com checker, and the
-// replay of a recorded run. No dependencies, no tracking.
+// replay of a recorded run. No dependencies, no usage tracking.
 (function () {
   var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 

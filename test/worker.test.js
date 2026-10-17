@@ -362,6 +362,9 @@ test("the confirm link shows a button and changes nothing on GET", async () => {
     assert.match(html, /action="\/api\/confirm" method="post"/);
     assert.match(html, /a\.person@example\.com/);
     assert.match(res.headers.get("Content-Security-Policy"), /script-src 'self'/);
+    // origin, not no-referrer: no-referrer makes the button's POST send Origin: null.
+    assert.equal(res.headers.get("Referrer-Policy"), "origin");
+    assert.doesNotMatch(html, /ph(-init)?\.js/);
   });
   assert.equal(r.calls.length, 0);
   assert.deepEqual(r.contacts["a.person@example.com"], { unsubscribed: true });
@@ -383,6 +386,7 @@ test("pressing confirm creates the contact as subscribed and lands on /confirmed
     const res = await worker.fetch(post({ t }, { path: "/api/confirm", type: "application/x-www-form-urlencoded", accept: "text/html" }), makeEnv());
     assert.equal(res.status, 303);
     assert.equal(res.headers.get("Location"), "/confirmed/");
+    assert.equal(res.headers.get("Referrer-Policy"), "no-referrer");
   });
   assert.deepEqual(r.contacts["a.person@example.com"], { unsubscribed: false });
   assert.equal(creates(r.calls).length, 1);
@@ -452,11 +456,12 @@ test("pages carry a CSP; the sample pages allow their inline script only", async
   const home = await worker.fetch(new Request("https://brandrune.com/"), makeEnv());
   const csp = home.headers.get("Content-Security-Policy");
   assert.match(csp, /script-src 'self'/);
-  assert.match(csp, /connect-src 'self' https:\/\/rdap\.verisign\.com;/);
+  assert.match(csp, /connect-src 'self' https:\/\/rdap\.verisign\.com https:\/\/us\.i\.posthog\.com;/);
+  assert.match(csp, /script-src 'self';/);
   assert.doesNotMatch(csp, /unsafe-inline/);
   const sample = await worker.fetch(new Request("https://brandrune.com/sample/plant-care/"), makeEnv());
-  assert.match(sample.headers.get("Content-Security-Policy"), /script-src 'unsafe-inline'/);
-  assert.doesNotMatch(sample.headers.get("Content-Security-Policy"), /connect-src/);
+  assert.match(sample.headers.get("Content-Security-Policy"), /script-src 'self' 'unsafe-inline'/);
+  assert.match(sample.headers.get("Content-Security-Policy"), /connect-src https:\/\/us\.i\.posthog\.com;/);
   assert.equal(sample.headers.get("X-Content-Type-Options"), "nosniff");
   assert.match(home.headers.get("Cache-Control"), /no-transform/);
 });
