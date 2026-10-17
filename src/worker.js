@@ -47,8 +47,11 @@ export default {
     if (url.pathname === "/api/subscribe") return withHeaders(await subscribe(request, env), SITE_CSP);
     // The confirm URL carries the subscriber's email and token, and /confirmed/
     // counts pageviews with its referrer, so neither hop may pass the URL on.
-    if (url.pathname === "/api/confirm") return noReferrer(withHeaders(await confirm(request, env), SITE_CSP));
-    if (url.pathname === "/confirm" || url.pathname === "/confirm/") return noReferrer(withHeaders(await confirmPage(request, env), SITE_CSP));
+    // /confirm sends only its origin (no-referrer would make the button's POST
+    // carry Origin: null, which the CSRF check refuses); the 303 from
+    // /api/confirm sends nothing, so /confirmed/ sees no referrer at all.
+    if (url.pathname === "/api/confirm") return referrer(withHeaders(await confirm(request, env), SITE_CSP), "no-referrer");
+    if (url.pathname === "/confirm" || url.pathname === "/confirm/") return referrer(withHeaders(await confirmPage(request, env), SITE_CSP), "origin");
     if (url.pathname.startsWith("/api/")) return withHeaders(json({ ok: false, error: "Not found." }, 404), SITE_CSP);
 
     const res = await env.ASSETS.fetch(request);
@@ -57,8 +60,8 @@ export default {
   },
 };
 
-function noReferrer(res) {
-  res.headers.set("Referrer-Policy", "no-referrer");
+function referrer(res, policy) {
+  res.headers.set("Referrer-Policy", policy);
   return res;
 }
 

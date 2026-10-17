@@ -362,7 +362,8 @@ test("the confirm link shows a button and changes nothing on GET", async () => {
     assert.match(html, /action="\/api\/confirm" method="post"/);
     assert.match(html, /a\.person@example\.com/);
     assert.match(res.headers.get("Content-Security-Policy"), /script-src 'self'/);
-    assert.equal(res.headers.get("Referrer-Policy"), "no-referrer");
+    // origin, not no-referrer: no-referrer makes the button's POST send Origin: null.
+    assert.equal(res.headers.get("Referrer-Policy"), "origin");
     assert.doesNotMatch(html, /ph(-init)?\.js/);
   });
   assert.equal(r.calls.length, 0);

@@ -16,7 +16,7 @@ domains (brandrune.com and www.brandrune.com, no wildcard route).
   new npm tarball and keep the same edits. `ph-init.js` holds the key and options.
   The worker's own pages (`/confirm` and its errors) load neither: that URL carries
   the subscriber's email and token. Regenerating `public/sample/` with the skill drops
-  the two script tags; add them back after `style.css` in the head.
+  the two script tags; add them back at the end of the head, after the closing `</style>`.
 - `demo-run/`: the recorded run the home page replays (an invented plant-care app,
   150 names on .com and .ai, checked 2026-10-10). `build.py` turns its
   `results.json` into `public/demo/run.json` using the skill's own status labels:
