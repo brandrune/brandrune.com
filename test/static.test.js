@@ -112,7 +112,7 @@ test("every terminal line marked as script output is a line the script printed",
 
 test("the site does not claim Codex support the shipped skill does not have", () => {
   // ph.js is vendored third-party code (its bot list names crawlers); skip it.
-  for (const f of files.filter((p) => /\.(html|js)$/.test(p) && !p.endsWith("ph.js"))) {
+  for (const f of files.filter((p) => /\.(html|js)$/.test(p) && path.basename(p) !== "ph.js")) {
     assert.doesNotMatch(readFileSync(f, "utf8"), /codex/i, f);
   }
   assert.doesNotMatch(readFileSync(path.join(root, "src", "worker.js"), "utf8"), /codex/i);
@@ -158,15 +158,21 @@ test("no third-party script hosts; the only extra connection is us.i.posthog.com
   assert.match(init, /disable_session_recording: true/);
   assert.match(init, /autocapture: false/);
   assert.match(init, /person_profiles: 'identified_only'/);
+  assert.match(init, /defaults: '2025-05-24'/);
+  assert.match(init, /capture_dead_clicks: false/);
+  assert.match(init, /capture_performance: false/);
+  assert.match(init, /enable_heatmaps: false/);
+  assert.match(init, /disable_surveys: true/);
 });
 
-test("every top-level page loads the self-hosted PostHog loader", () => {
+test("every static page loads the self-hosted PostHog loader; worker pages do not", () => {
   const pages = [...files, ...walk(path.join(pub, "sample"))].filter((p) => p.endsWith(".html"));
   for (const f of pages) {
     const s = readFileSync(f, "utf8");
     assert.ok(s.indexOf('src="/ph.js"') > -1 && s.indexOf('src="/ph.js"') < s.indexOf('src="/ph-init.js"'), f);
   }
-  assert.match(readFileSync(path.join(root, "src", "worker.js"), "utf8"), /src="\/ph\.js" defer><\/script><script src="\/ph-init\.js"/);
+  // Worker pages (/confirm carries an email and token in its URL) stay uninstrumented.
+  assert.doesNotMatch(readFileSync(path.join(root, "src", "worker.js"), "utf8"), /<script[^>]*ph(-init)?\.js/);
 });
 
 // The carved mark is for 32px and up; every 30px header and message-page logo

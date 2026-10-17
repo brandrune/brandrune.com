@@ -10,6 +10,13 @@ domains (brandrune.com and www.brandrune.com, no wildcard route).
 - `src/worker.js`: serves the assets with security headers, redirects www and
   http to https://brandrune.com, and handles the double opt-in signup
   (`POST /api/subscribe`, `GET /confirm`, `POST /api/confirm`).
+- `public/ph.js` and `public/ph-init.js`: PostHog pageview counting, served from
+  this origin. `ph.js` is posthog-js 1.438.7 `dist/array.no-external.js` (one em dash
+  escaped as `\u2014`, sourcemap line dropped); to upgrade, copy that file from the
+  new npm tarball and keep the same edits. `ph-init.js` holds the key and options.
+  The worker's own pages (`/confirm` and its errors) load neither: that URL carries
+  the subscriber's email and token. Regenerating `public/sample/` with the skill drops
+  the two script tags; add them back after `style.css` in the head.
 - `demo-run/`: the recorded run the home page replays (an invented plant-care app,
   150 names on .com and .ai, checked 2026-10-10). `build.py` turns its
   `results.json` into `public/demo/run.json` using the skill's own status labels:
@@ -82,7 +89,7 @@ parking list in `app.js` is copied from `brandrune.py` 0.3.0; keep them in step.
    that unsubscribed and confirms again is resubscribed; a 409 falls back to an
    explicit update. Then it 303s to `/confirmed/`.
 
-No other data is kept. The site counts pageviews and referrers with PostHog
+No other signup data is kept. The site counts pageviews and referrers with PostHog
 (self-hosted `/ph.js`, pageviews only, no profiles, no session recording,
 no autocapture). It does not track what you type or name in Brandrune.
 Responses carry `Cache-Control: no-transform` so the edge does not inject a

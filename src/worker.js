@@ -45,8 +45,10 @@ export default {
     }
 
     if (url.pathname === "/api/subscribe") return withHeaders(await subscribe(request, env), SITE_CSP);
-    if (url.pathname === "/api/confirm") return withHeaders(await confirm(request, env), SITE_CSP);
-    if (url.pathname === "/confirm" || url.pathname === "/confirm/") return withHeaders(await confirmPage(request, env), SITE_CSP);
+    // The confirm URL carries the subscriber's email and token, and /confirmed/
+    // counts pageviews with its referrer, so neither hop may pass the URL on.
+    if (url.pathname === "/api/confirm") return noReferrer(withHeaders(await confirm(request, env), SITE_CSP));
+    if (url.pathname === "/confirm" || url.pathname === "/confirm/") return noReferrer(withHeaders(await confirmPage(request, env), SITE_CSP));
     if (url.pathname.startsWith("/api/")) return withHeaders(json({ ok: false, error: "Not found." }, 404), SITE_CSP);
 
     const res = await env.ASSETS.fetch(request);
@@ -54,6 +56,11 @@ export default {
     return withHeaders(res, csp);
   },
 };
+
+function noReferrer(res) {
+  res.headers.set("Referrer-Policy", "no-referrer");
+  return res;
+}
 
 function withHeaders(res, csp) {
   const out = new Response(res.body, res);
@@ -78,8 +85,9 @@ const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&
 
 // A plain page in the site's style. `body` is trusted HTML built here; every
 // value from the request goes through esc() before it gets in.
+// No PostHog here: /confirm carries the subscriber's email and token in its URL.
 function page(title, body, status = 200) {
-  const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><meta name="robots" content="noindex"><title>${esc(title)}: Brandrune</title><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/style.css"><script src="/ph.js" defer></script><script src="/ph-init.js" defer></script></head><body><main class="wrap narrow page-msg"><a class="page-mark" href="/" aria-label="Brandrune home"><img src="/brand/assets/brandrune-lockup-flat.svg" alt="Brandrune" width="141" height="30"></a><h1>${esc(title)}</h1>${body}</main></body></html>`;
+  const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><meta name="robots" content="noindex"><title>${esc(title)}: Brandrune</title><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/style.css"></head><body><main class="wrap narrow page-msg"><a class="page-mark" href="/" aria-label="Brandrune home"><img src="/brand/assets/brandrune-lockup-flat.svg" alt="Brandrune" width="141" height="30"></a><h1>${esc(title)}</h1>${body}</main></body></html>`;
   return new Response(html, { status, headers: { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "no-store" } });
 }
 const para = (text) => `<p>${esc(text)}</p>`;

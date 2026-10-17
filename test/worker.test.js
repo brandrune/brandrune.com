@@ -362,6 +362,8 @@ test("the confirm link shows a button and changes nothing on GET", async () => {
     assert.match(html, /action="\/api\/confirm" method="post"/);
     assert.match(html, /a\.person@example\.com/);
     assert.match(res.headers.get("Content-Security-Policy"), /script-src 'self'/);
+    assert.equal(res.headers.get("Referrer-Policy"), "no-referrer");
+    assert.doesNotMatch(html, /ph(-init)?\.js/);
   });
   assert.equal(r.calls.length, 0);
   assert.deepEqual(r.contacts["a.person@example.com"], { unsubscribed: true });
@@ -383,6 +385,7 @@ test("pressing confirm creates the contact as subscribed and lands on /confirmed
     const res = await worker.fetch(post({ t }, { path: "/api/confirm", type: "application/x-www-form-urlencoded", accept: "text/html" }), makeEnv());
     assert.equal(res.status, 303);
     assert.equal(res.headers.get("Location"), "/confirmed/");
+    assert.equal(res.headers.get("Referrer-Policy"), "no-referrer");
   });
   assert.deepEqual(r.contacts["a.person@example.com"], { unsubscribed: false });
   assert.equal(creates(r.calls).length, 1);
