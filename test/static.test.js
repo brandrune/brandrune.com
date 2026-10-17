@@ -111,7 +111,8 @@ test("every terminal line marked as script output is a line the script printed",
 });
 
 test("the site does not claim Codex support the shipped skill does not have", () => {
-  for (const f of files.filter((p) => /\.(html|js)$/.test(p))) {
+  // ph.js is vendored third-party code (its bot list names crawlers); skip it.
+  for (const f of files.filter((p) => /\.(html|js)$/.test(p) && !p.endsWith("ph.js"))) {
     assert.doesNotMatch(readFileSync(f, "utf8"), /codex/i, f);
   }
   assert.doesNotMatch(readFileSync(path.join(root, "src", "worker.js"), "utf8"), /codex/i);
@@ -128,11 +129,44 @@ test("the status tree's open* leaf covers a missing price, not only a missing to
   assert.match(home, /no token, or no price came back<\/span> <span class="chip openstar">open\*<\/span>/);
 });
 
-test("the home page loads nothing from another host", () => {
-  const home = readFileSync(path.join(pub, "index.html"), "utf8");
-  for (const m of home.matchAll(/<(?:script|link|img)\b[^>]*(?:src|href)="(https?:)?\/\/[^"]*"/gi)) {
-    assert.ok(/rel="canonical"/.test(m[0]), `external asset: ${m[0]}`);
+// The only third party is PostHog pageview counting. Its loader is vendored and
+// served from this origin (/ph.js), so no page may load a script from another
+// host, and the only off-site connection the CSP allows besides the RDAP check
+// is https://us.i.posthog.com.
+test("no third-party script hosts; the only extra connection is us.i.posthog.com", () => {
+  const all = [...files, ...walk(path.join(pub, "sample"))].filter((p) => p.endsWith(".html"));
+  for (const f of all) {
+    const s = readFileSync(f, "utf8");
+    for (const m of s.matchAll(/<(?:script|link|img|iframe)\b[^>]*(?:src|href)="(https?:)?\/\/[^"]*"/gi)) {
+      assert.ok(/rel="canonical"/.test(m[0]), `${f}: external asset: ${m[0]}`);
+    }
   }
+  const worker = readFileSync(path.join(root, "src", "worker.js"), "utf8");
+  for (const m of worker.matchAll(/<script\b[^>]*src="(https?:)?\/\/[^"]*"/gi)) assert.fail(`worker emits external script: ${m[0]}`);
+  const csps = [...worker.matchAll(/^const (?:SITE|SAMPLE)_CSP = "([^"]*)"/gm)].map((m) => m[1]);
+  assert.equal(csps.length, 2);
+  for (const csp of csps) {
+    const hosts = [...csp.matchAll(/https?:\/\/[^\s;]+/g)].map((m) => m[0]);
+    for (const h of hosts) assert.ok(["https://rdap.verisign.com", "https://us.i.posthog.com"].includes(h), `CSP allows ${h}`);
+    const script = csp.match(/script-src ([^;]*)/)[1];
+    assert.doesNotMatch(script, /https?:/, "script-src stays on this origin");
+  }
+  const init = readFileSync(path.join(pub, "ph-init.js"), "utf8");
+  assert.match(init, /api_host: 'https:\/\/us\.i\.posthog\.com'/);
+  assert.match(init, /disable_external_dependency_loading: true/);
+  assert.match(init, /advanced_disable_flags: true/);
+  assert.match(init, /disable_session_recording: true/);
+  assert.match(init, /autocapture: false/);
+  assert.match(init, /person_profiles: 'identified_only'/);
+});
+
+test("every top-level page loads the self-hosted PostHog loader", () => {
+  const pages = [...files, ...walk(path.join(pub, "sample"))].filter((p) => p.endsWith(".html"));
+  for (const f of pages) {
+    const s = readFileSync(f, "utf8");
+    assert.ok(s.indexOf('src="/ph.js"') > -1 && s.indexOf('src="/ph.js"') < s.indexOf('src="/ph-init.js"'), f);
+  }
+  assert.match(readFileSync(path.join(root, "src", "worker.js"), "utf8"), /src="\/ph\.js" defer><\/script><script src="\/ph-init\.js"/);
 });
 
 // The carved mark is for 32px and up; every 30px header and message-page logo

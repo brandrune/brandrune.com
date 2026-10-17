@@ -452,11 +452,12 @@ test("pages carry a CSP; the sample pages allow their inline script only", async
   const home = await worker.fetch(new Request("https://brandrune.com/"), makeEnv());
   const csp = home.headers.get("Content-Security-Policy");
   assert.match(csp, /script-src 'self'/);
-  assert.match(csp, /connect-src 'self' https:\/\/rdap\.verisign\.com;/);
+  assert.match(csp, /connect-src 'self' https:\/\/rdap\.verisign\.com https:\/\/us\.i\.posthog\.com;/);
+  assert.match(csp, /script-src 'self';/);
   assert.doesNotMatch(csp, /unsafe-inline/);
   const sample = await worker.fetch(new Request("https://brandrune.com/sample/plant-care/"), makeEnv());
-  assert.match(sample.headers.get("Content-Security-Policy"), /script-src 'unsafe-inline'/);
-  assert.doesNotMatch(sample.headers.get("Content-Security-Policy"), /connect-src/);
+  assert.match(sample.headers.get("Content-Security-Policy"), /script-src 'self' 'unsafe-inline'/);
+  assert.match(sample.headers.get("Content-Security-Policy"), /connect-src https:\/\/us\.i\.posthog\.com;/);
   assert.equal(sample.headers.get("X-Content-Type-Options"), "nosniff");
   assert.match(home.headers.get("Cache-Control"), /no-transform/);
 });
